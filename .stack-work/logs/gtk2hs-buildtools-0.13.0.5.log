@@ -1,0 +1,415 @@
+Configuring gtk2hs-buildtools-0.13.0.5...
+Building gtk2hs-buildtools-0.13.0.5...
+Preprocessing executable 'gtk2hsTypeGen' for gtk2hs-buildtools-0.13.0.5...
+[1 of 2] Compiling Paths_gtk2hs_buildtools ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/autogen/Paths_gtk2hs_buildtools.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsTypeGen/gtk2hsTypeGen-tmp/Paths_gtk2hs_buildtools.o )
+[2 of 2] Compiling Main             ( hierarchyGen/TypeGen.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsTypeGen/gtk2hsTypeGen-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsTypeGen/gtk2hsTypeGen ...
+Preprocessing executable 'gtk2hsHookGenerator' for
+gtk2hs-buildtools-0.13.0.5...
+[1 of 2] Compiling Paths_gtk2hs_buildtools ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/autogen/Paths_gtk2hs_buildtools.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsHookGenerator/gtk2hsHookGenerator-tmp/Paths_gtk2hs_buildtools.o )
+[2 of 2] Compiling Main             ( callbackGen/HookGenerator.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsHookGenerator/gtk2hsHookGenerator-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsHookGenerator/gtk2hsHookGenerator ...
+Preprocessing executable 'gtk2hsC2hs' for gtk2hs-buildtools-0.13.0.5...
+[ 1 of 41] Compiling DLists           ( c2hs/base/general/DLists.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/DLists.o )
+[ 2 of 41] Compiling BaseVersion      ( c2hs/base/admin/BaseVersion.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/BaseVersion.o )
+[ 3 of 41] Compiling Switches         ( c2hs/state/Switches.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Switches.o )
+[ 4 of 41] Compiling Map              ( c2hs/base/general/Map.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Map.o )
+[ 5 of 41] Compiling FastMutInt       ( c2hs/base/general/FastMutInt.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/FastMutInt.o )
+[ 6 of 41] Compiling Config           ( c2hs/base/admin/Config.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Config.o )
+[ 7 of 41] Compiling C2HSConfig       ( c2hs/toplevel/C2HSConfig.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/C2HSConfig.o )
+[ 8 of 41] Compiling CInfo            ( c2hs/gen/CInfo.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CInfo.o )
+[ 9 of 41] Compiling Version          ( c2hs/toplevel/Version.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Version.o )
+[10 of 41] Compiling Binary           ( c2hs/base/general/Binary.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Binary.o )
+[11 of 41] Compiling Position         ( c2hs/base/general/Position.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Position.o )
+[12 of 41] Compiling UNames           ( c2hs/base/general/UNames.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/UNames.o )
+[13 of 41] Compiling Errors           ( c2hs/base/errors/Errors.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Errors.o )
+[14 of 41] Compiling Attributes       ( c2hs/base/syms/Attributes.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Attributes.o )
+[15 of 41] Compiling Idents           ( c2hs/base/syms/Idents.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Idents.o )
+[16 of 41] Compiling CTokens          ( c2hs/c/CTokens.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CTokens.o )
+[17 of 41] Compiling CAST             ( c2hs/c/CAST.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CAST.o )
+[18 of 41] Compiling CPretty          ( c2hs/c/CPretty.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CPretty.o )
+[19 of 41] Compiling Lexers           ( c2hs/base/syntax/Lexers.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Lexers.o )
+
+c2hs/base/syntax/Lexers.hs:133:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:134:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:197:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:197:54: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:198:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:198:47: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:199:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:199:63: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:211:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:212:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:213:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:214:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:215:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:216:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:217:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:218:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:219:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:220:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:221:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:222:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:228:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:270:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:271:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:307:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:308:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:309:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:310:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:311:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:312:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:317:14: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:323:14: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:346:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:347:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:348:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:349:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:397:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:398:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:418:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:419:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:454:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:455:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:456:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:467:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:468:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:469:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:470:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:471:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:472:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:473:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:475:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:476:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:477:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:478:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:479:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:480:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:481:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:482:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:483:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:484:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:485:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:486:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:487:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:488:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:489:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:490:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:491:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:492:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:493:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:494:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:495:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:496:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:500:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:501:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:502:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:503:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:504:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:505:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:508:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:509:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:510:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:512:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:513:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:514:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:515:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:516:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:517:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:518:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:519:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:520:1: Warning: Tab character
+
+c2hs/base/syntax/Lexers.hs:520:15: Warning: Tab character
+[20 of 41] Compiling StateTrans       ( c2hs/base/state/StateTrans.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/StateTrans.o )
+[21 of 41] Compiling StateBase        ( c2hs/base/state/StateBase.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/StateBase.o )
+[22 of 41] Compiling NameSpaces       ( c2hs/base/syms/NameSpaces.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/NameSpaces.o )
+[23 of 41] Compiling CAttrs           ( c2hs/c/CAttrs.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CAttrs.o )
+[24 of 41] Compiling CBuiltin         ( c2hs/c/CBuiltin.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CBuiltin.o )
+[25 of 41] Compiling CParserMonad     ( c2hs/c/CParserMonad.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CParserMonad.o )
+[26 of 41] Compiling CLexer           ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CLexer.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CLexer.o )
+
+c2hs/c/CLexer.x:75:14: Warning: Tab character
+
+c2hs/c/CLexer.x:240:41: Warning: Tab character
+
+c2hs/c/CLexer.x:241:49: Warning: Tab character
+
+c2hs/c/CLexer.x:243:25: Warning: Tab character
+
+c2hs/c/CLexer.x:244:33: Warning: Tab character
+
+c2hs/c/CLexer.x:245:41: Warning: Tab character
+
+c2hs/c/CLexer.x:246:29: Warning: Tab character
+
+c2hs/c/CLexer.x:247:33: Warning: Tab character
+
+c2hs/c/CLexer.x:248:33: Warning: Tab character
+
+c2hs/c/CLexer.x:249:29: Warning: Tab character
+
+c2hs/c/CLexer.x:250:29: Warning: Tab character
+
+c2hs/c/CLexer.x:251:33: Warning: Tab character
+
+c2hs/c/CLexer.x:252:41: Warning: Tab character
+
+c2hs/c/CLexer.x:253:49: Warning: Tab character
+
+c2hs/c/CLexer.x:254:45: Warning: Tab character
+
+c2hs/c/CLexer.x:255:45: Warning: Tab character
+
+c2hs/c/CLexer.x:256:41: Warning: Tab character
+
+c2hs/c/CLexer.x:257:21: Warning: Tab character
+
+c2hs/c/CLexer.x:258:37: Warning: Tab character
+
+c2hs/c/CLexer.x:259:29: Warning: Tab character
+
+c2hs/c/CLexer.x:260:29: Warning: Tab character
+
+c2hs/c/CLexer.x:261:37: Warning: Tab character
+
+c2hs/c/CLexer.x:262:33: Warning: Tab character
+
+c2hs/c/CLexer.x:263:25: Warning: Tab character
+
+c2hs/c/CLexer.x:264:29: Warning: Tab character
+
+c2hs/c/CLexer.x:265:21: Warning: Tab character
+
+c2hs/c/CLexer.x:266:37: Warning: Tab character
+
+c2hs/c/CLexer.x:267:45: Warning: Tab character
+
+c2hs/c/CLexer.x:268:53: Warning: Tab character
+
+c2hs/c/CLexer.x:269:25: Warning: Tab character
+
+c2hs/c/CLexer.x:271:53: Warning: Tab character
+
+c2hs/c/CLexer.x:272:49: Warning: Tab character
+
+c2hs/c/CLexer.x:273:45: Warning: Tab character
+
+c2hs/c/CLexer.x:274:29: Warning: Tab character
+
+c2hs/c/CLexer.x:275:45: Warning: Tab character
+
+c2hs/c/CLexer.x:276:45: Warning: Tab character
+
+c2hs/c/CLexer.x:277:53: Warning: Tab character
+
+c2hs/c/CLexer.x:279:37: Warning: Tab character
+
+c2hs/c/CLexer.x:280:33: Warning: Tab character
+
+c2hs/c/CLexer.x:281:37: Warning: Tab character
+
+c2hs/c/CLexer.x:282:45: Warning: Tab character
+
+c2hs/c/CLexer.x:283:53: Warning: Tab character
+
+c2hs/c/CLexer.x:284:37: Warning: Tab character
+
+c2hs/c/CLexer.x:285:37: Warning: Tab character
+
+c2hs/c/CLexer.x:286:37: Warning: Tab character
+
+c2hs/c/CLexer.x:287:37: Warning: Tab character
+
+c2hs/c/CLexer.x:288:41: Warning: Tab character
+
+c2hs/c/CLexer.x:289:37: Warning: Tab character
+
+c2hs/c/CLexer.x:290:45: Warning: Tab character
+
+c2hs/c/CLexer.x:291:53: Warning: Tab character
+
+c2hs/c/CLexer.x:292:45: Warning: Tab character
+
+c2hs/c/CLexer.x:293:33: Warning: Tab character
+
+c2hs/c/CLexer.x:294:45: Warning: Tab character
+
+c2hs/c/CLexer.x:295:29: Warning: Tab character
+
+c2hs/c/CLexer.x:296:45: Warning: Tab character
+
+c2hs/c/CLexer.x:297:53: Warning: Tab character
+
+c2hs/c/CLexer.x:299:33: Warning: Tab character
+
+c2hs/c/CLexer.x:306:1: Warning: Tab character
+
+c2hs/c/CLexer.x:338:1: Warning: Tab character
+
+c2hs/c/CLexer.x:339:1: Warning: Tab character
+
+c2hs/c/CLexer.x:340:1: Warning: Tab character
+
+c2hs/c/CLexer.x:341:1: Warning: Tab character
+
+c2hs/c/CLexer.x:342:1: Warning: Tab character
+
+c2hs/c/CLexer.x:343:1: Warning: Tab character
+
+c2hs/c/CLexer.x:344:1: Warning: Tab character
+
+c2hs/c/CLexer.x:345:1: Warning: Tab character
+
+c2hs/c/CLexer.x:346:1: Warning: Tab character
+
+c2hs/c/CLexer.x:347:1: Warning: Tab character
+
+c2hs/c/CLexer.x:348:1: Warning: Tab character
+
+c2hs/c/CLexer.x:349:1: Warning: Tab character
+
+c2hs/c/CLexer.x:350:1: Warning: Tab character
+
+c2hs/c/CLexer.x:351:1: Warning: Tab character
+
+c2hs/c/CLexer.x:352:1: Warning: Tab character
+
+c2hs/c/CLexer.x:353:1: Warning: Tab character
+
+c2hs/c/CLexer.x:365:9: Warning: Tab character
+
+c2hs/c/CLexer.x:366:11: Warning: Tab character
+
+c2hs/c/CLexer.x:367:13: Warning: Tab character
+
+c2hs/c/CLexer.x:368:11: Warning: Tab character
+
+c2hs/c/CLexer.x:368:56: Warning: Tab character
+
+c2hs/c/CLexer.x:369:1: Warning: Tab character
+
+c2hs/c/CLexer.x:370:1: Warning: Tab character
+
+c2hs/c/CLexer.x:370:40: Warning: Tab character
+
+c2hs/c/CLexer.x:371:1: Warning: Tab character
+
+c2hs/c/CLexer.x:371:32: Warning: Tab character
+
+c2hs/c/CLexer.x:390:29: Warning: Tab character
+
+c2hs/c/CLexer.x:391:1: Warning: Tab character
+
+c2hs/c/CLexer.x:391:26: Warning: Tab character
+
+c2hs/c/CLexer.x:438:1: Warning: Tab character
+[27 of 41] Compiling FNameOps         ( c2hs/base/general/FNameOps.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/FNameOps.o )
+[28 of 41] Compiling FileOps          ( c2hs/base/general/FileOps.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/FileOps.o )
+[29 of 41] Compiling CIO              ( c2hs/base/state/CIO.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CIO.o )
+
+c2hs/base/state/CIO.hs:77:1: Warning:
+    Module ‘System.Cmd’ is deprecated: Use "System.Process" instead
+[30 of 41] Compiling State            ( c2hs/base/state/State.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/State.o )
+[31 of 41] Compiling C2HSState        ( c2hs/state/C2HSState.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/C2HSState.o )
+[32 of 41] Compiling CHSLexer         ( c2hs/chs/CHSLexer.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CHSLexer.o )
+[33 of 41] Compiling CHS              ( c2hs/chs/CHS.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CHS.o )
+[34 of 41] Compiling GenHeader        ( c2hs/gen/GenHeader.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/GenHeader.o )
+[35 of 41] Compiling CTrav            ( c2hs/c/CTrav.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CTrav.o )
+[36 of 41] Compiling CNames           ( c2hs/c/CNames.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CNames.o )
+[37 of 41] Compiling CParser          ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CParser.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/CParser.o )
+[38 of 41] Compiling C                ( c2hs/c/C.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/C.o )
+[39 of 41] Compiling GBMonad          ( c2hs/gen/GBMonad.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/GBMonad.o )
+[40 of 41] Compiling GenBind          ( c2hs/gen/GenBind.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/GenBind.o )
+[41 of 41] Compiling Main             ( c2hs/toplevel/Main.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/gtk2hsC2hs/gtk2hsC2hs ...
+Installing executable(s) in
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/bin

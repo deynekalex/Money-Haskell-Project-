@@ -1,0 +1,34 @@
+[1 of 1] Compiling Main             ( /tmp/stack20147/lens-action-0.2.0.2/Setup.lhs, /tmp/stack20147/lens-action-0.2.0.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/Main.o )
+
+/tmp/stack20147/lens-action-0.2.0.2/Setup.lhs:7:1: Warning:
+    The import of ‘Package’
+    from module ‘Distribution.Package’ is redundant
+
+/tmp/stack20147/lens-action-0.2.0.2/Setup.lhs:10:1: Warning:
+    The import of ‘copyFiles’
+    from module ‘Distribution.Simple.Utils’ is redundant
+
+/tmp/stack20147/lens-action-0.2.0.2/Setup.lhs:12:1: Warning:
+    The import of ‘HaddockFlags, Flag, haddockDistPref’
+    from module ‘Distribution.Simple.Setup’ is redundant
+
+/tmp/stack20147/lens-action-0.2.0.2/Setup.lhs:14:1: Warning:
+    The import of ‘Distribution.Text’ is redundant
+      except perhaps to import instances from ‘Distribution.Text’
+    To import instances alone, use: import Distribution.Text()
+
+/tmp/stack20147/lens-action-0.2.0.2/Setup.lhs:15:1: Warning:
+    The import of ‘normal’
+    from module ‘Distribution.Verbosity’ is redundant
+Linking /tmp/stack20147/lens-action-0.2.0.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/setup ...
+Configuring lens-action-0.2.0.2...
+Building lens-action-0.2.0.2...
+Preprocessing library lens-action-0.2.0.2...
+[1 of 4] Compiling Control.Lens.Action.Internal ( src/Control/Lens/Action/Internal.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Control/Lens/Action/Internal.o )
+[2 of 4] Compiling Control.Lens.Action.Type ( src/Control/Lens/Action/Type.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Control/Lens/Action/Type.o )
+[3 of 4] Compiling Control.Lens.Action ( src/Control/Lens/Action.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Control/Lens/Action.o )
+[4 of 4] Compiling Control.Lens.Action.Reified ( src/Control/Lens/Action/Reified.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Control/Lens/Action/Reified.o )
+In-place registering lens-action-0.2.0.2...
+Installing library in
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/lens-action-0.2.0.2-Fg1o5RGNOuNA4g9Yj24nsW
+Registering lens-action-0.2.0.2...

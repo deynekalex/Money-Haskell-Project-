@@ -1,0 +1,2294 @@
+
+==================== FINAL INTERFACE ====================
+2016-01-24 12:11:20.489106 UTC
+
+interface main@main:Main [family instance module] 7103
+  interface hash: c39134145b98b401f22cd11c1b53eb11
+  ABI hash: ae8520eef6bf22f4dfa9fc95dc2d0c0e
+  export-list hash: 6938bc3b39c766d92cf8cd4563e29911
+  orphan hash: e506809d407b73e863eea75d7b416091
+  flag hash: 743ef5c5cfce12a97fce9fb4635757cb
+  sig of: Nothing
+  used TH splices: True
+  where
+exports:
+  Main.deleteByPos
+  Main.edit
+  Main.getAllNotes
+  Main.insert
+  Main.main
+  Main.AllNotes{Main.AllNotes}
+  Main.DeleteByPos{Main.DeleteByPos}
+  Main.Edit{Main.Edit}
+  Main.GetAllNotes{Main.GetAllNotes}
+  Main.Insert{Main.Insert}
+  Main.Note{Main.Note}
+module dependencies:
+package dependencies: acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim
+                      array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
+                      binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
+                      bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
+                      cairo-0.13.1.1@cairo_7irozPJ82Dr8q913AjxLYK
+                      cereal-0.4.1.1@cerea_GskkwdKSWUU2PP8FxH5aP8
+                      containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU
+                      deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
+                      directory-1.2.2.0@direc_0hFG6ZxK1nk4zsyOqbNHfm
+                      extensible-exceptions-0.1.1.4@exten_FEBYnjUcabpEXD3JqlYlJc
+                      filepath-1.4.0.0@filep_Ey7a1in9roBAE8bUFJ5R9m ghc-prim-0.4.0.0
+                      gio-0.13.1.1@gio_AIhtY67AQzE6P99VeqxNs9
+                      glib-0.13.2.2@glib_I50VnAx0lsAGkf2HUGy7ut
+                      gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p integer-gmp-1.0.0.0
+                      mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8
+                      network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ
+                      old-locale-1.0.0.7@oldlo_7h2Gx6mVPJ5Gheca8j9Mpe
+                      old-time-1.1.0.3@oldti_JVjJvknZJ0JKghfag2Jw2L
+                      pango-0.13.1.1@pango_2cIL87Bh7ZeLkiM5NMiqHc
+                      pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
+                      primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
+                      safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
+                      text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+                      unix-2.7.1.0@unix_KZL8h98IqDM57kQSPo1mKx
+                      utf8-string-1.0.1.1@utf8s_L8eKHa7Iv9q7FVKUYW6u4b
+                      vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi:Data.Binary.Generic
+         bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6:Data.ByteString.Builder
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Entry.Entry
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Entry.SpinButton
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.General.IconFactory
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.General.Structs
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.CellLayout
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeModel
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeModelFilter
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeModelSort
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Printing.PrintOperation
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Selectors.FileChooserButton
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Selectors.FileChooserDialog
+         gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Selectors.FileChooserWidget
+         network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network.Socket
+         network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network.Socket.Types
+         pango-0.13.1.1@pango_2cIL87Bh7ZeLkiM5NMiqHc:Graphics.Rendering.Pango.Font
+         safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.Instances
+         stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Show
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Fusion.Bundle
+         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntMap.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.IntSet.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
+                         containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
+                         template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text
+                         text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI:Data.Text.Lazy
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Primitive
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Storable
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed
+                         vector-0.11.0.0@vecto_LmZ3LQW4ivu8MsQuVgukln:Data.Vector.Unboxed.Base
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid 1f03f92d59060913df6ab47bd2b786f2
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Abstract 4bbfb7d5259d24a8a593ee6179703032
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Common 78109b2e5e9062517a38d456e64ee2ef
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Core 21ec61fdf562f7b81164a4ab943c4e09
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Local f7208571fb9ff084ed7f69bac6e64413
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Remote 7e2c8130d942c088680af4bd3416a1b6
+import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.TemplateHaskell dd3c57c767f2fdff3299e52d5908f78a
+import  -/  base-4.8.2.0:Control.Applicative a8ebf5ad4932b411ad7725da68be9801
+import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
+import  -/  base-4.8.2.0:Data.Typeable c3fcb0780ec05399195ad3277b18d294
+import  -/  base-4.8.2.0:Data.Typeable.Internal 76b09e88499fa4ff7869a34e89976afb
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.Environment ba6e36000c8274703cf7786fbe8d0f6c
+import  -/  base-4.8.2.0:System.Exit f5581af4ad998e898da01fdc74c2769b
+import  -/  base-4.8.2.0:System.IO 0248c1e850b7ea124cf7a2e1669ebf67
+import  -/  cereal-0.4.1.1@cerea_GskkwdKSWUU2PP8FxH5aP8:Data.Serialize.Get f77726e1877654775b8f6c34d4e22edc
+import  -/  containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map 1800ccac43fd924c376b60eac12f4d04
+import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  glib-0.13.2.2@glib_I50VnAx0lsAGkf2HUGy7ut:System.Glib.Attributes d0f933c4529fcef648e8baa2c20e4c02
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk 53a740fcf222cfb90cbfe31136239249
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Abstract.Box 5d1bc2992606864851962804c8c0c640
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Abstract.Container aeac2e684df928c3d60410cde42d8500
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Abstract.Widget 22f028ccfef151b7eadbd2b38464e7e3
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Buttons.Button 39b5513fc0ac5bb2a575d65470527e1e
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Display.Label f9a8b84b44dc72ffacf8705ec82ac9f3
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Entry.Entry 4e9eb2ba7db50a305b955b63a65cf79a
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.General.Enums 26aade95c1ea742b7f7754967695a878
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.General.General fdcd5ae78157d711087a1c585914b519
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Layout.HBox 968d9338206b3d6d87c299e53e2d1060
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Layout.VBox b50c7a74eb43481ddda9214b068f060e
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView cecc99fe9e3a1a8bb7adead491549100
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.CellLayout 689dde00709fb262bddff61c0a61d1ba
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.CellRendererText 81f35d478feb1435ba5af802fddb6062
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.ListStore 482a162411c7ec723dc43e0f0198cfbc
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeSelection cb8133eec5be13377169b83e982ae267
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeView fec201d86a7709435c870fa54d0ace87
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeViewColumn f134993d9216dc766265e65056ff5072
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Windows.Window 6c237c0e03f5757d94d3c0657996efb9
+import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.Reader 5d43a64348db8e4860adc3213d905c28
+import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.Reader.Class e7b714ea62f67bcf45e3abed40e559d5
+import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.State 3c8114545920fee1e57c3d7a07c2d0d7
+import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.State.Class 71cb030be928f92f7d8f2a86db6e1cae
+import  -/  network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network d25c46ceea5e9d1702f96f77c5fca775
+import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy 0ee67ce211ee529e8ecad623d77b93eb
+import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.Derive 3803886bbd195965da078889c31c7d39
+import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6ef4c4107ccbb539ef1879ad2c5d1159
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes :: Data.Acid.Common.IsAcidic Main.AllNotes
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.AllNotes
+                  Main.$fSafeCopyAllNotes
+                  Main.$fIsAcidicAllNotes_$cacidEvents -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes1 :: [Data.Acid.Common.Event Main.AllNotes]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Acid.Common.Event Main.AllNotes)
+                   Main.$fIsAcidicAllNotes9
+                     `cast`
+                   (Data.Acid.Common.Event (Main.TFCo:R:MethodStateDeleteByPos[0]))_R
+                   Main.$fIsAcidicAllNotes2) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes10 ::
+    GHC.Types.Int
+    -> Main.AllNotes
+    -> Data.Functor.Identity.Identity ((), Main.AllNotes)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Int w1 :: Main.AllNotes ->
+                 case w1 of ww { Main.AllNotes ww1 ->
+                 case Main.$wa1 w ww1 of ww2 { (#,#) ww3 ww4 ->
+                 (ww3, ww4)
+                   `cast`
+                 (Sym (Data.Functor.Identity.NTCo:Identity[0]
+                           <((), Main.AllNotes)>_R)) } }) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes11 ::
+    Data.Acid.Common.Event (Data.Acid.Core.MethodState Main.Insert)
+  {- Unfolding: (Data.Acid.Common.UpdateEvent
+                   @ (Data.Acid.Core.MethodState Main.Insert)
+                   @ Main.Insert
+                   @~ <Data.Acid.Core.MethodState Main.Insert>_N
+                   Main.$fMethodInsert
+                     `cast`
+                   (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Insert>_N)
+                   Main.$fIsAcidicAllNotes12
+                     `cast`
+                   (Sym (Main.NTCo:Insert[0])
+                    ->_R Trans
+                             (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                       <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
+                             (Sym (Data.Acid.Common.NTCo:Update[0]
+                                       (Main.TFCo:R:MethodStateInsert[0])) (Sym (Main.TFCo:R:MethodResultInsert[0]))))) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes12 ::
+    GHC.Base.String
+    -> Main.AllNotes
+    -> Data.Functor.Identity.Identity ((), Main.AllNotes)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(1*U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ record :: GHC.Base.String eta :: Main.AllNotes ->
+                 case eta of wild { Main.AllNotes ns ->
+                 (GHC.Tuple.(),
+                  Main.AllNotes
+                    (GHC.Base.augment
+                       @ Main.Note
+                       (\ @ b c :: Main.Note -> b -> b[OneShot] n :: b[OneShot] ->
+                        GHC.Base.foldr @ Main.Note @ b c n ns)
+                       (GHC.Types.:
+                          @ Main.Note
+                          (Main.Note record)
+                          (GHC.Types.[] @ Main.Note))))
+                   `cast`
+                 (Sym (Data.Functor.Identity.NTCo:Identity[0]
+                           <((), Main.AllNotes)>_R)) }) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes2 :: [Data.Acid.Common.Event Main.AllNotes]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Acid.Common.Event Main.AllNotes)
+                   Main.$fIsAcidicAllNotes6
+                     `cast`
+                   (Data.Acid.Common.Event (Main.TFCo:R:MethodStateEdit[0]))_R
+                   Main.$fIsAcidicAllNotes3) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes3 :: [Data.Acid.Common.Event Main.AllNotes]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Acid.Common.Event Main.AllNotes)
+                   Main.$fIsAcidicAllNotes4
+                     `cast`
+                   (Data.Acid.Common.Event (Main.TFCo:R:MethodStateGetAllNotes[0]))_R
+                   (GHC.Types.[] @ (Data.Acid.Common.Event Main.AllNotes))) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes4 ::
+    Data.Acid.Common.Event
+      (Data.Acid.Core.MethodState Main.GetAllNotes)
+  {- Unfolding: (Data.Acid.Common.QueryEvent
+                   @ (Data.Acid.Core.MethodState Main.GetAllNotes)
+                   @ Main.GetAllNotes
+                   @~ <Data.Acid.Core.MethodState Main.GetAllNotes>_N
+                   Main.$fMethodGetAllNotes
+                     `cast`
+                   (Sym (Data.Acid.Common.NTCo:QueryEvent[0]) <Main.GetAllNotes>_N)
+                   Main.$fIsAcidicAllNotes5
+                     `cast`
+                   (<Main.GetAllNotes>_R
+                    ->_R Trans
+                             (Sym (Control.Monad.Trans.Reader.NTCo:ReaderT[0]
+                                       <Data.Acid.Common.EventState Main.GetAllNotes>_R
+                                       <Data.Functor.Identity.Identity>_R
+                                       <Data.Acid.Common.EventResult Main.GetAllNotes>_N))
+                             (Sym (Data.Acid.Common.NTCo:Query[0]
+                                       <Data.Acid.Common.EventState
+                                          Main.GetAllNotes>_R) <Data.Acid.Common.EventResult
+                                                                  Main.GetAllNotes>_N))) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes5 ::
+    Main.GetAllNotes
+    -> Data.Acid.Common.EventState Main.GetAllNotes
+    -> Data.Functor.Identity.Identity
+         (Data.Acid.Common.EventResult Main.GetAllNotes)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*H><S(S),1*U(1*U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Main.GetAllNotes
+                   eta :: Data.Acid.Common.EventState Main.GetAllNotes ->
+                 case ds of wild { Main.GetAllNotes ->
+                 case eta
+                        `cast`
+                      (Sub (Main.TFCo:R:MethodStateGetAllNotes[0])) of wild1 { Main.AllNotes ns ->
+                 ns
+                   `cast`
+                 (Sym (Data.Functor.Identity.NTCo:Identity[0]
+                           (Sub (Main.TFCo:R:MethodResultGetAllNotes[0])))) } }) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes6 ::
+    Data.Acid.Common.Event (Data.Acid.Core.MethodState Main.Edit)
+  {- Unfolding: (Data.Acid.Common.UpdateEvent
+                   @ (Data.Acid.Core.MethodState Main.Edit)
+                   @ Main.Edit
+                   @~ <Data.Acid.Core.MethodState Main.Edit>_N
+                   Main.$fMethodEdit
+                     `cast`
+                   (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Edit>_N)
+                   Main.$fIsAcidicAllNotes7
+                     `cast`
+                   (<Main.Edit>_R
+                    ->_R Trans
+                             (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                       <Data.Acid.Common.EventState Main.Edit>_N
+                                       <Data.Functor.Identity.Identity>_R
+                                       <Data.Acid.Common.EventResult Main.Edit>_N))
+                             (Sym (Data.Acid.Common.NTCo:Update[0]
+                                       <Data.Acid.Common.EventState
+                                          Main.Edit>_N) <Data.Acid.Common.EventResult
+                                                           Main.Edit>_N))) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes7 ::
+    Main.Edit
+    -> Data.Acid.Common.EventState Main.Edit
+    -> Data.Functor.Identity.Identity
+         (Data.Acid.Common.EventResult Main.Edit,
+          Data.Acid.Common.EventState Main.Edit)
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U),U)><S,1*U(U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ ds :: Main.Edit eta :: Data.Acid.Common.EventState Main.Edit ->
+                 case ds of wild { Main.Edit arg arg1 ->
+                 (Main.$fIsAcidicAllNotes8
+                    arg
+                    arg1
+                    eta `cast` (Sub (Main.TFCo:R:MethodStateEdit[0])))
+                   `cast`
+                 (Data.Functor.Identity.Identity
+                    ((Sub (Sym (Main.TFCo:R:MethodResultEdit[0])),
+                      Sub (Sym (Main.TFCo:R:MethodStateEdit[0]))))_R)_R }) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes8 ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> Main.AllNotes
+    -> Data.Functor.Identity.Identity ((), Main.AllNotes)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U(U)><L,U><S,1*U(U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ w :: GHC.Types.Int w1 :: GHC.Base.String w2 :: Main.AllNotes ->
+                 case w2 of ww { Main.AllNotes ww1 ->
+                 case Main.$wa w w1 ww1 of ww2 { (#,#) ww3 ww4 ->
+                 (ww3, ww4)
+                   `cast`
+                 (Sym (Data.Functor.Identity.NTCo:Identity[0]
+                           <((), Main.AllNotes)>_R)) } }) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes9 ::
+    Data.Acid.Common.Event
+      (Data.Acid.Core.MethodState Main.DeleteByPos)
+  {- Unfolding: (Data.Acid.Common.UpdateEvent
+                   @ (Data.Acid.Core.MethodState Main.DeleteByPos)
+                   @ Main.DeleteByPos
+                   @~ <Data.Acid.Core.MethodState Main.DeleteByPos>_N
+                   Main.$fMethodDeleteByPos
+                     `cast`
+                   (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.DeleteByPos>_N)
+                   Main.$fIsAcidicAllNotes10
+                     `cast`
+                   (Sym (Main.NTCo:DeleteByPos[0])
+                    ->_R Trans
+                             (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                       <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
+                             (Sym (Data.Acid.Common.NTCo:Update[0]
+                                       (Main.TFCo:R:MethodStateDeleteByPos[0])) (Sym (Main.TFCo:R:MethodResultDeleteByPos[0]))))) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fIsAcidicAllNotes_$cacidEvents ::
+    [Data.Acid.Common.Event Main.AllNotes]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Data.Acid.Common.Event Main.AllNotes)
+                   Main.$fIsAcidicAllNotes11
+                     `cast`
+                   (Data.Acid.Common.Event (Main.TFCo:R:MethodStateInsert[0]))_R
+                   Main.$fIsAcidicAllNotes1) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fMethodDeleteByPos :: Data.Acid.Core.Method Main.DeleteByPos
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.DeleteByPos
+                  Main.$fMethodDeleteByPos_$dTypeable
+                  Main.$fSafeCopyDeleteByPos
+                  Main.$fMethodEdit3
+                    `cast`
+                  (Data.Typeable.Internal.Typeable
+                     <*>_N (Sym (Main.TFCo:R:MethodResultDeleteByPos[0])))_R
+                  Data.SafeCopy.Instances.$fSafeCopy()
+                    `cast`
+                  (Data.SafeCopy.SafeCopy.SafeCopy
+                     (Sym (Main.TFCo:R:MethodResultDeleteByPos[0])))_R
+                  Main.$fMethodDeleteByPos_$cmethodTag -}
+62c9f477c2fc7229fa17054b2bc70c6a
+  $fMethodDeleteByPos1 :: Data.ByteString.Lazy.Internal.ByteString
+  {- Unfolding: (Data.ByteString.Lazy.Internal.packChars_$spackChunks
+                   32
+                   Main.$fMethodDeleteByPos2) -}
+b9ae6c881a173e55f95f488f01234b9b
+  $fMethodDeleteByPos2 :: [GHC.Types.Char]
+  {- Unfolding: (Data.Acid.Core.$wshowQualifiedTypeRep
+                   __word 1142583151705468306
+                   __word 5438392071052339976
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodDeleteByPos_ww4
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fMethodDeleteByPos3 ::
+    GHC.Prim.Proxy# Main.DeleteByPos -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ wild :: GHC.Prim.Proxy# Main.DeleteByPos ->
+                 Main.$fMethodDeleteByPos4) -}
+c0f664fea239c7a2efd84bdc4aafe1b9
+  $fMethodDeleteByPos4 :: Data.Typeable.Internal.TypeRep
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TypeRep
+                   __word 1142583151705468306
+                   __word 5438392071052339976
+                   Main.$fMethodDeleteByPos_wild
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fMethodDeleteByPos_$cmethodTag ::
+    Main.DeleteByPos -> Data.Acid.Core.Tag
+  {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ w :: Main.DeleteByPos -> Main.$fMethodDeleteByPos1) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fMethodDeleteByPos_$dTypeable ::
+    Data.Typeable.Internal.Typeable Main.DeleteByPos
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodDeleteByPos3
+                  `cast`
+                (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                          <*>_N <Main.DeleteByPos>_N)) -}
+500434866996c6d2bd9074e26562db53
+  $fMethodDeleteByPos_wild :: Data.Typeable.Internal.TyCon
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 1142583151705468306
+                   __word 5438392071052339976
+                   Main.$fMethodGetAllNotes_ww7
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodDeleteByPos_ww4) -}
+228b428c95eded6f9a7251e8aff5933b
+  $fMethodDeleteByPos_ww4 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "DeleteByPos"#) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fMethodEdit :: Data.Acid.Core.Method Main.Edit
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Edit
+                  Main.$fMethodEdit_$dTypeable
+                  Main.$fSafeCopyEdit
+                  Main.$fMethodEdit3
+                    `cast`
+                  (Data.Typeable.Internal.Typeable
+                     <*>_N (Sym (Main.TFCo:R:MethodResultEdit[0])))_R
+                  Data.SafeCopy.Instances.$fSafeCopy()
+                    `cast`
+                  (Data.SafeCopy.SafeCopy.SafeCopy
+                     (Sym (Main.TFCo:R:MethodResultEdit[0])))_R
+                  Main.$fMethodEdit_$cmethodTag -}
+2101b785f9200767b8b7c99699a2a23b
+  $fMethodEdit1 :: Data.ByteString.Lazy.Internal.ByteString
+  {- Unfolding: (Data.ByteString.Lazy.Internal.packChars_$spackChunks
+                   32
+                   Main.$fMethodEdit2) -}
+012a78cae6100aab69ab768b949c0e1c
+  $fMethodEdit2 :: [GHC.Types.Char]
+  {- Unfolding: (Data.Acid.Core.$wshowQualifiedTypeRep
+                   __word 17571606368791182742
+                   __word 18329250896633895035
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodEdit_ww4
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+ea10b9e5b06be7aff7255728ff57fdbb
+  $fMethodEdit3 :: Data.Typeable.Internal.Typeable ()
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodEdit4
+                  `cast`
+                (Sym (Data.Typeable.Internal.NTCo:Typeable[0] <*>_N <()>_N)) -}
+c5f873fea8ca4869d556da04036c043c
+  $fMethodEdit4 ::
+    GHC.Prim.Proxy# () -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ wild :: GHC.Prim.Proxy# () -> Main.$fMethodEdit5) -}
+d045cb2f08cf6c2cf95a967fc268251c
+  $fMethodEdit5 :: Data.Typeable.Internal.TypeRep
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TypeRep
+                   __word 15843165073189925570
+                   __word 13730769858450861905
+                   Main.$fMethodEdit_wild
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fMethodEdit6 ::
+    GHC.Prim.Proxy# Main.Edit -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ wild :: GHC.Prim.Proxy# Main.Edit -> Main.$fMethodEdit7) -}
+d0370d758d1440800babd57a02726ea9
+  $fMethodEdit7 :: Data.Typeable.Internal.TypeRep
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TypeRep
+                   __word 17571606368791182742
+                   __word 18329250896633895035
+                   Main.$fMethodEdit_wild1
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fMethodEdit_$cmethodTag :: Main.Edit -> Data.Acid.Core.Tag
+  {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ w :: Main.Edit -> Main.$fMethodEdit1) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fMethodEdit_$dTypeable ::
+    Data.Typeable.Internal.Typeable Main.Edit
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodEdit6
+                  `cast`
+                (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                          <*>_N <Main.Edit>_N)) -}
+a2ed1cce532b8e346e28c4f10ce178bd
+  $fMethodEdit_wild :: Data.Typeable.Internal.TyCon
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 15843165073189925570
+                   __word 13730769858450861905
+                   Main.$fMethodGetAllNotes_ww6
+                   Main.$fMethodEdit_ww3
+                   Main.$fMethodEdit_ww1) -}
+644c98595f46a45e412ad9dda59805c0
+  $fMethodEdit_wild1 :: Data.Typeable.Internal.TyCon
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 17571606368791182742
+                   __word 18329250896633895035
+                   Main.$fMethodGetAllNotes_ww7
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodEdit_ww4) -}
+0c850f7b0b1b90cf2fa7938e240a07f5
+  $fMethodEdit_ww1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "()"#) -}
+a2c035c6d0428e15a4516ac4fa092be6
+  $fMethodEdit_ww3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "GHC.Tuple"#) -}
+1f25bc1c357e03f0cb54ef3218769d76
+  $fMethodEdit_ww4 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "Edit"#) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes :: Data.Acid.Core.Method Main.GetAllNotes
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.GetAllNotes
+                  Main.$fMethodGetAllNotes_$dTypeable
+                  Main.$fSafeCopyGetAllNotes
+                  Main.$fMethodGetAllNotes4
+                    `cast`
+                  (Data.Typeable.Internal.Typeable
+                     <*>_N (Sym (Main.TFCo:R:MethodResultGetAllNotes[0])))_R
+                  Main.$fMethodGetAllNotes3
+                    `cast`
+                  (Data.SafeCopy.SafeCopy.SafeCopy
+                     (Sym (Main.TFCo:R:MethodResultGetAllNotes[0])))_R
+                  Main.$fMethodGetAllNotes_$cmethodTag -}
+86853233fae914e03aefdaa4deb7bd17
+  $fMethodGetAllNotes1 :: Data.ByteString.Lazy.Internal.ByteString
+  {- Unfolding: (Data.ByteString.Lazy.Internal.packChars_$spackChunks
+                   32
+                   Main.$fMethodGetAllNotes2) -}
+917cbec9be546d752420ebbbeb7c8b71
+  $fMethodGetAllNotes10 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Types.:
+                   @ Data.Typeable.Internal.TypeRep
+                   Main.$fMethodGetAllNotes11
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+1ab48d960de208ce07228df1f010c555
+  $fMethodGetAllNotes11 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (Data.Typeable.Internal.TypeRep
+                   __word 9558220504458885597
+                   __word 1071257063104178601
+                   Main.$fMethodGetAllNotes12
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+832f009279bc8953084442622357fda6
+  $fMethodGetAllNotes12 :: Data.Typeable.Internal.TyCon
+  {- Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 9558220504458885597
+                   __word 1071257063104178601
+                   Main.$fMethodGetAllNotes_ww7
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodGetAllNotes13) -}
+7b1cebf28e78434f6796d1da9b9223e4
+  $fMethodGetAllNotes13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Note"#) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes14 ::
+    GHC.Prim.Proxy# Main.GetAllNotes -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ wild :: GHC.Prim.Proxy# Main.GetAllNotes ->
+                 Main.$fMethodGetAllNotes15) -}
+622337bbe03d40c3ba8ccb27588aa19c
+  $fMethodGetAllNotes15 :: Data.Typeable.Internal.TypeRep
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TypeRep
+                   __word 6719339004300044088
+                   __word 6729700143971619412
+                   Main.$fMethodGetAllNotes_wild1
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+f818056d73a9a0fc29182f4712c5ecdf
+  $fMethodGetAllNotes2 :: [GHC.Types.Char]
+  {- Unfolding: (Data.Acid.Core.$wshowQualifiedTypeRep
+                   __word 6719339004300044088
+                   __word 6729700143971619412
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodGetAllNotes_ww4
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes3 :: Data.SafeCopy.SafeCopy.SafeCopy [Main.Note]
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodGetAllNotes_$s$fSafeCopy[] -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes4 :: Data.Typeable.Internal.Typeable [Main.Note]
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodGetAllNotes5
+                  `cast`
+                (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                          <*>_N <[Main.Note]>_N)) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes5 ::
+    GHC.Prim.Proxy# [Main.Note] -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ wild :: GHC.Prim.Proxy# [Main.Note] ->
+                 Main.$fMethodGetAllNotes6) -}
+76c3ffd94ecb6e01e9896f0020d07adc
+  $fMethodGetAllNotes6 :: Data.Typeable.Internal.TypeRep
+  {- Unfolding: (case Main.$fMethodGetAllNotes_w1 of wild2 {
+                   []
+                   -> Data.Typeable.Internal.TypeRep
+                        __word 17730107610217102821
+                        __word 9866972337190828755
+                        Main.$fMethodGetAllNotes_wild
+                        (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                        (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   : ipv ipv1
+                   -> case GHC.Fingerprint.fingerprintFingerprints
+                             Main.$fMethodGetAllNotes7 of dt { GHC.Fingerprint.Type.Fingerprint dt1 dt2 ->
+                      Data.Typeable.Internal.TypeRep
+                        dt1
+                        dt2
+                        Main.$fMethodGetAllNotes_wild
+                        (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                        wild2 } }) -}
+e7a3fb02ad5c8a05fbeac48d072ba302
+  $fMethodGetAllNotes7 :: [GHC.Fingerprint.Type.Fingerprint]
+  {- Unfolding: (GHC.Types.:
+                   @ GHC.Fingerprint.Type.Fingerprint
+                   Main.$fMethodGetAllNotes9
+                   Main.$fMethodGetAllNotes8) -}
+df69a3cfe1a225a48b8ec46e05aa4888
+  $fMethodGetAllNotes8 :: [GHC.Fingerprint.Type.Fingerprint]
+  {- Unfolding: (Main.$fMethodGetAllNotes_go
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)) -}
+10833c58cdc500a6f971f792a3ac978c
+  $fMethodGetAllNotes9 :: GHC.Fingerprint.Type.Fingerprint
+  {- HasNoCafRefs,
+     Unfolding: (GHC.Fingerprint.Type.Fingerprint
+                   __word 17730107610217102821
+                   __word 9866972337190828755) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes_$cmethodTag ::
+    Main.GetAllNotes -> Data.Acid.Core.Tag
+  {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ w :: Main.GetAllNotes -> Main.$fMethodGetAllNotes1) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes_$dTypeable ::
+    Data.Typeable.Internal.Typeable Main.GetAllNotes
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodGetAllNotes14
+                  `cast`
+                (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                          <*>_N <Main.GetAllNotes>_N)) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes_$s$fSafeCopy[] ::
+    Data.SafeCopy.SafeCopy.SafeCopy [Main.Note]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ [Main.Note]
+                  (Data.SafeCopy.Instances.$fSafeCopy[]_$cversion
+                     @ Main.Note
+                     Main.$fSafeCopyNote)
+                  Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$ckind
+                  (Data.SafeCopy.Instances.$fSafeCopy[]_$cgetCopy
+                     @ Main.Note
+                     Main.$fSafeCopyNote)
+                  (Data.SafeCopy.Instances.$fSafeCopy[]_$cputCopy
+                     @ Main.Note
+                     Main.$fSafeCopyNote)
+                  Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$cinternalConsistency
+                  (Data.SafeCopy.Instances.$fSafeCopy[]_$cobjectProfile
+                     @ Main.Note
+                     Main.$fSafeCopyNote)
+                  Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$cerrorTypeName -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes_$s$fSafeCopy[]_$cerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy [Main.Note] -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.Instances.$fSafeCopy[]4 @ Main.Note) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes_$s$fSafeCopy[]_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency [Main.Note]
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ [Main.Note]) -}
+6db5827a9a31e99039a03909ae94236b
+  $fMethodGetAllNotes_$s$fSafeCopy[]_$ckind ::
+    Data.SafeCopy.SafeCopy.Kind [Main.Note]
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Base @ [Main.Note]) -}
+d97fca44a5fd9d6b95511721888d2844
+  $fMethodGetAllNotes_go ::
+    [Data.Typeable.Internal.TypeRep]
+    -> [GHC.Fingerprint.Type.Fingerprint]
+  {- Arity: 1, Strictness: <S,1*U> -}
+5092543109ed7e658bfa70e9f778dbf1
+  $fMethodGetAllNotes_w1 :: [Data.Typeable.Internal.TypeRep]
+  {- Unfolding: (GHC.Base.++
+                   @ Data.Typeable.Internal.TypeRep
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)
+                   Main.$fMethodGetAllNotes10) -}
+88646f1acb79968cdda74eac2e058e93
+  $fMethodGetAllNotes_wild :: Data.Typeable.Internal.TyCon
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 17730107610217102821
+                   __word 9866972337190828755
+                   Main.$fMethodGetAllNotes_ww6
+                   Main.$fMethodGetAllNotes_ww2
+                   Main.$fMethodGetAllNotes_ww1) -}
+bb7db19f8550da79a73f56b8aa48f216
+  $fMethodGetAllNotes_wild1 :: Data.Typeable.Internal.TyCon
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 6719339004300044088
+                   __word 6729700143971619412
+                   Main.$fMethodGetAllNotes_ww7
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodGetAllNotes_ww4) -}
+1be6a159735b24efbf28d24c464cf960
+  $fMethodGetAllNotes_ww1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "[]"#) -}
+c3b2f514ca23d4a52ef5708706fe884e
+  $fMethodGetAllNotes_ww2 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "GHC.Types"#) -}
+d646d01e8574aa0b8ccce54e58bcf916
+  $fMethodGetAllNotes_ww3 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "Main"#) -}
+2d9e4d36dcaba2712efaa36d3c6913de
+  $fMethodGetAllNotes_ww4 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "GetAllNotes"#) -}
+7dcec2200886d89556b6daf412034418
+  $fMethodGetAllNotes_ww6 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "ghc-prim"#) -}
+bdbcc584d538be3ac5558b5212634d74
+  $fMethodGetAllNotes_ww7 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "main"#) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fMethodInsert :: Data.Acid.Core.Method Main.Insert
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Insert
+                  Main.$fMethodInsert_$dTypeable
+                  Main.$fSafeCopyInsert
+                  Main.$fMethodEdit3
+                    `cast`
+                  (Data.Typeable.Internal.Typeable
+                     <*>_N (Sym (Main.TFCo:R:MethodResultInsert[0])))_R
+                  Data.SafeCopy.Instances.$fSafeCopy()
+                    `cast`
+                  (Data.SafeCopy.SafeCopy.SafeCopy
+                     (Sym (Main.TFCo:R:MethodResultInsert[0])))_R
+                  Main.$fMethodInsert_$cmethodTag -}
+df26176b63b1d35d506c15f4247a25e5
+  $fMethodInsert1 :: Data.ByteString.Lazy.Internal.ByteString
+  {- Unfolding: (Data.ByteString.Lazy.Internal.packChars_$spackChunks
+                   32
+                   Main.$fMethodInsert2) -}
+090ae306e8b86fc757edb105afe670dc
+  $fMethodInsert2 :: [GHC.Types.Char]
+  {- Unfolding: (Data.Acid.Core.$wshowQualifiedTypeRep
+                   __word 4791082895813723390
+                   __word 16267070148350681097
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodInsert_ww4
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fMethodInsert3 ::
+    GHC.Prim.Proxy# Main.Insert -> Data.Typeable.Internal.TypeRep
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ wild :: GHC.Prim.Proxy# Main.Insert -> Main.$fMethodInsert4) -}
+c13619701dcfc5210e71443003ea7b0a
+  $fMethodInsert4 :: Data.Typeable.Internal.TypeRep
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TypeRep
+                   __word 4791082895813723390
+                   __word 16267070148350681097
+                   Main.$fMethodInsert_wild
+                   (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
+                   (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fMethodInsert_$cmethodTag :: Main.Insert -> Data.Acid.Core.Tag
+  {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, True)
+                (\ w :: Main.Insert -> Main.$fMethodInsert1) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fMethodInsert_$dTypeable ::
+    Data.Typeable.Internal.Typeable Main.Insert
+  {- Arity: 1, Strictness: <L,A>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fMethodInsert3
+                  `cast`
+                (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
+                          <*>_N <Main.Insert>_N)) -}
+5063298590e77e9c3673683932f96584
+  $fMethodInsert_wild :: Data.Typeable.Internal.TyCon
+  {- Strictness: m,
+     Unfolding: (Data.Typeable.Internal.TyCon
+                   __word 4791082895813723390
+                   __word 16267070148350681097
+                   Main.$fMethodGetAllNotes_ww7
+                   Main.$fMethodGetAllNotes_ww3
+                   Main.$fMethodInsert_ww4) -}
+073647acab04a783f07b41557a59beec
+  $fMethodInsert_ww4 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString# "Insert"#) -}
+6db5827a9a31e99039a03909ae94236b
+  $fQueryEventGetAllNotes ::
+    Data.Acid.Common.QueryEvent Main.GetAllNotes
+  DFunId[0]
+  {- Strictness: m, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Main.$fMethodGetAllNotes
+                  `cast`
+                (Sym (Data.Acid.Common.NTCo:QueryEvent[0]) <Main.GetAllNotes>_N) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes :: Data.SafeCopy.SafeCopy.SafeCopy Main.AllNotes
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.AllNotes
+                  Main.$fSafeCopyAllNotes_$cversion
+                  (Data.SafeCopy.SafeCopy.base @ Main.AllNotes)
+                  Main.$fSafeCopyAllNotes_$cgetCopy
+                  Main.$fSafeCopyAllNotes_$cputCopy
+                  Main.$fSafeCopyAllNotes_$cinternalConsistency
+                  Main.$fSafeCopyAllNotes_$cobjectProfile
+                  Main.$fSafeCopyAllNotes_$cerrorTypeName -}
+8f40cd0d3f34009b223665f59d6bee29
+  $fSafeCopyAllNotes1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Main.AllNotes"#) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes2 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success Main.AllNotes r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,U><L,C(C1(C1(C1(U))))><L,C(C1(C1(C1(U))))>,
+     Unfolding: (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   kf :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success Main.AllNotes r ->
+                 let {
+                   kf1 :: Data.Serialize.Get.Failure r
+                     {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U>,
+                        Unfolding: InlineRule (4, True, False)
+                                   (\ s1 :: Data.Serialize.Get.Input
+                                      b1 :: Data.Serialize.Get.Buffer
+                                      m1 :: Data.Serialize.Get.More
+                                      ls :: [GHC.Base.String] ->
+                                    kf
+                                      s1
+                                      b1
+                                      m1
+                                      (GHC.Types.:
+                                         @ GHC.Base.String
+                                         Main.$fSafeCopyAllNotes5
+                                         ls)) -}
+                   = \ s1 :: Data.Serialize.Get.Input
+                       b1 :: Data.Serialize.Get.Buffer
+                       m1 :: Data.Serialize.Get.More
+                       ls :: [GHC.Base.String] ->
+                     kf
+                       s1
+                       b1
+                       m1
+                       (GHC.Types.: @ GHC.Base.String Main.$fSafeCopyAllNotes5 ls)
+                 } in
+                 Main.$fSafeCopyAllNotes4
+                   `cast`
+                 (Data.Serialize.Get.NTCo:Get[0]
+                      <Data.Serialize.Get.Get [Main.Note]>_R)
+                   @ r
+                   s0
+                   b0
+                   m0
+                   kf1
+                   (\ s1 :: Data.Serialize.Get.Input
+                      b1 :: Data.Serialize.Get.Buffer
+                      m1 :: Data.Serialize.Get.More
+                      a26 :: Data.Serialize.Get.Get [Main.Note] ->
+                    Data.Serialize.Get.$fAlternativeGet5
+                      @ [Main.Note]
+                      @ Main.AllNotes
+                      Main.$fSafeCopyAllNotes3
+                        `cast`
+                      (Sym (Data.Serialize.Get.NTCo:Get[0]
+                                <[Main.Note] -> Main.AllNotes>_R))
+                      a26
+                      @ r
+                      s1
+                      b1
+                      m1
+                      kf1
+                      ks)) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes3 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success ([Main.Note] -> Main.AllNotes) r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (5, True, True)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   ds :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success
+                           ([Main.Note] -> Main.AllNotes) r ->
+                 ks s0 b0 m0 Main.AllNotes) -}
+6869e5166b201394a049a780c1994359
+  $fSafeCopyAllNotes4 ::
+    Data.Serialize.Get.Get (Data.Serialize.Get.Get [Main.Note])
+  {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
+                   @ [Main.Note]
+                   Main.$fMethodGetAllNotes_$s$fSafeCopy[]) -}
+2abd495e4c38be4a542714ad43cbcd80
+  $fSafeCopyAllNotes5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Main.AllNotes:"#) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes_$cerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy Main.AllNotes -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.AllNotes ->
+                 Main.$fSafeCopyAllNotes1) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes_$cgetCopy ::
+    Data.SafeCopy.SafeCopy.Contained
+      (Data.Serialize.Get.Get Main.AllNotes)
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,U><L,C(C1(C1(C1(U))))><L,C(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyAllNotes2
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                          (Data.Serialize.Get.NTCo:Get[0] <Main.AllNotes>_R))) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency Main.AllNotes
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ Main.AllNotes) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes_$cobjectProfile ::
+    Data.SafeCopy.SafeCopy.Profile Main.AllNotes
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes_$cputCopy ::
+    Main.AllNotes
+    -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
+  {- Arity: 1, Strictness: <S,1*U(U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Main.AllNotes ->
+                 case w of ww { Main.AllNotes ww1 ->
+                 let {
+                   a26 :: Data.Serialize.Builder.Builder
+                   = case Data.SafeCopy.Instances.$w$cputCopy6
+                            @ Main.Note
+                            Main.$fSafeCopyNote
+                            ww1 of ww2 { (#,#) ww3 ww4 ->
+                     ww4 }
+                 } in
+                 (Data.Serialize.Put.PairS
+                    @ ()
+                    GHC.Tuple.()
+                    (\ x :: Data.Serialize.Builder.Buffer
+                            -> [Data.ByteString.Internal.ByteString] ->
+                     Main.$fSafeCopyAllNotes_a20
+                       `cast`
+                     (Data.Serialize.Builder.NTCo:Builder[0])
+                       (a26 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x))
+                      `cast`
+                    (Sym (Data.Serialize.Builder.NTCo:Builder[0])))
+                   `cast`
+                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                           (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $fSafeCopyAllNotes_$cversion ::
+    Data.SafeCopy.SafeCopy.Version Main.AllNotes
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote6
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.AllNotes>_P)) -}
+5b2f65340e16d85efc68217de8de6e2a
+  $fSafeCopyAllNotes_a20 :: Data.Serialize.Builder.Builder
+  {- Unfolding: (case Data.Serialize.$w$cput15
+                        Main.$fSafeCopyNote6 of ww { (#,#) ww1 ww2 ->
+                 ww2 }) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos ::
+    Data.SafeCopy.SafeCopy.SafeCopy Main.DeleteByPos
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.DeleteByPos
+                  Main.$fSafeCopyDeleteByPos_$cversion
+                  Main.$fSafeCopyDeleteByPos_$s$dmkind
+                  Main.$fSafeCopyDeleteByPos_$cgetCopy
+                  Main.$fSafeCopyDeleteByPos_$cputCopy
+                  Main.$fSafeCopyDeleteByPos_$cinternalConsistency
+                  Main.$fSafeCopyDeleteByPos_$cobjectProfile
+                  Main.$fSafeCopyDeleteByPos_$s$dmerrorTypeName -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos1 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success Main.DeleteByPos r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5,
+     Unfolding: (Data.Serialize.Get.$fAlternativeGet5
+                   @ GHC.Types.Int
+                   @ Main.DeleteByPos
+                   Main.$fSafeCopyDeleteByPos2
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0]
+                             <GHC.Types.Int -> Main.DeleteByPos>_R))
+                   Main.$fSafeCopyEdit4
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R))) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos2 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success (GHC.Types.Int -> Main.DeleteByPos) r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (5, True, True)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   ds :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success
+                           (GHC.Types.Int -> Main.DeleteByPos) r ->
+                 ks
+                   s0
+                   b0
+                   m0
+                   Main.$fSafeCopyDeleteByPos3
+                     `cast`
+                   (<GHC.Types.Int>_R ->_R Sym (Main.NTCo:DeleteByPos[0]))) -}
+7b58e83b97a27c60b6b278372baba6c3
+  $fSafeCopyDeleteByPos3 :: GHC.Types.Int -> GHC.Types.Int
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ tpl :: GHC.Types.Int -> tpl) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$cgetCopy ::
+    Data.SafeCopy.SafeCopy.Contained
+      (Data.Serialize.Get.Get Main.DeleteByPos)
+  {- Arity: 5,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyDeleteByPos1
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                          (Data.Serialize.Get.NTCo:Get[0] <Main.DeleteByPos>_R))) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency Main.DeleteByPos
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ Main.DeleteByPos) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$cobjectProfile ::
+    Data.SafeCopy.SafeCopy.Profile Main.DeleteByPos
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$cputCopy ::
+    Main.DeleteByPos
+    -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
+  {- Arity: 1, Strictness: <L,1*U(U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Main.DeleteByPos ->
+                 let {
+                   ds1 :: Data.Serialize.Put.PairS ()
+                   = case Data.Serialize.$w$cput1
+                            (case w `cast`
+                                  (Main.NTCo:DeleteByPos[0]) of wild { GHC.Types.I# x# ->
+                             GHC.Int.I64# x# }) of ww { (#,#) ww1 ww2 ->
+                     Data.Serialize.Put.PairS @ () ww1 ww2 }
+                 } in
+                 (Data.Serialize.Put.PairS
+                    @ ()
+                    GHC.Tuple.()
+                    (\ x :: Data.Serialize.Builder.Buffer
+                            -> [Data.ByteString.Internal.ByteString] ->
+                     Main.$fSafeCopyNote_a20
+                       `cast`
+                     (Data.Serialize.Builder.NTCo:Builder[0])
+                       (case ds1 of wild1 { Data.Serialize.Put.PairS b1 w'1 ->
+                        w'1 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x }))
+                      `cast`
+                    (Sym (Data.Serialize.Builder.NTCo:Builder[0])))
+                   `cast`
+                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                           (Data.Serialize.Put.NTCo:PutM[0] <()>_N)))) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$cversion ::
+    Data.SafeCopy.SafeCopy.Version Main.DeleteByPos
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote6
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0]
+                          <Main.DeleteByPos>_P)) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$s$dmerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy Main.DeleteByPos -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (-1, True, False)
+                (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.DeleteByPos ->
+                 GHC.Base.build
+                   @ GHC.Types.Char
+                   (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fSafeCopyDeleteByPos_$s$dmkind ::
+    Data.SafeCopy.SafeCopy.Kind Main.DeleteByPos
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (-1, True, True)
+                (Data.SafeCopy.SafeCopy.Base @ Main.DeleteByPos) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit :: Data.SafeCopy.SafeCopy.SafeCopy Main.Edit
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Edit
+                  Main.$fSafeCopyEdit_$cversion
+                  Main.$fSafeCopyEdit_$s$dmkind
+                  Main.$fSafeCopyEdit_$cgetCopy
+                  Main.$fSafeCopyEdit_$cputCopy
+                  Main.$fSafeCopyEdit_$cinternalConsistency
+                  Main.$fSafeCopyEdit_$cobjectProfile
+                  Main.$fSafeCopyEdit_$s$dmerrorTypeName -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit1 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success Main.Edit r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5,
+     Unfolding: (Data.Serialize.Get.$fAlternativeGet5
+                   @ GHC.Base.String
+                   @ Main.Edit
+                   Main.$fSafeCopyEdit3
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0]
+                             <GHC.Base.String -> Main.Edit>_R))
+                   Main.$fSafeCopyEdit2
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R))) -}
+279a662dc4b16e6b7674e7bb3befa088
+  $fSafeCopyEdit2 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success GHC.Base.String r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   kf :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success GHC.Base.String r ->
+                 Main.$fSafeCopyNote4
+                   `cast`
+                 (Data.Serialize.Get.NTCo:Get[0]
+                      <Data.Serialize.Get.Get GHC.Base.String>_R)
+                   @ r
+                   s0
+                   b0
+                   m0
+                   kf
+                   (\ s1 :: Data.Serialize.Get.Input
+                      b1 :: Data.Serialize.Get.Buffer
+                      m1 :: Data.Serialize.Get.More
+                      a26 :: Data.Serialize.Get.Get GHC.Base.String ->
+                    a26 `cast` (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R)
+                      @ r
+                      s1
+                      b1
+                      m1
+                      kf
+                      ks)) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit3 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success (GHC.Base.String -> Main.Edit) r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5,
+     Unfolding: (Data.Serialize.Get.$fAlternativeGet5
+                   @ GHC.Types.Int
+                   @ (GHC.Base.String -> Main.Edit)
+                   Main.$fSafeCopyEdit5
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0]
+                             <GHC.Types.Int -> GHC.Base.String -> Main.Edit>_R))
+                   Main.$fSafeCopyEdit4
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R))) -}
+5bb3f8da7ef28d42f8312e26a5bbcf33
+  $fSafeCopyEdit4 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success GHC.Types.Int r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, Strictness: <L,U><L,U><L,U><L,U><L,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   kf :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success GHC.Types.Int r ->
+                 Main.$fSafeCopyEdit_m
+                   `cast`
+                 (Data.Serialize.Get.NTCo:Get[0]
+                      <Data.Serialize.Get.Get GHC.Types.Int>_R)
+                   @ r
+                   s0
+                   b0
+                   m0
+                   kf
+                   (\ s1 :: Data.Serialize.Get.Input
+                      b1 :: Data.Serialize.Get.Buffer
+                      m1 :: Data.Serialize.Get.More
+                      a26 :: Data.Serialize.Get.Get GHC.Types.Int ->
+                    a26 `cast` (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R)
+                      @ r
+                      s1
+                      b1
+                      m1
+                      kf
+                      ks)) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit5 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success
+         (GHC.Types.Int -> GHC.Base.String -> Main.Edit) r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (5, True, True)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   ds :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success
+                           (GHC.Types.Int -> GHC.Base.String -> Main.Edit) r ->
+                 ks s0 b0 m0 Main.Edit) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$cgetCopy ::
+    Data.SafeCopy.SafeCopy.Contained (Data.Serialize.Get.Get Main.Edit)
+  {- Arity: 5,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyEdit1
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                          (Data.Serialize.Get.NTCo:Get[0] <Main.Edit>_R))) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency Main.Edit
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ Main.Edit) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$cobjectProfile ::
+    Data.SafeCopy.SafeCopy.Profile Main.Edit
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$cputCopy ::
+    Main.Edit
+    -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
+  {- Arity: 1, Strictness: <S,1*U(1*U(U),U)>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Main.Edit ->
+                 case w of ww { Main.Edit ww1 ww2 ->
+                 case Main.$w$cputCopy ww1 ww2 of ww3 { (#,#) ww4 ww5 ->
+                 (Data.Serialize.Put.PairS @ () ww4 ww5)
+                   `cast`
+                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                           (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) } }) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$cversion ::
+    Data.SafeCopy.SafeCopy.Version Main.Edit
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote6
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Edit>_P)) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$s$dmerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy Main.Edit -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (-1, True, False)
+                (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.Edit ->
+                 GHC.Base.build
+                   @ GHC.Types.Char
+                   (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fSafeCopyEdit_$s$dmkind :: Data.SafeCopy.SafeCopy.Kind Main.Edit
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (-1, True, True)
+                (Data.SafeCopy.SafeCopy.Base @ Main.Edit) -}
+a4d31ac5e9272c5b3ea9ee6c1bb02fb3
+  $fSafeCopyEdit_m ::
+    Data.Serialize.Get.Get (Data.Serialize.Get.Get GHC.Types.Int)
+  {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
+                   @ GHC.Types.Int
+                   Data.SafeCopy.Instances.$fSafeCopyInt) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes ::
+    Data.SafeCopy.SafeCopy.SafeCopy Main.GetAllNotes
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.GetAllNotes
+                  Main.$fSafeCopyGetAllNotes_$cversion
+                  Main.$fSafeCopyGetAllNotes_$s$dmkind
+                  Main.$fSafeCopyGetAllNotes_$cgetCopy
+                  Main.$fSafeCopyGetAllNotes_$cputCopy
+                  Main.$fSafeCopyGetAllNotes_$cinternalConsistency
+                  Main.$fSafeCopyGetAllNotes_$cobjectProfile
+                  Main.$fSafeCopyGetAllNotes_$s$dmerrorTypeName -}
+0f21978ad3735e8b59f0f87edad4a7ef
+  $fSafeCopyGetAllNotes1 :: Data.Serialize.Put.PairS ()
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (Data.Serialize.Put.PairS
+                   @ ()
+                   GHC.Tuple.()
+                   (GHC.Base.id
+                      @ (Data.Serialize.Builder.Buffer
+                         -> [Data.ByteString.Internal.ByteString]))
+                     `cast`
+                   (Sym (Data.Serialize.Builder.NTCo:Builder[0]))) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes2 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success Main.GetAllNotes r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (5, True, True)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   ds :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success Main.GetAllNotes r ->
+                 ks s0 b0 m0 Main.GetAllNotes) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$cgetCopy ::
+    Data.SafeCopy.SafeCopy.Contained
+      (Data.Serialize.Get.Get Main.GetAllNotes)
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyGetAllNotes2
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                          (Data.Serialize.Get.NTCo:Get[0] <Main.GetAllNotes>_R))) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency Main.GetAllNotes
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ Main.GetAllNotes) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$cobjectProfile ::
+    Data.SafeCopy.SafeCopy.Profile Main.GetAllNotes
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$cputCopy ::
+    Main.GetAllNotes
+    -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*H>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Main.GetAllNotes ->
+                 case ds of wild { Main.GetAllNotes ->
+                 Main.$fSafeCopyGetAllNotes1
+                   `cast`
+                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                           (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$cversion ::
+    Data.SafeCopy.SafeCopy.Version Main.GetAllNotes
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote6
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0]
+                          <Main.GetAllNotes>_P)) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$s$dmerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy Main.GetAllNotes -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (-1, True, False)
+                (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.GetAllNotes ->
+                 GHC.Base.build
+                   @ GHC.Types.Char
+                   (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyGetAllNotes_$s$dmkind ::
+    Data.SafeCopy.SafeCopy.Kind Main.GetAllNotes
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (-1, True, True)
+                (Data.SafeCopy.SafeCopy.Base @ Main.GetAllNotes) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert :: Data.SafeCopy.SafeCopy.SafeCopy Main.Insert
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Insert
+                  Main.$fSafeCopyInsert_$cversion
+                  Main.$fSafeCopyInsert_$s$dmkind
+                  Main.$fSafeCopyInsert_$cgetCopy
+                  Main.$fSafeCopyInsert_$cputCopy
+                  Main.$fSafeCopyInsert_$cinternalConsistency
+                  Main.$fSafeCopyInsert_$cobjectProfile
+                  Main.$fSafeCopyInsert_$s$dmerrorTypeName -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert1 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success Main.Insert r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5,
+     Unfolding: (Data.Serialize.Get.$fAlternativeGet5
+                   @ GHC.Base.String
+                   @ Main.Insert
+                   Main.$fSafeCopyInsert2
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0]
+                             <GHC.Base.String -> Main.Insert>_R))
+                   Main.$fSafeCopyEdit2
+                     `cast`
+                   (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R))) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert2 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success (GHC.Base.String -> Main.Insert) r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (5, True, True)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   ds :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success
+                           (GHC.Base.String -> Main.Insert) r ->
+                 ks
+                   s0
+                   b0
+                   m0
+                   Main.$fSafeCopyInsert3
+                     `cast`
+                   (<GHC.Base.String>_R ->_R Sym (Main.NTCo:Insert[0]))) -}
+1c160a667f2a920d353ca82dc8ad8f38
+  $fSafeCopyInsert3 :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, True)
+                (\ tpl :: GHC.Base.String -> tpl) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$cgetCopy ::
+    Data.SafeCopy.SafeCopy.Contained
+      (Data.Serialize.Get.Get Main.Insert)
+  {- Arity: 5,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyInsert1
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                          (Data.Serialize.Get.NTCo:Get[0] <Main.Insert>_R))) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency Main.Insert
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ Main.Insert) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$cobjectProfile ::
+    Data.SafeCopy.SafeCopy.Profile Main.Insert
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$cputCopy ::
+    Main.Insert
+    -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
+  {- Arity: 1, Strictness: <L,U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: Main.Insert ->
+                 let {
+                   ds1 :: Data.Serialize.Put.PairS ()
+                   = case Data.SafeCopy.Instances.$w$s$cputCopy2
+                            w `cast` (Main.NTCo:Insert[0]) of ww { (#,#) ww1 ww2 ->
+                     Data.Serialize.Put.PairS @ () ww1 ww2 }
+                 } in
+                 let {
+                   a26 :: Data.Serialize.Builder.Builder
+                   = case Data.Serialize.$w$cput15
+                            Data.SafeCopy.Instances.$fSafeCopy()3 of ww { (#,#) ww1 ww2 ->
+                     ww2 }
+                 } in
+                 (Data.Serialize.Put.PairS
+                    @ ()
+                    GHC.Tuple.()
+                    (\ x :: Data.Serialize.Builder.Buffer
+                            -> [Data.ByteString.Internal.ByteString] ->
+                     a26 `cast` (Data.Serialize.Builder.NTCo:Builder[0])
+                       (case ds1 of wild1 { Data.Serialize.Put.PairS b1 w'1 ->
+                        w'1 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x }))
+                      `cast`
+                    (Sym (Data.Serialize.Builder.NTCo:Builder[0])))
+                   `cast`
+                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                           (Data.Serialize.Put.NTCo:PutM[0] <()>_N)))) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$cversion ::
+    Data.SafeCopy.SafeCopy.Version Main.Insert
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote6
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Insert>_P)) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$s$dmerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy Main.Insert -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (-1, True, False)
+                (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.Insert ->
+                 GHC.Base.build
+                   @ GHC.Types.Char
+                   (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fSafeCopyInsert_$s$dmkind ::
+    Data.SafeCopy.SafeCopy.Kind Main.Insert
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (-1, True, True)
+                (Data.SafeCopy.SafeCopy.Base @ Main.Insert) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote :: Data.SafeCopy.SafeCopy.SafeCopy Main.Note
+  DFunId[0]
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Main.Note
+                  Main.$fSafeCopyNote_$cversion
+                  (Data.SafeCopy.SafeCopy.base @ Main.Note)
+                  Main.$fSafeCopyNote_$cgetCopy
+                  Main.$fSafeCopyNote_$cputCopy
+                  Main.$fSafeCopyNote_$cinternalConsistency
+                  Main.$fSafeCopyNote_$cobjectProfile
+                  Main.$fSafeCopyNote_$cerrorTypeName -}
+9f149423fa9cbeeebf0c36685343187e
+  $fSafeCopyNote1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Main.Note"#) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote2 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success Main.Note r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,U><L,C(C1(C1(C1(U))))><L,C(C1(C1(C1(U))))>,
+     Unfolding: (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   kf :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success Main.Note r ->
+                 let {
+                   kf1 :: Data.Serialize.Get.Failure r
+                     {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U>,
+                        Unfolding: InlineRule (4, True, False)
+                                   (\ s1 :: Data.Serialize.Get.Input
+                                      b1 :: Data.Serialize.Get.Buffer
+                                      m1 :: Data.Serialize.Get.More
+                                      ls :: [GHC.Base.String] ->
+                                    kf
+                                      s1
+                                      b1
+                                      m1
+                                      (GHC.Types.: @ GHC.Base.String Main.$fSafeCopyNote5 ls)) -}
+                   = \ s1 :: Data.Serialize.Get.Input
+                       b1 :: Data.Serialize.Get.Buffer
+                       m1 :: Data.Serialize.Get.More
+                       ls :: [GHC.Base.String] ->
+                     kf s1 b1 m1 (GHC.Types.: @ GHC.Base.String Main.$fSafeCopyNote5 ls)
+                 } in
+                 Main.$fSafeCopyNote4
+                   `cast`
+                 (Data.Serialize.Get.NTCo:Get[0]
+                      <Data.Serialize.Get.Get GHC.Base.String>_R)
+                   @ r
+                   s0
+                   b0
+                   m0
+                   kf1
+                   (\ s1 :: Data.Serialize.Get.Input
+                      b1 :: Data.Serialize.Get.Buffer
+                      m1 :: Data.Serialize.Get.More
+                      a26 :: Data.Serialize.Get.Get GHC.Base.String ->
+                    Data.Serialize.Get.$fAlternativeGet5
+                      @ GHC.Base.String
+                      @ Main.Note
+                      Main.$fSafeCopyNote3
+                        `cast`
+                      (Sym (Data.Serialize.Get.NTCo:Get[0]
+                                <GHC.Base.String -> Main.Note>_R))
+                      a26
+                      @ r
+                      s1
+                      b1
+                      m1
+                      kf1
+                      ks)) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote3 ::
+    Data.Serialize.Get.Input
+    -> Data.Serialize.Get.Buffer
+    -> Data.Serialize.Get.More
+    -> Data.Serialize.Get.Failure r
+    -> Data.Serialize.Get.Success (GHC.Base.String -> Main.Note) r
+    -> Data.Serialize.Get.Result r
+  {- Arity: 5, HasNoCafRefs,
+     Strictness: <L,U><L,U><L,U><L,A><C(C(C(C(S)))),1*C1(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (5, True, True)
+                (\ @ r
+                   s0 :: Data.Serialize.Get.Input
+                   b0 :: Data.Serialize.Get.Buffer
+                   m0 :: Data.Serialize.Get.More
+                   ds :: Data.Serialize.Get.Failure r
+                   ks :: Data.Serialize.Get.Success
+                           (GHC.Base.String -> Main.Note) r ->
+                 ks s0 b0 m0 Main.Note) -}
+0176a7ee08510e31ace924b1cac55205
+  $fSafeCopyNote4 ::
+    Data.Serialize.Get.Get (Data.Serialize.Get.Get GHC.Base.String)
+  {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
+                   @ GHC.Base.String
+                   Data.SafeCopy.Instances.$fSafeCopy[]_$s$fSafeCopy[]1) -}
+c1cb523578c4b6365f4e437506fd7ea8
+  $fSafeCopyNote5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Main.Note:"#) -}
+64150fcb06d31b4268b11789e2eb57d2
+  $fSafeCopyNote6 :: GHC.Int.Int32
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Int.I32# 0) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote_$cerrorTypeName ::
+    Data.SafeCopy.SafeCopy.Proxy Main.Note -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,A>,
+     Unfolding: InlineRule (1, True, True)
+                (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.Note ->
+                 Main.$fSafeCopyNote1) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote_$cgetCopy ::
+    Data.SafeCopy.SafeCopy.Contained (Data.Serialize.Get.Get Main.Note)
+  {- Arity: 5,
+     Strictness: <L,U><L,U><L,U><L,C(C1(C1(C1(U))))><L,C(C1(C1(C1(U))))>,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote2
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                          (Data.Serialize.Get.NTCo:Get[0] <Main.Note>_R))) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote_$cinternalConsistency ::
+    Data.SafeCopy.SafeCopy.Consistency Main.Note
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.SafeCopy.SafeCopy.Consistent @ Main.Note) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote_$cobjectProfile ::
+    Data.SafeCopy.SafeCopy.Profile Main.Note
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote_$cputCopy ::
+    Main.Note
+    -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
+  {- Arity: 1, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ ds :: Main.Note ->
+                 case ds of wild { Main.Note arg ->
+                 let {
+                   a26 :: Data.Serialize.Builder.Builder
+                   = case Data.SafeCopy.Instances.$w$s$cputCopy2
+                            arg of ww { (#,#) ww1 ww2 ->
+                     ww2 }
+                 } in
+                 (Data.Serialize.Put.PairS
+                    @ ()
+                    GHC.Tuple.()
+                    (\ x :: Data.Serialize.Builder.Buffer
+                            -> [Data.ByteString.Internal.ByteString] ->
+                     Main.$fSafeCopyNote_a20
+                       `cast`
+                     (Data.Serialize.Builder.NTCo:Builder[0])
+                       (a26 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x))
+                      `cast`
+                    (Sym (Data.Serialize.Builder.NTCo:Builder[0])))
+                   `cast`
+                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
+                           (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
+6db5827a9a31e99039a03909ae94236b
+  $fSafeCopyNote_$cversion ::
+    Data.SafeCopy.SafeCopy.Version Main.Note
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fSafeCopyNote6
+                  `cast`
+                (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Note>_P)) -}
+6bb87b35a95e28ec9e62901781ddc0ce
+  $fSafeCopyNote_a20 :: Data.Serialize.Builder.Builder
+  {- Unfolding: (case Data.Serialize.$w$cput15
+                        Data.SafeCopy.Instances.$fSafeCopy()3 of ww { (#,#) ww1 ww2 ->
+                 ww2 }) -}
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  $fUpdateEventDeleteByPos ::
+    Data.Acid.Common.UpdateEvent Main.DeleteByPos
+  DFunId[0]
+  {- Strictness: m, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Main.$fMethodDeleteByPos
+                  `cast`
+                (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.DeleteByPos>_N) -}
+ac6f4c1d799053f45c63f09f3203f112
+  $fUpdateEventEdit :: Data.Acid.Common.UpdateEvent Main.Edit
+  DFunId[0]
+  {- Strictness: m, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Main.$fMethodEdit
+                  `cast`
+                (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Edit>_N) -}
+2ee86e16bcbb030d23e181ab15e6bdfd
+  $fUpdateEventInsert :: Data.Acid.Common.UpdateEvent Main.Insert
+  DFunId[0]
+  {- Strictness: m, Inline: INLINE (sat-args=0),
+     Unfolding: InlineRule (0, False, True)
+                Main.$fMethodInsert
+                  `cast`
+                (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Insert>_N) -}
+db5fd1fadcc7112029b98065753b8fa1
+  $scontainerBorderWidth ::
+    System.Glib.Attributes.Attr
+      Graphics.UI.Gtk.Types.Window GHC.Types.Int
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, False)
+                (System.Glib.Attributes.Attr
+                   @ Graphics.UI.Gtk.Types.Window
+                   @ GHC.Types.Int
+                   @ GHC.Types.Int
+                   System.Glib.Attributes.newAttr1
+                   Main.$scontainerBorderWidth2
+                     `cast`
+                   (<Graphics.UI.Gtk.Types.Window>_R
+                    ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Int>_R))
+                   Main.$scontainerBorderWidth1
+                     `cast`
+                   (<Graphics.UI.Gtk.Types.Window>_R
+                    ->_R <GHC.Types.Int>_R
+                    ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+4cd7e309bc5ee7b69e7fe817fd8bf7fd
+  $scontainerBorderWidth1 ::
+    Graphics.UI.Gtk.Types.Window
+    -> GHC.Types.Int
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U(U,U)><S,1*U(U)><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ self1 :: Graphics.UI.Gtk.Types.Window
+                   borderWidth :: GHC.Types.Int
+                   eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case self1
+                        `cast`
+                      (Trans
+                           (Graphics.UI.Gtk.Types.NTCo:Window[0])
+                           (GHC.ForeignPtr.ForeignPtr
+                              (UnivCo opt_phantom phantom Graphics.UI.Gtk.Types.Window Graphics.UI.Gtk.Types.Container))_R) of wild { GHC.ForeignPtr.ForeignPtr fo ds1 ->
+                 case borderWidth of wild1 { GHC.Types.I# x# ->
+                 case {__pkg_ccall_GC gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p gtk_container_set_border_width GHC.Prim.Addr#
+                                                                                                           -> GHC.Prim.Word#
+                                                                                                           -> GHC.Prim.State#
+                                                                                                                GHC.Prim.RealWorld
+                                                                                                           -> (# GHC.Prim.State#
+                                                                                                                   GHC.Prim.RealWorld #)}
+                        fo
+                        (GHC.Prim.narrow32Word# (GHC.Prim.int2Word# x#))
+                        eta of wild2 { (##) ds ->
+                 case GHC.Prim.touch#
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds1
+                        ds of s' { DEFAULT ->
+                 (# s', GHC.Tuple.() #) } } } }) -}
+7118e7cbfb37b379d90099f437ad84db
+  $scontainerBorderWidth2 ::
+    Graphics.UI.Gtk.Types.Window
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U,U)><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ self1 :: Graphics.UI.Gtk.Types.Window
+                   s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case self1
+                        `cast`
+                      (Trans
+                           (Graphics.UI.Gtk.Types.NTCo:Window[0])
+                           (GHC.ForeignPtr.ForeignPtr
+                              (UnivCo opt_phantom phantom Graphics.UI.Gtk.Types.Window Graphics.UI.Gtk.Types.Container))_R) of wild { GHC.ForeignPtr.ForeignPtr fo ds1 ->
+                 case {__pkg_ccall gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p gtk_container_get_border_width GHC.Prim.Addr#
+                                                                                                        -> GHC.Prim.State#
+                                                                                                             GHC.Prim.RealWorld
+                                                                                                        -> (# GHC.Prim.State#
+                                                                                                                GHC.Prim.RealWorld,
+                                                                                                              GHC.Prim.Word# #)}
+                        fo
+                        s of wild1 { (#,#) ds ds2 ->
+                 case GHC.Prim.touch#
+                        @ GHC.ForeignPtr.ForeignPtrContents
+                        ds1
+                        ds of s' { DEFAULT ->
+                 (# s',
+                    GHC.Types.I#
+                      (GHC.Prim.word2Int# (GHC.Prim.narrow32Word# ds2)) #) } } }) -}
+be8ca0d4a46d63a7c468ff06e66b200c
+  $swindowDefaultHeight ::
+    System.Glib.Attributes.Attr
+      Graphics.UI.Gtk.Types.Window GHC.Types.Int
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, False)
+                (System.Glib.Properties.newAttrFromIntProperty
+                   @ Graphics.UI.Gtk.Types.Window
+                   Graphics.UI.Gtk.Types.$fGObjectClassWindow
+                   Graphics.UI.Gtk.Windows.Window.windowDefaultHeight1) -}
+b2158e5ea1a96aa0db4d255f054af12c
+  $swindowDefaultWidth ::
+    System.Glib.Attributes.Attr
+      Graphics.UI.Gtk.Types.Window GHC.Types.Int
+  {- Strictness: m,
+     Unfolding: InlineRule (0, True, False)
+                (System.Glib.Properties.newAttrFromIntProperty
+                   @ Graphics.UI.Gtk.Types.Window
+                   Graphics.UI.Gtk.Types.$fGObjectClassWindow
+                   Graphics.UI.Gtk.Windows.Window.windowDefaultWidth1) -}
+d53c1719affdb1d19d5cf5a1710ee2fe
+  $w$cputCopy ::
+    GHC.Types.Int
+    -> GHC.Base.String -> (# (), Data.Serialize.Builder.Builder #)
+  {- Arity: 2, Strictness: <L,1*U(U)><L,U>, Inline: [0],
+     Unfolding: (\ ww :: GHC.Types.Int ww1 :: GHC.Base.String ->
+                 let {
+                   ds1 :: Data.Serialize.Put.PairS ()
+                   = case Data.SafeCopy.Instances.$w$s$cputCopy2
+                            ww1 of ww2 { (#,#) ww3 ww4 ->
+                     Data.Serialize.Put.PairS @ () ww3 ww4 }
+                 } in
+                 let {
+                   ds2 :: Data.Serialize.Put.PairS ()
+                   = case Data.Serialize.$w$cput1
+                            (case ww of wild { GHC.Types.I# x# ->
+                             GHC.Int.I64# x# }) of ww2 { (#,#) ww3 ww4 ->
+                     Data.Serialize.Put.PairS @ () ww3 ww4 }
+                 } in
+                 (# GHC.Tuple.(),
+                    (\ x :: Data.Serialize.Builder.Buffer
+                            -> [Data.ByteString.Internal.ByteString] ->
+                     Main.$fSafeCopyNote_a20
+                       `cast`
+                     (Data.Serialize.Builder.NTCo:Builder[0])
+                       (case ds2 of wild1 { Data.Serialize.Put.PairS b1 w'1 ->
+                        w'1 `cast` (Data.Serialize.Builder.NTCo:Builder[0])
+                          (Main.$fSafeCopyNote_a20
+                             `cast`
+                           (Data.Serialize.Builder.NTCo:Builder[0])
+                             (case ds1 of wild2 { Data.Serialize.Put.PairS b2 w'2 ->
+                              w'2 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x })) }))
+                      `cast`
+                    (Sym (Data.Serialize.Builder.NTCo:Builder[0])) #)) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $wa ::
+    GHC.Types.Int
+    -> GHC.Base.String -> [Main.Note] -> (# (), Main.AllNotes #)
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U(U)><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ w :: GHC.Types.Int
+                   w1 :: GHC.Base.String
+                   ww :: [Main.Note] ->
+                 (# GHC.Tuple.(),
+                    Main.AllNotes
+                      (case w of wild { GHC.Types.I# x ->
+                       let {
+                         y :: GHC.Prim.Int# = GHC.Prim.-# x 1
+                       } in
+                       let {
+                         a26 :: Main.Note {- Strictness: m -} = Main.Note w1
+                       } in
+                       let {
+                         a27 :: [Main.Note]
+                         = let {
+                             x1 :: GHC.Prim.Int# = GHC.Prim.+# x 1
+                           } in
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# x1 0) of wild1 {
+                             GHC.Types.False -> Main.$wunsafeDrop @ Main.Note x1 ww
+                             GHC.Types.True -> ww }
+                       } in
+                       let {
+                         n :: [Main.Note] = GHC.Types.: @ Main.Note a26 a27
+                       } in
+                       case GHC.Prim.tagToEnum#
+                              @ GHC.Types.Bool
+                              (GHC.Prim.<# 0 y) of wild1 {
+                         GHC.Types.False -> n
+                         GHC.Types.True
+                         -> letrec {
+                              $wgo :: [Main.Note] -> GHC.Prim.Int# -> [Main.Note]
+                                {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0] -}
+                              = \ w2 :: [Main.Note] ww1 :: GHC.Prim.Int# ->
+                                case w2 of wild2 {
+                                  [] -> n
+                                  : y1 ys
+                                  -> case ww1 of ds1 {
+                                       DEFAULT
+                                       -> GHC.Types.: @ Main.Note y1 ($wgo ys (GHC.Prim.-# ds1 1))
+                                       1 -> GHC.Types.: @ Main.Note y1 n } }
+                            } in
+                            $wgo ww y } }) #)) -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  $wa1 :: GHC.Types.Int -> [Main.Note] -> (# (), Main.AllNotes #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ w :: GHC.Types.Int ww :: [Main.Note] ->
+                 (# GHC.Tuple.(),
+                    Main.AllNotes
+                      (case w of wild { GHC.Types.I# x ->
+                       let {
+                         y :: GHC.Prim.Int# = GHC.Prim.-# x 1
+                       } in
+                       let {
+                         n :: [Main.Note]
+                         = let {
+                             x1 :: GHC.Prim.Int# = GHC.Prim.+# x 1
+                           } in
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<=# x1 0) of wild1 {
+                             GHC.Types.False -> Main.$wunsafeDrop1 @ Main.Note x1 ww
+                             GHC.Types.True -> ww }
+                       } in
+                       case GHC.Prim.tagToEnum#
+                              @ GHC.Types.Bool
+                              (GHC.Prim.<# 0 y) of wild1 {
+                         GHC.Types.False -> n
+                         GHC.Types.True
+                         -> letrec {
+                              $wgo :: [Main.Note] -> GHC.Prim.Int# -> [Main.Note]
+                                {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0] -}
+                              = \ w1 :: [Main.Note] ww1 :: GHC.Prim.Int# ->
+                                case w1 of wild2 {
+                                  [] -> n
+                                  : y1 ys
+                                  -> case ww1 of ds1 {
+                                       DEFAULT
+                                       -> GHC.Types.: @ Main.Note y1 ($wgo ys (GHC.Prim.-# ds1 1))
+                                       1 -> GHC.Types.: @ Main.Note y1 n } }
+                            } in
+                            $wgo ww y } }) #)) -}
+0c8113ed7c058bcfb485d94d10e8cf93
+  $wunsafeDrop :: GHC.Prim.Int# -> [a1] -> [a1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U>,
+     Inline: [0] -}
+444ff5663f1ee90819f49745374cd9d1
+  $wunsafeDrop1 :: GHC.Prim.Int# -> [a1] -> [a1]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U>,
+     Inline: [0] -}
+1d5ebfb6d5b2c84621db45273d1c9b37
+  data AllNotes = AllNotes [Main.Note]
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  newtype DeleteByPos = DeleteByPos GHC.Types.Int
+ac6f4c1d799053f45c63f09f3203f112
+  data Edit = Edit GHC.Types.Int GHC.Base.String
+6db5827a9a31e99039a03909ae94236b
+  data GetAllNotes = GetAllNotes
+    Promotable
+2ee86e16bcbb030d23e181ab15e6bdfd
+  newtype Insert = Insert GHC.Base.String
+6db5827a9a31e99039a03909ae94236b
+  data Note = Note GHC.Base.String
+3cca0654878a8c3fcd2e305f3ba1bd0c
+  axiom TFCo:R:MethodResultDeleteByPos::
+      Data.Acid.Core.MethodResult Main.DeleteByPos = ()
+ac6f4c1d799053f45c63f09f3203f112
+  axiom TFCo:R:MethodResultEdit::
+      Data.Acid.Core.MethodResult Main.Edit = ()
+6db5827a9a31e99039a03909ae94236b
+  axiom TFCo:R:MethodResultGetAllNotes::
+      Data.Acid.Core.MethodResult Main.GetAllNotes = [Main.Note]
+2ee86e16bcbb030d23e181ab15e6bdfd
+  axiom TFCo:R:MethodResultInsert::
+      Data.Acid.Core.MethodResult Main.Insert = ()
+1d5ebfb6d5b2c84621db45273d1c9b37
+  axiom TFCo:R:MethodStateDeleteByPos::
+      Data.Acid.Core.MethodState Main.DeleteByPos = Main.AllNotes
+1d5ebfb6d5b2c84621db45273d1c9b37
+  axiom TFCo:R:MethodStateEdit::
+      Data.Acid.Core.MethodState Main.Edit = Main.AllNotes
+1d5ebfb6d5b2c84621db45273d1c9b37
+  axiom TFCo:R:MethodStateGetAllNotes::
+      Data.Acid.Core.MethodState Main.GetAllNotes = Main.AllNotes
+1d5ebfb6d5b2c84621db45273d1c9b37
+  axiom TFCo:R:MethodStateInsert::
+      Data.Acid.Core.MethodState Main.Insert = Main.AllNotes
+e69f8995118371f6ac321c3a222723c9
+  deleteByPos ::
+    GHC.Types.Int -> Data.Acid.Common.Update Main.AllNotes ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fIsAcidicAllNotes10
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R Trans
+                          (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                    <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
+                          (Sym (Data.Acid.Common.NTCo:Update[0]
+                                    <Main.AllNotes>_N) <()>_N)) -}
+7b7cb3937f083d796373a4bc05a06d74
+  edit ::
+    GHC.Types.Int
+    -> GHC.Base.String -> Data.Acid.Common.Update Main.AllNotes ()
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U(U)><L,U><S,1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fIsAcidicAllNotes8
+                  `cast`
+                (<GHC.Types.Int>_R
+                 ->_R <GHC.Base.String>_R
+                 ->_R Trans
+                          (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                    <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
+                          (Sym (Data.Acid.Common.NTCo:Update[0]
+                                    <Main.AllNotes>_N) <()>_N)) -}
+9ce70301378a4fb99b2398d1cc92abb8
+  getAllNotes :: Data.Acid.Common.Query Main.AllNotes [Main.Note]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+     Unfolding: InlineRule (0, True, True)
+                Main.getAllNotes1
+                  `cast`
+                (Trans
+                     (Sym (Control.Monad.Trans.Reader.NTCo:ReaderT[0]
+                               <Main.AllNotes>_R
+                               <Data.Functor.Identity.Identity>_R
+                               <[Main.Note]>_N))
+                     (Sym (Data.Acid.Common.NTCo:Query[0]
+                               <Main.AllNotes>_R) <[Main.Note]>_N)) -}
+7d31136f934f1c007d7afffd96ba4733
+  getAllNotes1 ::
+    Main.AllNotes -> Data.Functor.Identity.Identity [Main.Note]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ eta2 :: Main.AllNotes ->
+                 case eta2 of wild { Main.AllNotes ns ->
+                 ns
+                   `cast`
+                 (Sym (Data.Functor.Identity.NTCo:Identity[0]
+                           <[Main.Note]>_R)) }) -}
+4a5f76ef5bbd0a4a6dccbaf3843a6749
+  insert ::
+    GHC.Base.String -> Data.Acid.Common.Update Main.AllNotes ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(1*U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Main.$fIsAcidicAllNotes12
+                  `cast`
+                (<GHC.Base.String>_R
+                 ->_R Trans
+                          (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                    <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
+                          (Sym (Data.Acid.Common.NTCo:Update[0]
+                                    <Main.AllNotes>_N) <()>_N)) -}
+ee6590a2ab0ffaa5074d93f2d3fc4c03
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+e3bd864fe81295cabb6b36ca45539f6f
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U> -}
+20688fff09df92565d9be8c5f0313411
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
+instance Data.Acid.Common.IsAcidic [Main.AllNotes]
+  = Main.$fIsAcidicAllNotes
+instance Data.Acid.Core.Method [Main.DeleteByPos]
+  = Main.$fMethodDeleteByPos
+instance Data.Acid.Core.Method [Main.Edit] = Main.$fMethodEdit
+instance Data.Acid.Core.Method [Main.GetAllNotes]
+  = Main.$fMethodGetAllNotes
+instance Data.Acid.Core.Method [Main.Insert] = Main.$fMethodInsert
+instance Data.Acid.Common.QueryEvent [Main.GetAllNotes]
+  = Main.$fQueryEventGetAllNotes
+instance Data.SafeCopy.SafeCopy.SafeCopy [Main.AllNotes]
+  = Main.$fSafeCopyAllNotes
+instance Data.SafeCopy.SafeCopy.SafeCopy [Main.DeleteByPos]
+  = Main.$fSafeCopyDeleteByPos
+instance Data.SafeCopy.SafeCopy.SafeCopy [Main.Edit]
+  = Main.$fSafeCopyEdit
+instance Data.SafeCopy.SafeCopy.SafeCopy [Main.GetAllNotes]
+  = Main.$fSafeCopyGetAllNotes
+instance Data.SafeCopy.SafeCopy.SafeCopy [Main.Insert]
+  = Main.$fSafeCopyInsert
+instance Data.SafeCopy.SafeCopy.SafeCopy [Main.Note]
+  = Main.$fSafeCopyNote
+instance Data.Acid.Common.UpdateEvent [Main.DeleteByPos]
+  = Main.$fUpdateEventDeleteByPos
+instance Data.Acid.Common.UpdateEvent [Main.Edit]
+  = Main.$fUpdateEventEdit
+instance Data.Acid.Common.UpdateEvent [Main.Insert]
+  = Main.$fUpdateEventInsert
+family instance Data.Acid.Core.MethodResult [Main.Insert]
+  = Main.TFCo:R:MethodResultInsert
+family instance Data.Acid.Core.MethodResult [Main.DeleteByPos]
+  = Main.TFCo:R:MethodResultDeleteByPos
+family instance Data.Acid.Core.MethodResult [Main.Edit]
+  = Main.TFCo:R:MethodResultEdit
+family instance Data.Acid.Core.MethodResult [Main.GetAllNotes]
+  = Main.TFCo:R:MethodResultGetAllNotes
+family instance Data.Acid.Core.MethodState [Main.Insert]
+  = Main.TFCo:R:MethodStateInsert
+family instance Data.Acid.Core.MethodState [Main.DeleteByPos]
+  = Main.TFCo:R:MethodStateDeleteByPos
+family instance Data.Acid.Core.MethodState [Main.Edit]
+  = Main.TFCo:R:MethodStateEdit
+family instance Data.Acid.Core.MethodState [Main.GetAllNotes]
+  = Main.TFCo:R:MethodStateGetAllNotes
+"SPEC/Main $dmerrorTypeName @ DeleteByPos" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                           Main.DeleteByPos
+  Data.SafeCopy.SafeCopy.$dmerrorTypeName @ Main.DeleteByPos
+                                          $dSafeCopy
+  = Main.$fSafeCopyDeleteByPos_$s$dmerrorTypeName
+"SPEC/Main $dmerrorTypeName @ Edit" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                    Main.Edit
+  Data.SafeCopy.SafeCopy.$dmerrorTypeName @ Main.Edit $dSafeCopy
+  = Main.$fSafeCopyEdit_$s$dmerrorTypeName
+"SPEC/Main $dmerrorTypeName @ GetAllNotes" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                           Main.GetAllNotes
+  Data.SafeCopy.SafeCopy.$dmerrorTypeName @ Main.GetAllNotes
+                                          $dSafeCopy
+  = Main.$fSafeCopyGetAllNotes_$s$dmerrorTypeName
+"SPEC/Main $dmerrorTypeName @ Insert" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                      Main.Insert
+  Data.SafeCopy.SafeCopy.$dmerrorTypeName @ Main.Insert $dSafeCopy
+  = Main.$fSafeCopyInsert_$s$dmerrorTypeName
+"SPEC/Main $dmkind @ DeleteByPos" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                  Main.DeleteByPos
+  Data.SafeCopy.SafeCopy.$dmkind @ Main.DeleteByPos $dSafeCopy
+  = Main.$fSafeCopyDeleteByPos_$s$dmkind
+"SPEC/Main $dmkind @ Edit" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                           Main.Edit
+  Data.SafeCopy.SafeCopy.$dmkind @ Main.Edit $dSafeCopy
+  = Main.$fSafeCopyEdit_$s$dmkind
+"SPEC/Main $dmkind @ GetAllNotes" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                  Main.GetAllNotes
+  Data.SafeCopy.SafeCopy.$dmkind @ Main.GetAllNotes $dSafeCopy
+  = Main.$fSafeCopyGetAllNotes_$s$dmkind
+"SPEC/Main $dmkind @ Insert" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                             Main.Insert
+  Data.SafeCopy.SafeCopy.$dmkind @ Main.Insert $dSafeCopy
+  = Main.$fSafeCopyInsert_$s$dmkind
+"SPEC/Main $fSafeCopy[] @ Note" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                Main.Note
+  Data.SafeCopy.Instances.$fSafeCopy[] @ Main.Note $dSafeCopy
+  = Main.$fMethodGetAllNotes_$s$fSafeCopy[]
+"SPEC/Main $fSafeCopy[]_$cerrorTypeName @ Note" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                                Main.Note
+  Data.SafeCopy.Instances.$fSafeCopy[]_$cerrorTypeName @ Main.Note
+                                                       $dSafeCopy
+  = Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$cerrorTypeName
+"SPEC/Main $fSafeCopy[]_$cinternalConsistency @ Note" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                                      Main.Note
+  Data.SafeCopy.Instances.$fSafeCopy[]_$cinternalConsistency @ Main.Note
+                                                             $dSafeCopy
+  = Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$cinternalConsistency
+"SPEC/Main $fSafeCopy[]_$ckind @ Note" [ALWAYS] forall $dSafeCopy :: Data.SafeCopy.SafeCopy.SafeCopy
+                                                                       Main.Note
+  Data.SafeCopy.Instances.$fSafeCopy[]_$ckind @ Main.Note $dSafeCopy
+  = Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$ckind
+"SPEC/Main containerBorderWidth @ Window" [ALWAYS] forall $dContainerClass :: Graphics.UI.Gtk.Types.ContainerClass
+                                                                                Graphics.UI.Gtk.Types.Window
+  Graphics.UI.Gtk.Abstract.Container.containerBorderWidth @ Graphics.UI.Gtk.Types.Window
+                                                          $dContainerClass
+  = Main.$scontainerBorderWidth
+"SPEC/Main windowDefaultHeight @ Window" [ALWAYS] forall $dWindowClass :: Graphics.UI.Gtk.Types.WindowClass
+                                                                            Graphics.UI.Gtk.Types.Window
+  Graphics.UI.Gtk.Windows.Window.windowDefaultHeight @ Graphics.UI.Gtk.Types.Window
+                                                     $dWindowClass
+  = Main.$swindowDefaultHeight
+"SPEC/Main windowDefaultWidth @ Window" [ALWAYS] forall $dWindowClass :: Graphics.UI.Gtk.Types.WindowClass
+                                                                           Graphics.UI.Gtk.Types.Window
+  Graphics.UI.Gtk.Windows.Window.windowDefaultWidth @ Graphics.UI.Gtk.Types.Window
+                                                    $dWindowClass
+  = Main.$swindowDefaultWidth
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

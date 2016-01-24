@@ -1,0 +1,501 @@
+[1 of 2] Compiling SetupWrapper     ( SetupWrapper.hs, /tmp/stack12703/gtk3-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/SetupWrapper.o )
+[2 of 2] Compiling Main             ( /tmp/stack12703/gtk3-0.14.2/Setup.hs, /tmp/stack12703/gtk3-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/Main.o )
+Linking /tmp/stack12703/gtk3-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/setup ...
+[1 of 2] Compiling Gtk2HsSetup      ( Gtk2HsSetup.hs, dist/setup-wrapper/Gtk2HsSetup.o )
+[2 of 2] Compiling Main             ( SetupMain.hs, dist/setup-wrapper/Main.o )
+Linking dist/setup-wrapper/setup ...
+Configuring gtk3-0.14.2...
+Building gtk3-0.14.2...
+Preprocessing library gtk3-0.14.2...
+[  1 of 202] Compiling Graphics.UI.Gtk.ModelView.Sequence ( Graphics/UI/Gtk/ModelView/Sequence.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/Sequence.o )
+[  2 of 202] Compiling Graphics.UI.Gtk.Gdk.Enums ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Enums.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Enums.o )
+[  3 of 202] Compiling Graphics.UI.Gtk.General.Enums ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Enums.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Enums.o )
+[  4 of 202] Compiling Graphics.UI.Gtk.General.Threading ( Graphics/UI/Gtk/General/Threading.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Threading.o )
+[  5 of 202] Compiling Graphics.UI.Gtk.Signals ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Signals.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Signals.o )
+[  6 of 202] Compiling Graphics.UI.Gtk.Types ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Types.o )
+[  7 of 202] Compiling Graphics.UI.Gtk.General.DNDTypes ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/DNDTypes.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/DNDTypes.o )
+[  8 of 202] Compiling Graphics.UI.Gtk.Abstract.ContainerChildProperties ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/ContainerChildProperties.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/ContainerChildProperties.o )
+[  9 of 202] Compiling Graphics.UI.Gtk.Embedding.Types ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Embedding/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Embedding/Types.o )
+[ 10 of 202] Compiling Graphics.UI.Gtk.ModelView.Types ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/Types.o )
+[ 11 of 202] Compiling Graphics.UI.Gtk.Gdk.PixbufData ( Graphics/UI/Gtk/Gdk/PixbufData.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/PixbufData.o )
+[ 12 of 202] Compiling Graphics.UI.Gtk.Gdk.PixbufAnimation ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/PixbufAnimation.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/PixbufAnimation.o )
+[ 13 of 202] Compiling Graphics.UI.Gtk.General.CssProvider ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/CssProvider.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/CssProvider.o )
+[ 14 of 202] Compiling Graphics.UI.Gtk.General.StyleContext ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/StyleContext.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/StyleContext.o )
+[ 15 of 202] Compiling Graphics.UI.Gtk.General.StyleProvider ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/StyleProvider.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/StyleProvider.o )
+[ 16 of 202] Compiling Graphics.UI.Gtk.Builder ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Builder.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Builder.o )
+[ 17 of 202] Compiling Graphics.UI.Gtk.Abstract.Separator ( Graphics/UI/Gtk/Abstract/Separator.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Separator.o )
+[ 18 of 202] Compiling Graphics.UI.Gtk.Abstract.Scrollbar ( Graphics/UI/Gtk/Abstract/Scrollbar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Scrollbar.o )
+[ 19 of 202] Compiling Graphics.UI.Gtk.Abstract.Scale ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Scale.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Scale.o )
+[ 20 of 202] Compiling Graphics.UI.Gtk.Abstract.Object ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Object.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Object.o )
+[ 21 of 202] Compiling Graphics.UI.Gtk.Abstract.Paned ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Paned.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Paned.o )
+[ 22 of 202] Compiling Graphics.UI.Gtk.General.Structs ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Structs.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Structs.o )
+[ 23 of 202] Compiling Graphics.UI.Gtk.Abstract.Range ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Range.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Range.o )
+[ 24 of 202] Compiling Graphics.UI.Gtk.Embedding.Plug ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Embedding/Plug.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Embedding/Plug.o )
+[ 25 of 202] Compiling Graphics.UI.Gtk.Embedding.Socket ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Embedding/Socket.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Embedding/Socket.o )
+[ 26 of 202] Compiling Graphics.UI.Gtk.Multiline.Types ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/Types.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/Types.o )
+[ 27 of 202] Compiling Graphics.UI.GtkInternals ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/GtkInternals.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/GtkInternals.o )
+[ 28 of 202] Compiling Graphics.UI.Gtk.Abstract.Misc ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Misc.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Misc.o )
+[ 29 of 202] Compiling Graphics.UI.Gtk.Abstract.Bin ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Bin.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Bin.o )
+[ 30 of 202] Compiling Graphics.UI.Gtk.Abstract.Container ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Container.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Container.o )
+[ 31 of 202] Compiling Graphics.UI.Gtk.Abstract.ButtonBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/ButtonBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/ButtonBox.o )
+[ 32 of 202] Compiling Graphics.UI.Gtk.Abstract.Box ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Box.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Box.o )
+[ 33 of 202] Compiling Graphics.UI.Gtk.Misc.Viewport ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Viewport.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Viewport.o )
+[ 34 of 202] Compiling Graphics.UI.Gtk.Misc.Tooltip ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Tooltip.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Tooltip.o )
+[ 35 of 202] Compiling Graphics.UI.Gtk.Misc.SizeGroup ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/SizeGroup.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/SizeGroup.o )
+[ 36 of 202] Compiling Graphics.UI.Gtk.Misc.IMContextSimple ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/IMContextSimple.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/IMContextSimple.o )
+[ 37 of 202] Compiling Graphics.UI.Gtk.Misc.IMMulticontext ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/IMMulticontext.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/IMMulticontext.o )
+[ 38 of 202] Compiling Graphics.UI.Gtk.Misc.HandleBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/HandleBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/HandleBox.o )
+[ 39 of 202] Compiling Graphics.UI.Gtk.Misc.EventBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/EventBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/EventBox.o )
+[ 40 of 202] Compiling Graphics.UI.Gtk.Misc.DrawingArea ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/DrawingArea.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/DrawingArea.o )
+[ 41 of 202] Compiling Graphics.UI.Gtk.Misc.Calendar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Calendar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Calendar.o )
+[ 42 of 202] Compiling Graphics.UI.Gtk.Misc.Arrow ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Arrow.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Arrow.o )
+[ 43 of 202] Compiling Graphics.UI.Gtk.Misc.Adjustment ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Adjustment.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Adjustment.o )
+[ 44 of 202] Compiling Graphics.UI.Gtk.Misc.Accessible ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Accessible.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Misc/Accessible.o )
+[ 45 of 202] Compiling Graphics.UI.Gtk.Scrolling.VScrollbar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Scrolling/VScrollbar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Scrolling/VScrollbar.o )
+[ 46 of 202] Compiling Graphics.UI.Gtk.Scrolling.ScrolledWindow ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Scrolling/ScrolledWindow.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Scrolling/ScrolledWindow.o )
+[ 47 of 202] Compiling Graphics.UI.Gtk.Scrolling.HScrollbar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Scrolling/HScrollbar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Scrolling/HScrollbar.o )
+[ 48 of 202] Compiling Graphics.UI.Gtk.Recent.RecentInfo ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentInfo.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentInfo.o )
+[ 49 of 202] Compiling Graphics.UI.Gtk.Recent.RecentChooser ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentChooser.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentChooser.o )
+[ 50 of 202] Compiling Graphics.UI.Gtk.Recent.RecentManager ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentManager.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentManager.o )
+[ 51 of 202] Compiling Graphics.UI.Gtk.Recent.RecentFilter ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentFilter.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentFilter.o )
+[ 52 of 202] Compiling Graphics.UI.Gtk.Recent.RecentChooserWidget ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentChooserWidget.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentChooserWidget.o )
+[ 53 of 202] Compiling Graphics.UI.Gtk.Recent.RecentChooserMenu ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentChooserMenu.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Recent/RecentChooserMenu.o )
+[ 54 of 202] Compiling Graphics.UI.Gtk.Printing.PrintContext ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PrintContext.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PrintContext.o )
+[ 55 of 202] Compiling Graphics.UI.Gtk.Printing.PaperSize ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PaperSize.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PaperSize.o )
+[ 56 of 202] Compiling Graphics.UI.Gtk.Printing.PrintOperation ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PrintOperation.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PrintOperation.o )
+[ 57 of 202] Compiling Graphics.UI.Gtk.Printing.PrintSettings ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PrintSettings.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PrintSettings.o )
+[ 58 of 202] Compiling Graphics.UI.Gtk.Printing.PageSetup ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PageSetup.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Printing/PageSetup.o )
+[ 59 of 202] Compiling Graphics.UI.Gtk.Ornaments.VSeparator ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Ornaments/VSeparator.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Ornaments/VSeparator.o )
+[ 60 of 202] Compiling Graphics.UI.Gtk.Ornaments.HSeparator ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Ornaments/HSeparator.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Ornaments/HSeparator.o )
+[ 61 of 202] Compiling Graphics.UI.Gtk.Ornaments.Frame ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Ornaments/Frame.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Ornaments/Frame.o )
+[ 62 of 202] Compiling Graphics.UI.Gtk.Layout.VPaned ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/VPaned.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/VPaned.o )
+[ 63 of 202] Compiling Graphics.UI.Gtk.Layout.VButtonBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/VButtonBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/VButtonBox.o )
+[ 64 of 202] Compiling Graphics.UI.Gtk.Layout.VBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/VBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/VBox.o )
+[ 65 of 202] Compiling Graphics.UI.Gtk.Layout.Table ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Table.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Table.o )
+[ 66 of 202] Compiling Graphics.UI.Gtk.Layout.Expander ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Expander.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Expander.o )
+[ 67 of 202] Compiling Graphics.UI.Gtk.Layout.Overlay ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Overlay.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Overlay.o )
+[ 68 of 202] Compiling Graphics.UI.Gtk.Layout.Grid ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Grid.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Grid.o )
+[ 69 of 202] Compiling Graphics.UI.Gtk.Layout.Layout ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Layout.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Layout.o )
+[ 70 of 202] Compiling Graphics.UI.Gtk.Layout.HPaned ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/HPaned.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/HPaned.o )
+[ 71 of 202] Compiling Graphics.UI.Gtk.Layout.Fixed ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Fixed.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Fixed.o )
+[ 72 of 202] Compiling Graphics.UI.Gtk.Layout.HButtonBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/HButtonBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/HButtonBox.o )
+[ 73 of 202] Compiling Graphics.UI.Gtk.Layout.HBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/HBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/HBox.o )
+[ 74 of 202] Compiling Graphics.UI.Gtk.Layout.AspectFrame ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/AspectFrame.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/AspectFrame.o )
+[ 75 of 202] Compiling Graphics.UI.Gtk.Layout.Alignment ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Alignment.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Alignment.o )
+[ 76 of 202] Compiling Graphics.UI.Gtk.Selectors.FileFilter ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileFilter.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileFilter.o )
+[ 77 of 202] Compiling Graphics.UI.Gtk.Selectors.FileChooser ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooser.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooser.o )
+[ 78 of 202] Compiling Graphics.UI.Gtk.Selectors.FileChooserWidget ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooserWidget.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooserWidget.o )
+[ 79 of 202] Compiling Graphics.UI.Gtk.Selectors.FileChooserButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooserButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooserButton.o )
+[ 80 of 202] Compiling Graphics.UI.Gtk.Selectors.HSV ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/HSV.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/HSV.o )
+[ 81 of 202] Compiling Graphics.UI.Gtk.Selectors.FontButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FontButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FontButton.o )
+[ 82 of 202] Compiling Graphics.UI.Gtk.Selectors.FontSelectionDialog ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FontSelectionDialog.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FontSelectionDialog.o )
+[ 83 of 202] Compiling Graphics.UI.Gtk.Selectors.FontSelection ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FontSelection.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FontSelection.o )
+[ 84 of 202] Compiling Graphics.UI.Gtk.Selectors.ColorButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/ColorButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/ColorButton.o )
+[ 85 of 202] Compiling Graphics.UI.Gtk.Selectors.ColorSelectionDialog ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/ColorSelectionDialog.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/ColorSelectionDialog.o )
+[ 86 of 202] Compiling Graphics.UI.Gtk.Selectors.ColorSelection ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/ColorSelection.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/ColorSelection.o )
+[ 87 of 202] Compiling Graphics.UI.Gtk.ActionMenuToolbar.UIManager ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/UIManager.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/UIManager.o )
+[ 88 of 202] Compiling Graphics.UI.Gtk.ActionMenuToolbar.RecentAction ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/RecentAction.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/RecentAction.o )
+[ 89 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.SeparatorToolItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/SeparatorToolItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/SeparatorToolItem.o )
+[ 90 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.SeparatorMenuItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/SeparatorMenuItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/SeparatorMenuItem.o )
+[ 91 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ToolPalette ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolPalette.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolPalette.o )
+[ 92 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ToolItemGroup ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolItemGroup.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolItemGroup.o )
+[ 93 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ToolItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolItem.o )
+[ 94 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.Toolbar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/Toolbar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/Toolbar.o )
+[ 95 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.TearoffMenuItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/TearoffMenuItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/TearoffMenuItem.o )
+[ 96 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.RadioMenuItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/RadioMenuItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/RadioMenuItem.o )
+[ 97 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.MenuShell ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuShell.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuShell.o )
+[ 98 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.MenuItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuItem.o )
+[ 99 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.MenuBar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuBar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuBar.o )
+[100 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.CheckMenuItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/CheckMenuItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/CheckMenuItem.o )
+[101 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeRowReference ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeRowReference.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeRowReference.o )
+[102 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeSortable ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeSortable.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeSortable.o )
+[103 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeDrag ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeDrag.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeDrag.o )
+[104 of 202] Compiling Graphics.UI.Gtk.ModelView.CustomStore ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CustomStore.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CustomStore.o )
+[105 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeModel ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeModel.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeModel.o )
+[106 of 202] Compiling Graphics.UI.Gtk.ModelView.ListStore ( Graphics/UI/Gtk/ModelView/ListStore.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/ListStore.o )
+[107 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeModelSort ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeModelSort.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeModelSort.o )
+[108 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeModelFilter ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeModelFilter.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeModelFilter.o )
+[109 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeSelection ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeSelection.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeSelection.o )
+[110 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeViewColumn ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeViewColumn.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeViewColumn.o )
+[111 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeStore ( Graphics/UI/Gtk/ModelView/TreeStore.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeStore.o )
+[112 of 202] Compiling Graphics.UI.Gtk.ModelView.CellView ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellView.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellView.o )
+[113 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererToggle ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererToggle.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererToggle.o )
+[114 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererSpin ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererSpin.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererSpin.o )
+[115 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererText ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererText.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererText.o )
+[116 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererProgress ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererProgress.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererProgress.o )
+[117 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererPixbuf ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererPixbuf.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererPixbuf.o )
+[118 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererCombo ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererCombo.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererCombo.o )
+[119 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererSpinner ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererSpinner.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererSpinner.o )
+[120 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRenderer ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRenderer.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRenderer.o )
+[121 of 202] Compiling Graphics.UI.Gtk.ModelView.CellLayout ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellLayout.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellLayout.o )
+[122 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ComboBox ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ComboBox.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ComboBox.o )
+[123 of 202] Compiling Graphics.UI.Gtk.Multiline.TextTagTable ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextTagTable.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextTagTable.o )
+[124 of 202] Compiling Graphics.UI.Gtk.Multiline.TextMark ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextMark.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextMark.o )
+[125 of 202] Compiling Graphics.UI.Gtk.Entry.SpinButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/SpinButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/SpinButton.o )
+[126 of 202] Compiling Graphics.UI.Gtk.Entry.VScale ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/VScale.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/VScale.o )
+[127 of 202] Compiling Graphics.UI.Gtk.Entry.HScale ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/HScale.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/HScale.o )
+[128 of 202] Compiling Graphics.UI.Gtk.Entry.EntryCompletion ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/EntryCompletion.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/EntryCompletion.o )
+[129 of 202] Compiling Graphics.UI.Gtk.Entry.EntryBuffer ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/EntryBuffer.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/EntryBuffer.o )
+[130 of 202] Compiling Graphics.UI.Gtk.Entry.Editable ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/Editable.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/Editable.o )
+[131 of 202] Compiling Graphics.UI.Gtk.Buttons.VolumeButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/VolumeButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/VolumeButton.o )
+[132 of 202] Compiling Graphics.UI.Gtk.Buttons.ScaleButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/ScaleButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/ScaleButton.o )
+[133 of 202] Compiling Graphics.UI.Gtk.Buttons.LinkButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/LinkButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/LinkButton.o )
+[134 of 202] Compiling Graphics.UI.Gtk.Buttons.ToggleButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/ToggleButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/ToggleButton.o )
+[135 of 202] Compiling Graphics.UI.Gtk.Buttons.RadioButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/RadioButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/RadioButton.o )
+[136 of 202] Compiling Graphics.UI.Gtk.Buttons.CheckButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/CheckButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/CheckButton.o )
+[137 of 202] Compiling Graphics.UI.Gtk.Display.Statusbar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Statusbar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Statusbar.o )
+[138 of 202] Compiling Graphics.UI.Gtk.Display.Spinner ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Spinner.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Spinner.o )
+[139 of 202] Compiling Graphics.UI.Gtk.Display.ProgressBar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/ProgressBar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/ProgressBar.o )
+[140 of 202] Compiling Graphics.UI.Gtk.Display.LevelBar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/LevelBar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/LevelBar.o )
+[141 of 202] Compiling Graphics.UI.Gtk.Display.AccelLabel ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/AccelLabel.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/AccelLabel.o )
+[142 of 202] Compiling Graphics.UI.Gtk.Windows.WindowGroup ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/WindowGroup.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/WindowGroup.o )
+[143 of 202] Compiling Graphics.UI.Gtk.Windows.MessageDialog ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/MessageDialog.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/MessageDialog.o )
+[144 of 202] Compiling Graphics.UI.Gtk.Display.InfoBar ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/InfoBar.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/InfoBar.o )
+[145 of 202] Compiling Graphics.UI.Gtk.Windows.Assistant ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Assistant.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Assistant.o )
+[146 of 202] Compiling Graphics.UI.Gtk.Windows.AboutDialog ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/AboutDialog.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/AboutDialog.o )
+[147 of 202] Compiling Graphics.UI.Gtk.Windows.Dialog ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Dialog.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Dialog.o )
+[148 of 202] Compiling Graphics.UI.Gtk.Windows.OffscreenWindow ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/OffscreenWindow.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/OffscreenWindow.o )
+[149 of 202] Compiling Graphics.UI.Gtk.Cairo ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Cairo.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Cairo.o )
+[150 of 202] Compiling Graphics.UI.Gtk.Gdk.DisplayManager ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/DisplayManager.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/DisplayManager.o )
+[151 of 202] Compiling Graphics.UI.Gtk.Gdk.Screen ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Screen.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Screen.o )
+[152 of 202] Compiling Graphics.UI.Gtk.Windows.Invisible ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Invisible.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Invisible.o )
+[153 of 202] Compiling Graphics.UI.Gtk.Gdk.Pixbuf ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Pixbuf.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Pixbuf.o )
+[154 of 202] Compiling Graphics.UI.Gtk.Gdk.Cursor ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Cursor.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Cursor.o )
+[155 of 202] Compiling Graphics.UI.Gtk.Gdk.DrawWindow ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/DrawWindow.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/DrawWindow.o )
+[156 of 202] Compiling Graphics.UI.Gtk.General.RcStyle ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/RcStyle.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/RcStyle.o )
+[157 of 202] Compiling Graphics.UI.Gtk.General.Style ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Style.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Style.o )
+[158 of 202] Compiling Graphics.UI.Gtk.Gdk.Keys ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Keys.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Keys.o )
+[159 of 202] Compiling Graphics.UI.Gtk.Gdk.EventM ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/EventM.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/EventM.o )
+[160 of 202] Compiling Graphics.UI.Gtk.Gdk.AppLaunchContext ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/AppLaunchContext.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/AppLaunchContext.o )
+[161 of 202] Compiling Graphics.UI.Gtk.Gdk.Display ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Display.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Display.o )
+[162 of 202] Compiling Graphics.UI.Gtk.Entry.Entry ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/Entry.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Entry/Entry.o )
+[163 of 202] Compiling Graphics.UI.Gtk.Multiline.TextTag ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextTag.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextTag.o )
+[164 of 202] Compiling Graphics.UI.Gtk.Multiline.TextIter ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextIter.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextIter.o )
+[165 of 202] Compiling Graphics.UI.Gtk.Multiline.TextBuffer ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextBuffer.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextBuffer.o )
+[166 of 202] Compiling Graphics.UI.Gtk.Multiline.TextView ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextView.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Multiline/TextView.o )
+[167 of 202] Compiling Graphics.UI.Gtk.ModelView.CellEditable ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellEditable.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellEditable.o )
+[168 of 202] Compiling Graphics.UI.Gtk.Abstract.IMContext ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/IMContext.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/IMContext.o )
+[169 of 202] Compiling Graphics.UI.Gtk.Gdk.Keymap ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Keymap.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Keymap.o )
+[170 of 202] Compiling Graphics.UI.Gtk.Windows.Window ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Window.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Windows/Window.o )
+[171 of 202] Compiling Graphics.UI.Gtk.Selectors.FileChooserDialog ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooserDialog.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Selectors/FileChooserDialog.o )
+[172 of 202] Compiling Graphics.UI.Gtk.Display.Label ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Label.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Label.o )
+[173 of 202] Compiling Graphics.UI.Gtk.Layout.Notebook ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Notebook.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Layout/Notebook.o )
+[174 of 202] Compiling Graphics.UI.Gtk.ModelView.CellRendererAccel ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererAccel.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/CellRendererAccel.o )
+[175 of 202] Compiling Graphics.UI.Gtk.Gdk.Events ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Events.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Events.o )
+[176 of 202] Compiling Graphics.UI.Gtk.Gdk.Gdk ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Gdk.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Gdk/Gdk.o )
+[177 of 202] Compiling Graphics.UI.Gtk.ModelView.IconView ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/IconView.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/IconView.o )
+[178 of 202] Compiling Graphics.UI.Gtk.ModelView.TreeView ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeView.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView/TreeView.o )
+[179 of 202] Compiling Graphics.UI.Gtk.ModelView ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ModelView.o )
+[180 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.Menu ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/Menu.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/Menu.o )
+[181 of 202] Compiling Graphics.UI.Gtk.General.Settings ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Settings.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Settings.o )
+[182 of 202] Compiling Graphics.UI.Gtk.General.Selection ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Selection.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Selection.o )
+[183 of 202] Compiling Graphics.UI.Gtk.General.Clipboard ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Clipboard.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Clipboard.o )
+[184 of 202] Compiling Graphics.UI.Gtk.General.StockItems ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/StockItems.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/StockItems.o )
+[185 of 202] Compiling Graphics.UI.Gtk.General.Drag ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Drag.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/Drag.o )
+[186 of 202] Compiling Graphics.UI.Gtk.Display.Image ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Image.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/Image.o )
+[187 of 202] Compiling Graphics.UI.Gtk.Display.StatusIcon ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/StatusIcon.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Display/StatusIcon.o )
+[188 of 202] Compiling Graphics.UI.Gtk.Buttons.Button ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/Button.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Buttons/Button.o )
+[189 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ImageMenuItem ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ImageMenuItem.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ImageMenuItem.o )
+[190 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ToolButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToolButton.o )
+[191 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.MenuToolButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuToolButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/MenuToolButton.o )
+[192 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.ToggleToolButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToggleToolButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/ToggleToolButton.o )
+[193 of 202] Compiling Graphics.UI.Gtk.MenuComboToolbar.RadioToolButton ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/RadioToolButton.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/MenuComboToolbar/RadioToolButton.o )
+[194 of 202] Compiling Graphics.UI.Gtk.ActionMenuToolbar.Action ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/Action.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/Action.o )
+[195 of 202] Compiling Graphics.UI.Gtk.ActionMenuToolbar.ToggleAction ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/ToggleAction.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/ToggleAction.o )
+[196 of 202] Compiling Graphics.UI.Gtk.ActionMenuToolbar.RadioAction ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/RadioAction.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/RadioAction.o )
+[197 of 202] Compiling Graphics.UI.Gtk.ActionMenuToolbar.ActionGroup ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/ActionGroup.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/ActionMenuToolbar/ActionGroup.o )
+[198 of 202] Compiling Graphics.UI.Gtk.Abstract.Widget ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Widget.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/Abstract/Widget.o )
+[199 of 202] Compiling Graphics.UI.Gtk.General.IconTheme ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/IconTheme.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/IconTheme.o )
+[200 of 202] Compiling Graphics.UI.Gtk.General.IconFactory ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/IconFactory.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/IconFactory.o )
+[201 of 202] Compiling Graphics.UI.Gtk.General.General ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/General.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk/General/General.o )
+[202 of 202] Compiling Graphics.UI.Gtk  ( .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Graphics/UI/Gtk.o )
+Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_threads_initialise’:
+
+Graphics/UI/Gtk/General/hsgthread.c:105:5:
+     warning: ‘g_static_mutex_init’ is deprecated: Use 'g_mutex_init' instead [-Wdeprecated-declarations]
+         g_static_mutex_init(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:150:9:
+     note: declared here
+     void    g_static_mutex_init           (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:113:5:
+     warning: ‘g_thread_init’ is deprecated [-Wdeprecated-declarations]
+         g_thread_init(NULL);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:265:10:
+     note: declared here
+     void     g_thread_init                   (gpointer vtable);
+              ^
+
+Graphics/UI/Gtk/General/hsgthread.c:114:5:
+     warning: ‘gdk_threads_init’ is deprecated [-Wdeprecated-declarations]
+         gdk_threads_init();
+         ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:44:10:
+     note: declared here
+     void     gdk_threads_init                     (void);
+              ^
+
+Graphics/UI/Gtk/General/hsgthread.c:117:5:
+     warning: ‘gdk_threads_enter’ is deprecated [-Wdeprecated-declarations]
+         gdk_threads_enter();
+         ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:46:10:
+     note: declared here
+     void     gdk_threads_enter                    (void);
+              ^
+Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_g_object_unref_from_mainloop’:
+
+Graphics/UI/Gtk/General/hsgthread.c:136:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_lock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:181:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_run_finalizers’:
+
+Graphics/UI/Gtk/General/hsgthread.c:191:3:
+     warning: ‘gdk_threads_enter’ is deprecated [-Wdeprecated-declarations]
+       gdk_threads_enter();
+       ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:46:10:
+     note: declared here
+     void     gdk_threads_enter                    (void);
+              ^
+
+Graphics/UI/Gtk/General/hsgthread.c:201:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_lock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:224:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:228:3:
+     warning: ‘gdk_threads_leave’ is deprecated [-Wdeprecated-declarations]
+       gdk_threads_leave();
+       ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:48:10:
+     note: declared here
+     void     gdk_threads_leave                    (void);
+              ^
+Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_threads_initialise’:
+
+Graphics/UI/Gtk/General/hsgthread.c:105:5:
+     warning: ‘g_static_mutex_init’ is deprecated: Use 'g_mutex_init' instead [-Wdeprecated-declarations]
+         g_static_mutex_init(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:150:9:
+     note: declared here
+     void    g_static_mutex_init           (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:113:5:
+     warning: ‘g_thread_init’ is deprecated [-Wdeprecated-declarations]
+         g_thread_init(NULL);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:265:10:
+     note: declared here
+     void     g_thread_init                   (gpointer vtable);
+              ^
+
+Graphics/UI/Gtk/General/hsgthread.c:114:5:
+     warning: ‘gdk_threads_init’ is deprecated [-Wdeprecated-declarations]
+         gdk_threads_init();
+         ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:44:10:
+     note: declared here
+     void     gdk_threads_init                     (void);
+              ^
+
+Graphics/UI/Gtk/General/hsgthread.c:117:5:
+     warning: ‘gdk_threads_enter’ is deprecated [-Wdeprecated-declarations]
+         gdk_threads_enter();
+         ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:46:10:
+     note: declared here
+     void     gdk_threads_enter                    (void);
+              ^
+Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_g_object_unref_from_mainloop’:
+
+Graphics/UI/Gtk/General/hsgthread.c:136:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_lock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:181:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_run_finalizers’:
+
+Graphics/UI/Gtk/General/hsgthread.c:191:3:
+     warning: ‘gdk_threads_enter’ is deprecated [-Wdeprecated-declarations]
+       gdk_threads_enter();
+       ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:46:10:
+     note: declared here
+     void     gdk_threads_enter                    (void);
+              ^
+
+Graphics/UI/Gtk/General/hsgthread.c:201:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_lock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:224:5:
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+         g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
+         ^
+
+In file included from /usr/include/glib-2.0/glib.h:107:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:34:
+
+/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
+     note: declared here
+     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
+             ^
+
+Graphics/UI/Gtk/General/hsgthread.c:228:3:
+     warning: ‘gdk_threads_leave’ is deprecated [-Wdeprecated-declarations]
+       gdk_threads_leave();
+       ^
+
+In file included from /usr/include/gtk-3.0/gdk/gdk.h:56:0:
+    0,
+                     from Graphics/UI/Gtk/General/hsgthread.c:35:
+
+/usr/include/gtk-3.0/gdk/gdkthreads.h:48:10:
+     note: declared here
+     void     gdk_threads_leave                    (void);
+              ^
+In-place registering gtk3-0.14.2...
+Installing library in
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/gtk3-0.14.2-1D7SksqLkRbG7gstjJQHwK
+Registering gtk3-0.14.2...
