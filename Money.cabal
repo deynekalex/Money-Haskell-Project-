@@ -14,7 +14,7 @@ category:            Graphics
 build-type:          Simple
 -- extra-source-files:  
 cabal-version:       >=1.10
-
+Options-ghc: -fno-warn-tabs
 
 executable Money
   main-is:             Main.hs

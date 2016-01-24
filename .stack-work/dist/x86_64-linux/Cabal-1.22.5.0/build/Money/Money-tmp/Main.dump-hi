@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-01-24 12:11:20.489106 UTC
+2016-01-24 17:12:20.474004 UTC
 
 interface main@main:Main [family instance module] 7103
-  interface hash: c39134145b98b401f22cd11c1b53eb11
-  ABI hash: ae8520eef6bf22f4dfa9fc95dc2d0c0e
-  export-list hash: 6938bc3b39c766d92cf8cd4563e29911
+  interface hash: dd80a0dedd4fbad91123da001baf3f77
+  ABI hash: 5d1f7c525fb931cdc5d0f978813805eb
+  export-list hash: 450a69eef840bd2b414036246e266525
   orphan hash: e506809d407b73e863eea75d7b416091
   flag hash: 743ef5c5cfce12a97fce9fb4635757cb
   sig of: Nothing
@@ -46,6 +46,7 @@ package dependencies: acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim
                       pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
                       primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
                       safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG
+                      split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z
                       stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
                       text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
                       time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
@@ -110,6 +111,7 @@ import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Local f7208
 import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.Remote 7e2c8130d942c088680af4bd3416a1b6
 import  -/  acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim:Data.Acid.TemplateHaskell dd3c57c767f2fdff3299e52d5908f78a
 import  -/  base-4.8.2.0:Control.Applicative a8ebf5ad4932b411ad7725da68be9801
+import  -/  base-4.8.2.0:Data.Char c8f827952d4111ae2e47c0b105217cdb
 import  -/  base-4.8.2.0:Data.Foldable 2ce969969ad5231eb40bd713f94f05ad
 import  -/  base-4.8.2.0:Data.Typeable c3fcb0780ec05399195ad3277b18d294
 import  -/  base-4.8.2.0:Data.Typeable.Internal 76b09e88499fa4ff7869a34e89976afb
@@ -152,7 +154,9 @@ import  -/  network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network d25c46ceea5e9d1
 import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy 0ee67ce211ee529e8ecad623d77b93eb
 import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.Derive 3803886bbd195965da078889c31c7d39
 import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6ef4c4107ccbb539ef1879ad2c5d1159
-1d5ebfb6d5b2c84621db45273d1c9b37
+import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split 0ce5c537605fc9ad887ec02865b54394
+import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 963ae3cccb2c92e36d269de482ab8341
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes :: Data.Acid.Common.IsAcidic Main.AllNotes
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -160,7 +164,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                   @ Main.AllNotes
                   Main.$fSafeCopyAllNotes
                   Main.$fIsAcidicAllNotes_$cacidEvents -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes1 :: [Data.Acid.Common.Event Main.AllNotes]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -169,7 +173,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateDeleteByPos[0]))_R
                    Main.$fIsAcidicAllNotes2) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes10 ::
     GHC.Types.Int
     -> Main.AllNotes
@@ -184,7 +188,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <((), Main.AllNotes)>_R)) } }) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes11 ::
     Data.Acid.Common.Event (Data.Acid.Core.MethodState Main.Insert)
   {- Unfolding: (Data.Acid.Common.UpdateEvent
@@ -202,7 +206,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                                        <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
                              (Sym (Data.Acid.Common.NTCo:Update[0]
                                        (Main.TFCo:R:MethodStateInsert[0])) (Sym (Main.TFCo:R:MethodResultInsert[0]))))) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes12 ::
     GHC.Base.String
     -> Main.AllNotes
@@ -224,7 +228,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <((), Main.AllNotes)>_R)) }) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes2 :: [Data.Acid.Common.Event Main.AllNotes]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -233,7 +237,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateEdit[0]))_R
                    Main.$fIsAcidicAllNotes3) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes3 :: [Data.Acid.Common.Event Main.AllNotes]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -242,7 +246,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateGetAllNotes[0]))_R
                    (GHC.Types.[] @ (Data.Acid.Common.Event Main.AllNotes))) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes4 ::
     Data.Acid.Common.Event
       (Data.Acid.Core.MethodState Main.GetAllNotes)
@@ -265,7 +269,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                                        <Data.Acid.Common.EventState
                                           Main.GetAllNotes>_R) <Data.Acid.Common.EventResult
                                                                   Main.GetAllNotes>_N))) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes5 ::
     Main.GetAllNotes
     -> Data.Acid.Common.EventState Main.GetAllNotes
@@ -283,7 +287,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            (Sub (Main.TFCo:R:MethodResultGetAllNotes[0])))) } }) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes6 ::
     Data.Acid.Common.Event (Data.Acid.Core.MethodState Main.Edit)
   {- Unfolding: (Data.Acid.Common.UpdateEvent
@@ -305,7 +309,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                                        <Data.Acid.Common.EventState
                                           Main.Edit>_N) <Data.Acid.Common.EventResult
                                                            Main.Edit>_N))) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes7 ::
     Main.Edit
     -> Data.Acid.Common.EventState Main.Edit
@@ -325,7 +329,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                  (Data.Functor.Identity.Identity
                     ((Sub (Sym (Main.TFCo:R:MethodResultEdit[0])),
                       Sub (Sym (Main.TFCo:R:MethodStateEdit[0]))))_R)_R }) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes8 ::
     GHC.Types.Int
     -> GHC.Base.String
@@ -341,7 +345,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <((), Main.AllNotes)>_R)) } }) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes9 ::
     Data.Acid.Common.Event
       (Data.Acid.Core.MethodState Main.DeleteByPos)
@@ -360,7 +364,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                                        <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
                              (Sym (Data.Acid.Common.NTCo:Update[0]
                                        (Main.TFCo:R:MethodStateDeleteByPos[0])) (Sym (Main.TFCo:R:MethodResultDeleteByPos[0]))))) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fIsAcidicAllNotes_$cacidEvents ::
     [Data.Acid.Common.Event Main.AllNotes]
   {- Strictness: m2,
@@ -370,7 +374,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateInsert[0]))_R
                    Main.$fIsAcidicAllNotes1) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fMethodDeleteByPos :: Data.Acid.Core.Method Main.DeleteByPos
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -401,7 +405,7 @@ b9ae6c881a173e55f95f488f01234b9b
                    Main.$fMethodDeleteByPos_ww4
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fMethodDeleteByPos3 ::
     GHC.Prim.Proxy# Main.DeleteByPos -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -417,13 +421,13 @@ c0f664fea239c7a2efd84bdc4aafe1b9
                    Main.$fMethodDeleteByPos_wild
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fMethodDeleteByPos_$cmethodTag ::
     Main.DeleteByPos -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.DeleteByPos -> Main.$fMethodDeleteByPos1) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fMethodDeleteByPos_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.DeleteByPos
   {- Arity: 1, Strictness: <L,A>m,
@@ -444,7 +448,7 @@ c0f664fea239c7a2efd84bdc4aafe1b9
 228b428c95eded6f9a7251e8aff5933b
   $fMethodDeleteByPos_ww4 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "DeleteByPos"#) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fMethodEdit :: Data.Acid.Core.Method Main.Edit
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -497,7 +501,7 @@ d045cb2f08cf6c2cf95a967fc268251c
                    Main.$fMethodEdit_wild
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fMethodEdit6 ::
     GHC.Prim.Proxy# Main.Edit -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -512,12 +516,12 @@ d0370d758d1440800babd57a02726ea9
                    Main.$fMethodEdit_wild1
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fMethodEdit_$cmethodTag :: Main.Edit -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.Edit -> Main.$fMethodEdit1) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fMethodEdit_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.Edit
   {- Arity: 1, Strictness: <L,A>m,
@@ -553,7 +557,7 @@ a2c035c6d0428e15a4516ac4fa092be6
 1f25bc1c357e03f0cb54ef3218769d76
   $fMethodEdit_ww4 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Edit"#) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes :: Data.Acid.Core.Method Main.GetAllNotes
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -600,7 +604,7 @@ a2c035c6d0428e15a4516ac4fa092be6
 7b1cebf28e78434f6796d1da9b9223e4
   $fMethodGetAllNotes13 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Note"#) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes14 ::
     GHC.Prim.Proxy# Main.GetAllNotes -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -625,12 +629,12 @@ f818056d73a9a0fc29182f4712c5ecdf
                    Main.$fMethodGetAllNotes_ww4
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes3 :: Data.SafeCopy.SafeCopy.SafeCopy [Main.Note]
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Main.$fMethodGetAllNotes_$s$fSafeCopy[] -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes4 :: Data.Typeable.Internal.Typeable [Main.Note]
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
@@ -638,7 +642,7 @@ f818056d73a9a0fc29182f4712c5ecdf
                   `cast`
                 (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
                           <*>_N <[Main.Note]>_N)) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes5 ::
     GHC.Prim.Proxy# [Main.Note] -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
@@ -680,13 +684,13 @@ df69a3cfe1a225a48b8ec46e05aa4888
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    __word 17730107610217102821
                    __word 9866972337190828755) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes_$cmethodTag ::
     Main.GetAllNotes -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.GetAllNotes -> Main.$fMethodGetAllNotes1) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.GetAllNotes
   {- Arity: 1, Strictness: <L,A>m,
@@ -695,7 +699,7 @@ df69a3cfe1a225a48b8ec46e05aa4888
                   `cast`
                 (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
                           <*>_N <Main.GetAllNotes>_N)) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes_$s$fSafeCopy[] ::
     Data.SafeCopy.SafeCopy.SafeCopy [Main.Note]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -716,19 +720,19 @@ df69a3cfe1a225a48b8ec46e05aa4888
                      @ Main.Note
                      Main.$fSafeCopyNote)
                   Main.$fMethodGetAllNotes_$s$fSafeCopy[]_$cerrorTypeName -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes_$s$fSafeCopy[]_$cerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy [Main.Note] -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.Instances.$fSafeCopy[]4 @ Main.Note) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes_$s$fSafeCopy[]_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency [Main.Note]
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ [Main.Note]) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fMethodGetAllNotes_$s$fSafeCopy[]_$ckind ::
     Data.SafeCopy.SafeCopy.Kind [Main.Note]
   {- HasNoCafRefs,
@@ -781,7 +785,7 @@ d646d01e8574aa0b8ccce54e58bcf916
 bdbcc584d538be3ac5558b5212634d74
   $fMethodGetAllNotes_ww7 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "main"#) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fMethodInsert :: Data.Acid.Core.Method Main.Insert
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -812,7 +816,7 @@ df26176b63b1d35d506c15f4247a25e5
                    Main.$fMethodInsert_ww4
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fMethodInsert3 ::
     GHC.Prim.Proxy# Main.Insert -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -827,12 +831,12 @@ c13619701dcfc5210e71443003ea7b0a
                    Main.$fMethodInsert_wild
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fMethodInsert_$cmethodTag :: Main.Insert -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.Insert -> Main.$fMethodInsert1) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fMethodInsert_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.Insert
   {- Arity: 1, Strictness: <L,A>m,
@@ -853,7 +857,7 @@ c13619701dcfc5210e71443003ea7b0a
 073647acab04a783f07b41557a59beec
   $fMethodInsert_ww4 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Insert"#) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fQueryEventGetAllNotes ::
     Data.Acid.Common.QueryEvent Main.GetAllNotes
   DFunId[0]
@@ -862,7 +866,7 @@ c13619701dcfc5210e71443003ea7b0a
                 Main.$fMethodGetAllNotes
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:QueryEvent[0]) <Main.GetAllNotes>_N) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes :: Data.SafeCopy.SafeCopy.SafeCopy Main.AllNotes
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -878,7 +882,7 @@ c13619701dcfc5210e71443003ea7b0a
 8f40cd0d3f34009b223665f59d6bee29
   $fSafeCopyAllNotes1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Main.AllNotes"#) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -947,7 +951,7 @@ c13619701dcfc5210e71443003ea7b0a
                       m1
                       kf1
                       ks)) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes3 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -966,7 +970,7 @@ c13619701dcfc5210e71443003ea7b0a
                    ks :: Data.Serialize.Get.Success
                            ([Main.Note] -> Main.AllNotes) r ->
                  ks s0 b0 m0 Main.AllNotes) -}
-6869e5166b201394a049a780c1994359
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes4 ::
     Data.Serialize.Get.Get (Data.Serialize.Get.Get [Main.Note])
   {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
@@ -975,14 +979,14 @@ c13619701dcfc5210e71443003ea7b0a
 2abd495e4c38be4a542714ad43cbcd80
   $fSafeCopyAllNotes5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Main.AllNotes:"#) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes_$cerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.AllNotes -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.AllNotes ->
                  Main.$fSafeCopyAllNotes1) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.AllNotes)
@@ -993,16 +997,16 @@ c13619701dcfc5210e71443003ea7b0a
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.AllNotes>_R))) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.AllNotes
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.AllNotes) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.AllNotes
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes_$cputCopy ::
     Main.AllNotes
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1032,7 +1036,7 @@ c13619701dcfc5210e71443003ea7b0a
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyAllNotes_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.AllNotes
   {- Strictness: m,
@@ -1045,7 +1049,7 @@ c13619701dcfc5210e71443003ea7b0a
   {- Unfolding: (case Data.Serialize.$w$cput15
                         Main.$fSafeCopyNote6 of ww { (#,#) ww1 ww2 ->
                  ww2 }) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos ::
     Data.SafeCopy.SafeCopy.SafeCopy Main.DeleteByPos
   DFunId[0]
@@ -1059,7 +1063,7 @@ c13619701dcfc5210e71443003ea7b0a
                   Main.$fSafeCopyDeleteByPos_$cinternalConsistency
                   Main.$fSafeCopyDeleteByPos_$cobjectProfile
                   Main.$fSafeCopyDeleteByPos_$s$dmerrorTypeName -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos1 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1078,7 +1082,7 @@ c13619701dcfc5210e71443003ea7b0a
                    Main.$fSafeCopyEdit4
                      `cast`
                    (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R))) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1108,7 +1112,7 @@ c13619701dcfc5210e71443003ea7b0a
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
      Unfolding: InlineRule (1, True, True)
                 (\ tpl :: GHC.Types.Int -> tpl) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.DeleteByPos)
@@ -1118,16 +1122,16 @@ c13619701dcfc5210e71443003ea7b0a
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.DeleteByPos>_R))) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.DeleteByPos
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.DeleteByPos) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.DeleteByPos
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$cputCopy ::
     Main.DeleteByPos
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1157,7 +1161,7 @@ c13619701dcfc5210e71443003ea7b0a
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N)))) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.DeleteByPos
   {- Strictness: m,
@@ -1166,7 +1170,7 @@ c13619701dcfc5210e71443003ea7b0a
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0]
                           <Main.DeleteByPos>_P)) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.DeleteByPos -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1175,13 +1179,13 @@ c13619701dcfc5210e71443003ea7b0a
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyDeleteByPos_$s$dmkind ::
     Data.SafeCopy.SafeCopy.Kind Main.DeleteByPos
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
                 (Data.SafeCopy.SafeCopy.Base @ Main.DeleteByPos) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit :: Data.SafeCopy.SafeCopy.SafeCopy Main.Edit
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1194,7 +1198,7 @@ ac6f4c1d799053f45c63f09f3203f112
                   Main.$fSafeCopyEdit_$cinternalConsistency
                   Main.$fSafeCopyEdit_$cobjectProfile
                   Main.$fSafeCopyEdit_$s$dmerrorTypeName -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit1 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1249,7 +1253,7 @@ ac6f4c1d799053f45c63f09f3203f112
                       m1
                       kf
                       ks)) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit3 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1304,7 +1308,7 @@ ac6f4c1d799053f45c63f09f3203f112
                       m1
                       kf
                       ks)) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit5 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1324,7 +1328,7 @@ ac6f4c1d799053f45c63f09f3203f112
                    ks :: Data.Serialize.Get.Success
                            (GHC.Types.Int -> GHC.Base.String -> Main.Edit) r ->
                  ks s0 b0 m0 Main.Edit) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained (Data.Serialize.Get.Get Main.Edit)
   {- Arity: 5,
@@ -1333,16 +1337,16 @@ ac6f4c1d799053f45c63f09f3203f112
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.Edit>_R))) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.Edit
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.Edit) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.Edit
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$cputCopy ::
     Main.Edit
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1355,7 +1359,7 @@ ac6f4c1d799053f45c63f09f3203f112
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) } }) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.Edit
   {- Strictness: m,
@@ -1363,7 +1367,7 @@ ac6f4c1d799053f45c63f09f3203f112
                 Main.$fSafeCopyNote6
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Edit>_P)) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.Edit -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1372,7 +1376,7 @@ ac6f4c1d799053f45c63f09f3203f112
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyEdit_$s$dmkind :: Data.SafeCopy.SafeCopy.Kind Main.Edit
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
@@ -1383,7 +1387,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
   {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
                    @ GHC.Types.Int
                    Data.SafeCopy.Instances.$fSafeCopyInt) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes ::
     Data.SafeCopy.SafeCopy.SafeCopy Main.GetAllNotes
   DFunId[0]
@@ -1408,7 +1412,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                          -> [Data.ByteString.Internal.ByteString]))
                      `cast`
                    (Sym (Data.Serialize.Builder.NTCo:Builder[0]))) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1426,7 +1430,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                    ds :: Data.Serialize.Get.Failure r
                    ks :: Data.Serialize.Get.Success Main.GetAllNotes r ->
                  ks s0 b0 m0 Main.GetAllNotes) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.GetAllNotes)
@@ -1437,16 +1441,16 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.GetAllNotes>_R))) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.GetAllNotes
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.GetAllNotes) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.GetAllNotes
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$cputCopy ::
     Main.GetAllNotes
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1458,7 +1462,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.GetAllNotes
   {- Strictness: m,
@@ -1467,7 +1471,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0]
                           <Main.GetAllNotes>_P)) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.GetAllNotes -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1476,13 +1480,13 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyGetAllNotes_$s$dmkind ::
     Data.SafeCopy.SafeCopy.Kind Main.GetAllNotes
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
                 (Data.SafeCopy.SafeCopy.Base @ Main.GetAllNotes) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert :: Data.SafeCopy.SafeCopy.SafeCopy Main.Insert
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1495,7 +1499,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                   Main.$fSafeCopyInsert_$cinternalConsistency
                   Main.$fSafeCopyInsert_$cobjectProfile
                   Main.$fSafeCopyInsert_$s$dmerrorTypeName -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert1 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1514,7 +1518,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                    Main.$fSafeCopyEdit2
                      `cast`
                    (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R))) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1544,7 +1548,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, True)
                 (\ tpl :: GHC.Base.String -> tpl) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.Insert)
@@ -1554,16 +1558,16 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.Insert>_R))) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.Insert
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.Insert) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.Insert
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$cputCopy ::
     Main.Insert
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1595,7 +1599,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N)))) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.Insert
   {- Strictness: m,
@@ -1603,7 +1607,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                 Main.$fSafeCopyNote6
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Insert>_P)) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.Insert -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1612,13 +1616,13 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyInsert_$s$dmkind ::
     Data.SafeCopy.SafeCopy.Kind Main.Insert
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
                 (Data.SafeCopy.SafeCopy.Base @ Main.Insert) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote :: Data.SafeCopy.SafeCopy.SafeCopy Main.Note
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1634,7 +1638,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
 9f149423fa9cbeeebf0c36685343187e
   $fSafeCopyNote1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Main.Note"#) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1696,7 +1700,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
                       m1
                       kf1
                       ks)) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote3 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1727,14 +1731,14 @@ c1cb523578c4b6365f4e437506fd7ea8
 64150fcb06d31b4268b11789e2eb57d2
   $fSafeCopyNote6 :: GHC.Int.Int32
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Int.I32# 0) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote_$cerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.Note -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.Note ->
                  Main.$fSafeCopyNote1) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained (Data.Serialize.Get.Get Main.Note)
   {- Arity: 5,
@@ -1744,16 +1748,16 @@ c1cb523578c4b6365f4e437506fd7ea8
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.Note>_R))) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.Note
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.Note) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.Note
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote_$cputCopy ::
     Main.Note
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1781,7 +1785,7 @@ c1cb523578c4b6365f4e437506fd7ea8
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   $fSafeCopyNote_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.Note
   {- Strictness: m,
@@ -1794,7 +1798,7 @@ c1cb523578c4b6365f4e437506fd7ea8
   {- Unfolding: (case Data.Serialize.$w$cput15
                         Data.SafeCopy.Instances.$fSafeCopy()3 of ww { (#,#) ww1 ww2 ->
                  ww2 }) -}
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   $fUpdateEventDeleteByPos ::
     Data.Acid.Common.UpdateEvent Main.DeleteByPos
   DFunId[0]
@@ -1803,7 +1807,7 @@ c1cb523578c4b6365f4e437506fd7ea8
                 Main.$fMethodDeleteByPos
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.DeleteByPos>_N) -}
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   $fUpdateEventEdit :: Data.Acid.Common.UpdateEvent Main.Edit
   DFunId[0]
   {- Strictness: m, Inline: INLINE (sat-args=0),
@@ -1811,7 +1815,7 @@ ac6f4c1d799053f45c63f09f3203f112
                 Main.$fMethodEdit
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Edit>_N) -}
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   $fUpdateEventInsert :: Data.Acid.Common.UpdateEvent Main.Insert
   DFunId[0]
   {- Strictness: m, Inline: INLINE (sat-args=0),
@@ -1955,7 +1959,7 @@ d53c1719affdb1d19d5cf5a1710ee2fe
                               w'2 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x })) }))
                       `cast`
                     (Sym (Data.Serialize.Builder.NTCo:Builder[0])) #)) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $wa ::
     GHC.Types.Int
     -> GHC.Base.String -> [Main.Note] -> (# (), Main.AllNotes #)
@@ -2005,7 +2009,7 @@ d53c1719affdb1d19d5cf5a1710ee2fe
                                        1 -> GHC.Types.: @ Main.Note y1 n } }
                             } in
                             $wgo ww y } }) #)) -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   $wa1 :: GHC.Types.Int -> [Main.Note] -> (# (), Main.AllNotes #)
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
      Inline: [0],
@@ -2053,44 +2057,44 @@ d53c1719affdb1d19d5cf5a1710ee2fe
   $wunsafeDrop1 :: GHC.Prim.Int# -> [a1] -> [a1]
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U>,
      Inline: [0] -}
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   data AllNotes = AllNotes [Main.Note]
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   newtype DeleteByPos = DeleteByPos GHC.Types.Int
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   data Edit = Edit GHC.Types.Int GHC.Base.String
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   data GetAllNotes = GetAllNotes
     Promotable
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   newtype Insert = Insert GHC.Base.String
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   data Note = Note GHC.Base.String
-3cca0654878a8c3fcd2e305f3ba1bd0c
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodResultDeleteByPos::
       Data.Acid.Core.MethodResult Main.DeleteByPos = ()
-ac6f4c1d799053f45c63f09f3203f112
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodResultEdit::
       Data.Acid.Core.MethodResult Main.Edit = ()
-6db5827a9a31e99039a03909ae94236b
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodResultGetAllNotes::
       Data.Acid.Core.MethodResult Main.GetAllNotes = [Main.Note]
-2ee86e16bcbb030d23e181ab15e6bdfd
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodResultInsert::
       Data.Acid.Core.MethodResult Main.Insert = ()
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodStateDeleteByPos::
       Data.Acid.Core.MethodState Main.DeleteByPos = Main.AllNotes
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodStateEdit::
       Data.Acid.Core.MethodState Main.Edit = Main.AllNotes
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodStateGetAllNotes::
       Data.Acid.Core.MethodState Main.GetAllNotes = Main.AllNotes
-1d5ebfb6d5b2c84621db45273d1c9b37
+c88c98d29d9bda12f808981beaf82945
   axiom TFCo:R:MethodStateInsert::
       Data.Acid.Core.MethodState Main.Insert = Main.AllNotes
-e69f8995118371f6ac321c3a222723c9
+78d97c81799278ce014d985013ad9acd
   deleteByPos ::
     GHC.Types.Int -> Data.Acid.Common.Update Main.AllNotes ()
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U(U)>m,
@@ -2103,7 +2107,7 @@ e69f8995118371f6ac321c3a222723c9
                                     <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
                           (Sym (Data.Acid.Common.NTCo:Update[0]
                                     <Main.AllNotes>_N) <()>_N)) -}
-7b7cb3937f083d796373a4bc05a06d74
+3787bf8961602c5ba14e0b198f3dfea4
   edit ::
     GHC.Types.Int
     -> GHC.Base.String -> Data.Acid.Common.Update Main.AllNotes ()
@@ -2118,7 +2122,7 @@ e69f8995118371f6ac321c3a222723c9
                                     <Main.AllNotes>_N <Data.Functor.Identity.Identity>_R <()>_N))
                           (Sym (Data.Acid.Common.NTCo:Update[0]
                                     <Main.AllNotes>_N) <()>_N)) -}
-9ce70301378a4fb99b2398d1cc92abb8
+2df555d0914740f19610a767d410f6a0
   getAllNotes :: Data.Acid.Common.Query Main.AllNotes [Main.Note]
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
      Unfolding: InlineRule (0, True, True)
@@ -2131,7 +2135,7 @@ e69f8995118371f6ac321c3a222723c9
                                <[Main.Note]>_N))
                      (Sym (Data.Acid.Common.NTCo:Query[0]
                                <Main.AllNotes>_R) <[Main.Note]>_N)) -}
-7d31136f934f1c007d7afffd96ba4733
+ffa9c8553762e848584e74931c4fdc53
   getAllNotes1 ::
     Main.AllNotes -> Data.Functor.Identity.Identity [Main.Note]
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
@@ -2142,7 +2146,7 @@ e69f8995118371f6ac321c3a222723c9
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <[Main.Note]>_R)) }) -}
-4a5f76ef5bbd0a4a6dccbaf3843a6749
+a6ea9fff088e3ef0967ab73841953acc
   insert ::
     GHC.Base.String -> Data.Acid.Common.Update Main.AllNotes ()
   {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(1*U)>m,
