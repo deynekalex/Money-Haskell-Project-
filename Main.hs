@@ -5,177 +5,199 @@
 module Main where
 
 import Control.Monad.State
+import Control.Monad
 import Graphics.UI.Gtk hiding (get)
-import Graphics.UI.Gtk.ModelView as Model
 import Data.Acid
-import Data.Acid.Remote
-import Control.Applicative
 import Control.Monad.Reader
 import Data.SafeCopy
-import Network
-import System.Environment
-import System.Exit
-import System.IO
-import Data.Typeable
-import qualified Data.Map as Map
-
+--import Graphics.UI.Gtk.ModelView as Model
+--import Data.Acid.Remote
+--import Control.Applicative
+--import Network
+--import System.Environment
+--import System.Exit
+--import System.IO
+--import Data.Typeable
+--import qualified Data.Map as Map
+--import Data.Time
+--import Data.DateTime
+--import System.Time
 import Data.Char
 import Data.List.Split
 
-data Note = Note String deriving Typeable
-data AllNotes = AllNotes[Note] deriving Typeable
+data Item = Item String
+type ListOfItems = [Item]
+--show $ typeOf x
+data AllItems = AllItems ListOfItems --deriving Typeable
 
-insert :: String -> Update AllNotes ()
+--interact with db
+insert :: String -> Update AllItems ()
 insert record = do
-     AllNotes ns <- get
-     put (AllNotes (ns ++ [Note record]))
+     AllItems ns <- get
+     put (AllItems (ns ++ [Item record]))
 
-deleteByPos :: Int -> Update AllNotes ()
+deleteByPos :: Int -> Update AllItems ()
 deleteByPos pos = do
-    AllNotes ns <- get
-    put (AllNotes ((take (pos - 1) ns) ++ (drop (pos + 1) ns)))
+    AllItems ns <- get
+    put (AllItems (take (pos - 1) ns ++ drop (pos + 1) ns))
 
-edit :: Int -> String -> Update AllNotes ()
+edit :: Int -> String -> Update AllItems ()
 edit pos record = do
-    AllNotes ns <- get
-    put (AllNotes ((take (pos - 1) ns) ++ [Note record] ++ (drop (pos + 1) ns)))
+    AllItems ns <- get
+    put (AllItems (take (pos - 1) ns ++ [Item record] ++ drop (pos + 1) ns))
 
-getAllNotes :: Query AllNotes [Note]
-getAllNotes = do 
-    AllNotes ns <- ask
+getAllItems :: Query AllItems [Item]
+getAllItems = do
+    AllItems ns <- ask
     return ns
 
-$(deriveSafeCopy 0 'base ''Note)
-$(deriveSafeCopy 0 'base ''AllNotes)
-$(makeAcidic ''AllNotes ['insert, 'deleteByPos, 'edit, 'getAllNotes])
+$(deriveSafeCopy 0 'base ''Item)
+$(deriveSafeCopy 0 'base ''AllItems)
+$(makeAcidic ''AllItems ['insert, 'deleteByPos, 'edit, 'getAllItems])
 
 main :: IO()
 main = do
-	--Read saved notes
-	all <- openLocalState (AllNotes [])
-	listNote <- query all GetAllNotes
+        --Read saved notes
+        allItems <- openLocalState (AllItems [])
+        listItem <- query allItems GetAllItems
 
-	list2 <- listStoreNew []
-	mapM_ (\(Note r)-> listStoreAppend list2 r) listNote
+        list2 <- listStoreNew []
+        mapM_ (\(Item r)-> listStoreAppend list2 r) listItem
 
-	--Initialize GUI
-	initGUI
-	window <- windowNew
-	set window [windowTitle := "Notes", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10]
-	--mainBox
-	mainBox <- vBoxNew False 1
-	containerAdd window mainBox
+        --Initialize GUI
+        initGUI
+        window <- windowNew
+        set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10]
+        --mainBox
+        mainBox <- vBoxNew False 1
+        containerAdd window mainBox
 
-	--infoBox
-	infoBox <-  hBoxNew False 1
-	infoLbl <- labelNew(Just "Оставшиеся деньги")
-	boxPackStart infoBox infoLbl PackNatural 0
+        --infoBox
+        {-infoBox <-  hBoxNew False 1
+        infoLbl <- labelNew(Just "Оставшиеся деньги")
+        boxPackStart infoBox infoLbl PackNatural 0-}
 
-	--DescriptionPrice
-	descPriceBox <- hBoxNew False 1
-	descLbl <- labelNew(Just "Описание")
-	priceLbl <- labelNew(Just "Цена")
-	boxPackStart descPriceBox descLbl PackGrow 0
-	boxPackStart descPriceBox priceLbl PackGrow 0
+        --DescriptionPrice
+        descPriceBox <- hBoxNew False 1
+        descLbl <- labelNew(Just "Описание")
+        priceLbl <- labelNew(Just "Цена")
+        boxPackStart descPriceBox descLbl PackNatural 220
+        boxPackStart descPriceBox priceLbl PackNatural 95
 
-	--addBox
-	addBox <- hBoxNew False 1
-	addLbl <- labelNew(Just "NewNote:")
-	addEdt <- entryNew
-	addEdt1 <- entryNew
-	addBtn <- buttonNewWithLabel "Add"
-	boxPackStart addBox addLbl PackNatural 0
-	boxPackStart addBox addEdt PackGrow 0
-	boxPackStart addBox addEdt1 PackGrow 0
-	boxPackStart addBox addBtn PackNatural 0
+        --addBox
+        addBox <- hBoxNew False 1
+        addLbl <- labelNew(Just "Новый: ")
+        addEdt <- entryNew
+        addEdt1 <- entryNew
+        addBtnCons <- buttonNewWithLabel "Расход "
+        addBtnInc <- buttonNewWithLabel "Доход"
+        boxPackStart addBox addLbl PackNatural 15
+        boxPackStart addBox addEdt PackGrow 0
+        boxPackStart addBox addEdt1 PackGrow 0
+        boxPackStart addBox addBtnCons PackNatural 0
+        boxPackStart addBox addBtnInc PackNatural 0
 
-	--editBox
-	editBox <- hBoxNew False 1
-	edtLbl <- labelNew(Just "EditNode:")
-	editEdt <- entryNew
-	editEdt1 <- entryNew
-	saveBtn <- buttonNewWithLabel "Save"
-	boxPackStart editBox edtLbl PackNatural 0
-	boxPackStart editBox editEdt PackGrow 0
-	boxPackStart editBox editEdt1 PackGrow 0
-	boxPackStart editBox saveBtn PackNatural 0
+        --editBox 
+        editBox <- hBoxNew False 1
+        edtLbl <- labelNew(Just "Изменить:")
+        editEdt <- entryNew
+        editEdt1 <- entryNew
+        editEdt2 <- entryNew
+        saveBtn <- buttonNewWithLabel "Сохранить"
+        boxPackStart editBox edtLbl PackNatural 5
+        boxPackStart editBox editEdt PackGrow 0
+        boxPackStart editBox editEdt1 PackGrow 0
+        boxPackStart editBox saveBtn PackNatural 16
 
-	--delButton
-	delBtn <- buttonNewWithLabel "Delete"
+        --delButton
+        delBtn <- buttonNewWithLabel "Удалить"
 
-	--ListView
-	treeview <- treeViewNewWithModel list2
-	treeViewSetHeadersVisible treeview False
-	col <- treeViewColumnNew
-	rend <- cellRendererTextNew
-	cellLayoutPackStart col rend False
-	cellLayoutSetAttributes col rend list2 (\i -> [cellText := i])
-	treeViewAppendColumn treeview col
-	selection <- treeViewGetSelection treeview
-	treeSelectionSetMode selection SelectionSingle
-	lbl <- labelNew(Just "Saved Notes")
-	boxPackStart mainBox lbl PackNatural 0
-	boxPackStart mainBox treeview PackGrow 0
-	boxPackStart mainBox infoBox PackNatural 0
-	boxPackStart mainBox descPriceBox PackNatural 0
-	boxPackStart mainBox addBox PackNatural 0
-	boxPackStart mainBox editBox PackNatural 0
-	boxPackStart mainBox delBtn PackNatural 0
-	set window [windowTitle := "Notes", windowDefaultWidth := 1000, windowDefaultHeight := 800, containerBorderWidth := 30]
-	
-	onClicked addBtn (do 
-		curText <- liftM2 (++) (liftM2 (++) (entryGetText addEdt1) (return " - ")) (entryGetText addEdt)
-		text1 <- (entryGetText addEdt1)::IO String
-		if ((length curText /= 0) && (Prelude.all isNumber text1) && (length text1 > 0))
-		  then do
-		    listStoreAppend list2 curText
-		    update all (Insert curText)
-		    entrySetText addEdt ""
-		    entrySetText addEdt1 ""
-		  else 
-		    return ()
-		)
+        --ListView
+        treeview <- treeViewNewWithModel list2
+        treeViewSetHeadersVisible treeview False
+        col <- treeViewColumnNew
+        rend <- cellRendererTextNew
+        cellLayoutPackStart col rend False
+        cellLayoutSetAttributes col rend list2 (\i -> [cellText := i])
+        treeViewAppendColumn treeview col
+        selection <- treeViewGetSelection treeview
+        treeViewColumnsAutosize treeview
+        treeSelectionSetMode selection SelectionSingle
+        lbl <- labelNew(Just "История расходов/доходов")
+        boxPackStart mainBox lbl PackNatural 0
+        boxPackStart mainBox treeview PackGrow 0
+        --boxPackStart mainBox infoBox PackNatural 0
+        boxPackStart mainBox descPriceBox PackNatural 0
+        boxPackStart mainBox addBox PackNatural 0
+        boxPackStart mainBox editBox PackNatural 0
+        boxPackStart mainBox delBtn PackNatural 0
+        set window [windowTitle := "Учёт расходов", windowDefaultWidth := 1000, windowDefaultHeight := 800, containerBorderWidth := 30]
 
-	onClicked delBtn (do 
-		selRows <- treeSelectionGetSelectedRows selection
-		if (null selRows)
-		  then
-		    return ()
-		  else do
-		    let index = head (head selRows)
-		    update all (DeleteByPos index)
-		    listStoreRemove list2 index
-		    entrySetText editEdt ""
-		)
+        onClicked addBtnCons (do
+                --concat two entrys
+                curText <- liftM2 (++) (liftM2 (++) (entryGetText addEdt1) (return " - ")) (entryGetText addEdt)
+                text1 <- entryGetText addEdt1::IO String
+                --check for some conditions
+                Control.Monad.when (not (null curText) && all isNumber text1 && not (null text1)) $ do
+                    listStoreAppend list2 ("Расход - " ++ curText)
+                    update allItems (Insert ("Расход - " ++ curText))
+                    entrySetText addEdt ""
+                    entrySetText addEdt1 ""
+                )
 
-	onSelectionChanged selection (do
-		selRows <- treeSelectionGetSelectedRows selection
-		if (null selRows) 
-		  then
-		    return ()
-		  else do
-		    let index = head (head selRows)
-		    v <- listStoreGetValue list2 index
-		    let first = head (splitOn "-" v)
-		    let second = head (tail (splitOn "-" v))
-		    entrySetText editEdt first 
-		    entrySetText editEdt1 second
-		)
+        onClicked addBtnInc (do
+                curText <- liftM2 (++) (liftM2 (++) (entryGetText addEdt1) (return " - ")) (entryGetText addEdt)
+                text1 <- entryGetText addEdt1::IO String
+                Control.Monad.when (not (null curText) && all isNumber text1 && not (null text1)) $ do
+                    listStoreAppend list2 ("Доход - " ++ curText)
+                    update allItems (Insert ("Доход - " ++ curText))
+                    entrySetText addEdt ""
+                    entrySetText addEdt1 ""
+                )
 
-	onClicked saveBtn (do
-		selRows <- treeSelectionGetSelectedRows selection
-		let index = head (head selRows)
-		curText <- entryGetText editEdt
-		if (length curText == 0) 
-		  then
-		    buttonClicked delBtn
-		  else do
-		  	update all (Edit index curText)
-		  	listStoreSetValue list2 index curText
-		  	entrySetText editEdt ""
-		)
+        onClicked delBtn (do
+                selRows <- treeSelectionGetSelectedRows selection
+                Control.Monad.unless (null selRows) $ do
+                    let index = head (head selRows)
+                    update allItems (DeleteByPos index)
+                    listStoreRemove list2 index
+                    entrySetText editEdt ""
+                )
 
-	onDestroy window mainQuit
-	onDestroy window (closeAcidState all)
-	widgetShowAll window
-	mainGUI
+        onSelectionChanged selection (do
+                --get selected row
+                selRows <- treeSelectionGetSelectedRows selection
+                Control.Monad.unless (null selRows) $ do
+                    let index = head (head selRows)
+                    v <- listStoreGetValue list2 index
+                    --parse
+                    let zero = head (splitOn " - " v)
+                    let first = splitOn " - " v!!1
+                    let second = splitOn " - " v!!2
+                    entrySetText editEdt2 zero
+                    entrySetText editEdt1 first
+                    entrySetText editEdt second
+                )
+
+        onClicked saveBtn (do
+                selRows <- treeSelectionGetSelectedRows selection
+                Control.Monad.unless (length selRows < 1) (do
+                        let index = head (head selRows)
+                        curText <- liftM2 (++) (entryGetText editEdt2) 
+                                (liftM2 (++) (return " - ") (liftM2 (++) (
+                                liftM2 (++) (entryGetText editEdt1) (return " - "))
+                                (entryGetText editEdt)))
+                        text1 <- entryGetText editEdt1::IO String
+                        Control.Monad.unless (not (not (null curText) && all isNumber text1 && not (null text1))) $ do
+                                listStoreSetValue list2 index curText
+                                update allItems (Edit index curText)
+                                entrySetText editEdt ""
+                                entrySetText editEdt1 ""
+                                entrySetText editEdt2 ""
+                        )
+                )
+
+        onDestroy window mainQuit
+        onDestroy window (closeAcidState allItems)
+        widgetShowAll window
+        mainGUI

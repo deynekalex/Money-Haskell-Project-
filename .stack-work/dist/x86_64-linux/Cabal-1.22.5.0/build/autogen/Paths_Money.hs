@@ -16,11 +16,11 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/deynekalex/Desktop/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/bin"
-libdir     = "/home/deynekalex/Desktop/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/Money-0.1.0.0-2mPF4uVjFTn1Rmv9hgk4Ry"
-datadir    = "/home/deynekalex/Desktop/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/share/x86_64-linux-ghc-7.10.3/Money-0.1.0.0"
-libexecdir = "/home/deynekalex/Desktop/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/libexec"
-sysconfdir = "/home/deynekalex/Desktop/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/etc"
+bindir     = "/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/bin"
+libdir     = "/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/Money-0.1.0.0-HdHCNmWYtcB4qGQ8Q3iN8s"
+datadir    = "/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/share/x86_64-linux-ghc-7.10.3/Money-0.1.0.0"
+libexecdir = "/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/libexec"
+sysconfdir = "/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-4.2/7.10.3/etc"
 
 getBinDir, getLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "Money_bindir") (\_ -> return bindir)

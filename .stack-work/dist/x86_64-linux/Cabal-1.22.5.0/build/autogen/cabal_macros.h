@@ -77,6 +77,13 @@
   (major1) == 2 && (major2) <  6 || \
   (major1) == 2 && (major2) == 6 && (minor) <= 2)
 
+/* package old-time-1.1.0.3 */
+#define VERSION_old_time "1.1.0.3"
+#define MIN_VERSION_old_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  1 || \
+  (major1) == 1 && (major2) == 1 && (minor) <= 0)
+
 /* package random-shuffle-0.0.4 */
 #define VERSION_random_shuffle "0.0.4"
 #define MIN_VERSION_random_shuffle(major1,major2,minor) (\
@@ -97,6 +104,13 @@
   (major1) <  0 || \
   (major1) == 0 && (major2) <  2 || \
   (major1) == 0 && (major2) == 2 && (minor) <= 3)
+
+/* package time-1.5.0.1 */
+#define VERSION_time "1.5.0.1"
+#define MIN_VERSION_time(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  5 || \
+  (major1) == 1 && (major2) == 5 && (minor) <= 0)
 
 /* tool alex-3.1.7 */
 #define TOOL_VERSION_alex "3.1.7"
@@ -182,5 +196,5 @@
   (major1) == 2 && (major2) <  25 || \
   (major1) == 2 && (major2) == 25 && (minor) <= 0)
 
-#define CURRENT_PACKAGE_KEY "Money_2mPF4uVjFTn1Rmv9hgk4Ry"
+#define CURRENT_PACKAGE_KEY "Money_HdHCNmWYtcB4qGQ8Q3iN8s"
 
