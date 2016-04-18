@@ -1,6 +1,6 @@
-[1 of 2] Compiling SetupWrapper     ( SetupWrapper.hs, /tmp/stack18896/gtk-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/SetupWrapper.o )
-[2 of 2] Compiling Main             ( /tmp/stack18896/gtk-0.14.2/Setup.hs, /tmp/stack18896/gtk-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/Main.o )
-Linking /tmp/stack18896/gtk-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/setup ...
+[1 of 2] Compiling SetupWrapper     ( SetupWrapper.hs, /tmp/stack8207/gtk-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/SetupWrapper.o )
+[2 of 2] Compiling Main             ( /tmp/stack8207/gtk-0.14.2/Setup.hs, /tmp/stack8207/gtk-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/Main.o )
+Linking /tmp/stack8207/gtk-0.14.2/.stack-work/dist/x86_64-linux/Cabal-1.22.5.0/setup/setup ...
 [1 of 2] Compiling Gtk2HsSetup      ( Gtk2HsSetup.hs, dist/setup-wrapper/Gtk2HsSetup.o )
 [2 of 2] Compiling Main             ( SetupMain.hs, dist/setup-wrapper/Main.o )
 Linking dist/setup-wrapper/setup ...
@@ -219,177 +219,69 @@ Preprocessing library gtk-0.14.2...
 Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_threads_initialise’:
 
 Graphics/UI/Gtk/General/hsgthread.c:105:5:
-     warning: ‘g_static_mutex_init’ is deprecated: Use 'g_mutex_init' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_init’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:146): Use 'g_mutex_init' instead [-Wdeprecated-declarations]
          g_static_mutex_init(&gtk2hs_finalizer_mutex);
          ^
 
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:150:9:
-     note: declared here
-     void    g_static_mutex_init           (GStaticMutex *mutex);
-             ^
-
 Graphics/UI/Gtk/General/hsgthread.c:113:5:
-     warning: ‘g_thread_init’ is deprecated [-Wdeprecated-declarations]
+     warning: ‘g_thread_init’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:261) [-Wdeprecated-declarations]
          g_thread_init(NULL);
          ^
-
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:265:10:
-     note: declared here
-     void     g_thread_init                   (gpointer vtable);
-              ^
 Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_g_object_unref_from_mainloop’:
 
 Graphics/UI/Gtk/General/hsgthread.c:136:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_lock(&gtk2hs_finalizer_mutex);
          ^
 
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
-
 Graphics/UI/Gtk/General/hsgthread.c:181:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
          ^
-
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
 Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_run_finalizers’:
 
 Graphics/UI/Gtk/General/hsgthread.c:201:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_lock(&gtk2hs_finalizer_mutex);
          ^
 
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
-
 Graphics/UI/Gtk/General/hsgthread.c:224:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
          ^
-
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
 Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_threads_initialise’:
 
 Graphics/UI/Gtk/General/hsgthread.c:105:5:
-     warning: ‘g_static_mutex_init’ is deprecated: Use 'g_mutex_init' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_init’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:146): Use 'g_mutex_init' instead [-Wdeprecated-declarations]
          g_static_mutex_init(&gtk2hs_finalizer_mutex);
          ^
 
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:150:9:
-     note: declared here
-     void    g_static_mutex_init           (GStaticMutex *mutex);
-             ^
-
 Graphics/UI/Gtk/General/hsgthread.c:113:5:
-     warning: ‘g_thread_init’ is deprecated [-Wdeprecated-declarations]
+     warning: ‘g_thread_init’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:261) [-Wdeprecated-declarations]
          g_thread_init(NULL);
          ^
-
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:265:10:
-     note: declared here
-     void     g_thread_init                   (gpointer vtable);
-              ^
 Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_g_object_unref_from_mainloop’:
 
 Graphics/UI/Gtk/General/hsgthread.c:136:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_lock(&gtk2hs_finalizer_mutex);
          ^
 
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
-
 Graphics/UI/Gtk/General/hsgthread.c:181:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
          ^
-
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
 Graphics/UI/Gtk/General/hsgthread.c: In function ‘gtk2hs_run_finalizers’:
 
 Graphics/UI/Gtk/General/hsgthread.c:201:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_lock(&gtk2hs_finalizer_mutex);
          ^
 
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
-
 Graphics/UI/Gtk/General/hsgthread.c:224:5:
-     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated: Use 'GMutex' instead [-Wdeprecated-declarations]
+     warning: ‘g_static_mutex_get_mutex_impl’ is deprecated (declared at /usr/include/glib-2.0/glib/deprecated/gthread.h:150): Use 'GMutex' instead [-Wdeprecated-declarations]
          g_static_mutex_unlock(&gtk2hs_finalizer_mutex);
          ^
-
-In file included from /usr/include/glib-2.0/glib.h:107:0:
-    0,
-                     from Graphics/UI/Gtk/General/hsgthread.c:34:
-
-/usr/include/glib-2.0/glib/deprecated/gthread.h:154:9:
-     note: declared here
-     GMutex *g_static_mutex_get_mutex_impl (GStaticMutex *mutex);
-             ^
 In-place registering gtk-0.14.2...
 Installing library in
 /home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/gtk-0.14.2-Gt5OC8BLJhB3JqsdGgYX4p

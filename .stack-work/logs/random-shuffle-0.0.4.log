@@ -20,5 +20,5 @@ src/System/Random/Shuffle.hs:79:1: Warning: Tab character
 src/System/Random/Shuffle.hs:80:1: Warning: Tab character
 In-place registering random-shuffle-0.0.4...
 Installing library in
-/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/random-shuffle-0.0.4-3ck1N70wQD94pmtuzryXMS
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-5.13/7.10.3/lib/x86_64-linux-ghc-7.10.3/random-shuffle-0.0.4-8irnu0xuW5tE8Vkr6PjiDr
 Registering random-shuffle-0.0.4...

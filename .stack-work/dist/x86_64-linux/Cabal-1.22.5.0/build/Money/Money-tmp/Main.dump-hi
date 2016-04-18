@@ -1,12 +1,12 @@
 
 ==================== FINAL INTERFACE ====================
-2016-01-25 09:34:43.996296 UTC
+2016-04-18 06:30:38.95769 UTC
 
 interface main@main:Main [family instance module] 7103
-  interface hash: 5c64ddb3b30a37f4bdaaaa89f4fe3aaf
-  ABI hash: 49092073d25ad49f3cd25fc7d0ba0a7b
-  export-list hash: b3542ff3b240d2a5edb87837e4cf255f
-  orphan hash: e506809d407b73e863eea75d7b416091
+  interface hash: 710c888ff83bc71875ecd575e5267c89
+  ABI hash: 5a178a333326354b9654de0c02f7d914
+  export-list hash: 044d226bbf6dc5b8ee366f0c90c6dd69
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 743ef5c5cfce12a97fce9fb4635757cb
   sig of: Nothing
   used TH splices: True
@@ -24,8 +24,9 @@ exports:
   Main.Insert{Main.Insert}
   Main.Item{Main.Item}
   Main.ListOfItems
-module dependencies:
-package dependencies: acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim
+module dependencies: InteractDB WebTime
+package dependencies: HTTP-4000.2.23@HTTP_CK9K9WEMkBSE1zlFmdOMPq
+                      acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim
                       array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA base-4.8.2.0
                       binary-0.7.5.0@binar_3uXFWMoAGBg0xKP9MHKRwi
                       bytestring-0.10.6.0@bytes_6VWy06pWzJq9evDvK2d4w6
@@ -40,15 +41,19 @@ package dependencies: acid-state-0.14.0@acids_7fYalOGOdhpBygcTKGaMim
                       glib-0.13.2.2@glib_I50VnAx0lsAGkf2HUGy7ut
                       gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p integer-gmp-1.0.0.0
                       mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8
+                      network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ
+                      network-uri-2.6.0.3@netwo_B6cnyX3vwvIANPyGOhBaPA
                       old-locale-1.0.0.7@oldlo_7h2Gx6mVPJ5Gheca8j9Mpe
                       old-time-1.1.0.3@oldti_JVjJvknZJ0JKghfag2Jw2L
                       pango-0.13.1.1@pango_2cIL87Bh7ZeLkiM5NMiqHc
+                      parsec-3.1.9@parse_EE5NO1mlYLh4J8mgDEshNv
                       pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC
                       primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3
                       safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG
                       split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z
-                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD template-haskell-2.10.0.0
-                      text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
+                      stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD
+                      tagsoup-0.13.8@tagso_Jv92tXkL1qiDnkklg4g52I
+                      template-haskell-2.10.0.0 text-1.2.2.0@text_5c7VCmRXJenGcMPs3kwpkI
                       time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
                       transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
                       unix-2.7.1.0@unix_KZL8h98IqDM57kQSPo1mKx
@@ -69,6 +74,8 @@ orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
          gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Selectors.FileChooserButton
          gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Selectors.FileChooserDialog
          gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Selectors.FileChooserWidget
+         network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network.Socket
+         network-2.6.2.1@netwo_A6pE0dLgMEk2GtUa1JtTJQ:Network.Socket.Types
          pango-0.13.1.1@pango_2cIL87Bh7ZeLkiM5NMiqHc:Graphics.Rendering.Pango.Font
          safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.Instances
          stm-2.4.4.1@stm_EyxFXFfnfY05IrjGaqCxeD:Control.Monad.STM
@@ -91,6 +98,7 @@ family instance modules: base-4.8.2.0:Control.Applicative
                          containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Map.Base
                          containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Sequence
                          containers-0.5.6.2@conta_2C3ZI8RgPO2LBMidXKTvIU:Data.Set.Base
+                         network-uri-2.6.0.3@netwo_B6cnyX3vwvIANPyGOhBaPA:Network.URI
                          pretty-1.1.2.0@prett_JItwetRppk1H5Uq3xbjDGC:Text.PrettyPrint.HughesPJ
                          primitive-0.6.1.0@primi_EphY2c7CCxSCBKjAN0YTR3:Control.Monad.Primitive
                          template-haskell-2.10.0.0:Language.Haskell.TH.Syntax
@@ -119,12 +127,12 @@ import  -/  cereal-0.4.1.1@cerea_GskkwdKSWUU2PP8FxH5aP8:Data.Serialize.Get f7772
 import  -/  ghc-prim-0.4.0.0:GHC.Classes e1f4ff80f7b5262008a595d29986fb18
 import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
 import  -/  glib-0.13.2.2@glib_I50VnAx0lsAGkf2HUGy7ut:System.Glib.Attributes d0f933c4529fcef648e8baa2c20e4c02
-import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk 53a740fcf222cfb90cbfe31136239249
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk 2d8a7b82e37bc883d928c97e31bcf748
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Abstract.Box 5d1bc2992606864851962804c8c0c640
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Abstract.Container aeac2e684df928c3d60410cde42d8500
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Abstract.Widget 22f028ccfef151b7eadbd2b38464e7e3
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Buttons.Button 39b5513fc0ac5bb2a575d65470527e1e
-import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Display.Label f9a8b84b44dc72ffacf8705ec82ac9f3
+import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Display.Label e312efae10c762b6196c9d4f702e6fe1
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Entry.Entry 4e9eb2ba7db50a305b955b63a65cf79a
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.General.Enums 26aade95c1ea742b7f7754967695a878
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.General.General fdcd5ae78157d711087a1c585914b519
@@ -137,6 +145,10 @@ import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.Tree
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeView fec201d86a7709435c870fa54d0ace87
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.ModelView.TreeViewColumn f134993d9216dc766265e65056ff5072
 import  -/  gtk-0.14.2@gtk_Gt5OC8BLJhB3JqsdGgYX4p:Graphics.UI.Gtk.Windows.Window 6c237c0e03f5757d94d3c0657996efb9
+import  -/  InteractDB 809d0a319a144c079e45bb29dcd0b448
+  exports: 3d36c07a8b4c6acd094315eaf0b1ef1b
+import  -/  WebTime da93363bec6a63999f471a1c8ecf92d4
+  exports: a78021471179aecc7cd412b7ef421e35
 import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.Reader 5d43a64348db8e4860adc3213d905c28
 import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.Reader.Class e7b714ea62f67bcf45e3abed40e559d5
 import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.State 3c8114545920fee1e57c3d7a07c2d0d7
@@ -146,7 +158,7 @@ import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.Derive 380
 import  -/  safecopy-0.8.6@safec_L1z5zGYYDhEA5U68g5tMYG:Data.SafeCopy.SafeCopy 6ef4c4107ccbb539ef1879ad2c5d1159
 import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split 0ce5c537605fc9ad887ec02865b54394
 import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 963ae3cccb2c92e36d269de482ab8341
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems :: Data.Acid.Common.IsAcidic Main.AllItems
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -154,7 +166,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                   @ Main.AllItems
                   Main.$fSafeCopyAllItems
                   Main.$fIsAcidicAllItems_$cacidEvents -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems1 :: [Data.Acid.Common.Event Main.AllItems]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -163,7 +175,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateDeleteByPos[0]))_R
                    Main.$fIsAcidicAllItems2) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems10 ::
     GHC.Types.Int
     -> Main.AllItems
@@ -178,7 +190,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <((), Main.AllItems)>_R)) } }) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems11 ::
     Data.Acid.Common.Event (Data.Acid.Core.MethodState Main.Insert)
   {- Unfolding: (Data.Acid.Common.UpdateEvent
@@ -196,7 +208,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                                        <Main.AllItems>_N <Data.Functor.Identity.Identity>_R <()>_N))
                              (Sym (Data.Acid.Common.NTCo:Update[0]
                                        (Main.TFCo:R:MethodStateInsert[0])) (Sym (Main.TFCo:R:MethodResultInsert[0]))))) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems12 ::
     GHC.Base.String
     -> Main.AllItems
@@ -218,7 +230,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <((), Main.AllItems)>_R)) }) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems2 :: [Data.Acid.Common.Event Main.AllItems]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -227,7 +239,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateEdit[0]))_R
                    Main.$fIsAcidicAllItems3) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems3 :: [Data.Acid.Common.Event Main.AllItems]
   {- Strictness: m2,
      Unfolding: (GHC.Types.:
@@ -236,7 +248,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateGetAllItems[0]))_R
                    (GHC.Types.[] @ (Data.Acid.Common.Event Main.AllItems))) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems4 ::
     Data.Acid.Common.Event
       (Data.Acid.Core.MethodState Main.GetAllItems)
@@ -259,7 +271,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                                        <Data.Acid.Common.EventState
                                           Main.GetAllItems>_R) <Data.Acid.Common.EventResult
                                                                   Main.GetAllItems>_N))) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems5 ::
     Main.GetAllItems
     -> Data.Acid.Common.EventState Main.GetAllItems
@@ -277,7 +289,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            (Sub (Main.TFCo:R:MethodResultGetAllItems[0])))) } }) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems6 ::
     Data.Acid.Common.Event (Data.Acid.Core.MethodState Main.Edit)
   {- Unfolding: (Data.Acid.Common.UpdateEvent
@@ -299,7 +311,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                                        <Data.Acid.Common.EventState
                                           Main.Edit>_N) <Data.Acid.Common.EventResult
                                                            Main.Edit>_N))) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems7 ::
     Main.Edit
     -> Data.Acid.Common.EventState Main.Edit
@@ -319,7 +331,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                  (Data.Functor.Identity.Identity
                     ((Sub (Sym (Main.TFCo:R:MethodResultEdit[0])),
                       Sub (Sym (Main.TFCo:R:MethodStateEdit[0]))))_R)_R }) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems8 ::
     GHC.Types.Int
     -> GHC.Base.String
@@ -335,7 +347,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <((), Main.AllItems)>_R)) } }) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems9 ::
     Data.Acid.Common.Event
       (Data.Acid.Core.MethodState Main.DeleteByPos)
@@ -354,7 +366,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                                        <Main.AllItems>_N <Data.Functor.Identity.Identity>_R <()>_N))
                              (Sym (Data.Acid.Common.NTCo:Update[0]
                                        (Main.TFCo:R:MethodStateDeleteByPos[0])) (Sym (Main.TFCo:R:MethodResultDeleteByPos[0]))))) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fIsAcidicAllItems_$cacidEvents ::
     [Data.Acid.Common.Event Main.AllItems]
   {- Strictness: m2,
@@ -364,7 +376,7 @@ import  -/  split-0.2.3@split_CDzOynTh4l8Ahg1HaWUL4Z:Data.List.Split.Internals 9
                      `cast`
                    (Data.Acid.Common.Event (Main.TFCo:R:MethodStateInsert[0]))_R
                    Main.$fIsAcidicAllItems1) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fMethodDeleteByPos :: Data.Acid.Core.Method Main.DeleteByPos
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -395,7 +407,7 @@ e2469052c014e694cc69b19f423058ad
                    Main.$fMethodDeleteByPos_ww4
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fMethodDeleteByPos3 ::
     GHC.Prim.Proxy# Main.DeleteByPos -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -411,13 +423,13 @@ a2af6d135bb7386aa33b9ff662d59de3
                    Main.$fMethodDeleteByPos_wild
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fMethodDeleteByPos_$cmethodTag ::
     Main.DeleteByPos -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.DeleteByPos -> Main.$fMethodDeleteByPos1) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fMethodDeleteByPos_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.DeleteByPos
   {- Arity: 1, Strictness: <L,A>m,
@@ -438,7 +450,7 @@ e8ce7868687c05d36e36f7218eea391a
 228b428c95eded6f9a7251e8aff5933b
   $fMethodDeleteByPos_ww4 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "DeleteByPos"#) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fMethodEdit :: Data.Acid.Core.Method Main.Edit
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -491,7 +503,7 @@ bf93ae73554c5725bcc951f8c7a840bd
                    Main.$fMethodEdit_wild
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fMethodEdit6 ::
     GHC.Prim.Proxy# Main.Edit -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -506,12 +518,12 @@ f1a8a104137afed0afb87e2ee4afe1e0
                    Main.$fMethodEdit_wild1
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fMethodEdit_$cmethodTag :: Main.Edit -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.Edit -> Main.$fMethodEdit1) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fMethodEdit_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.Edit
   {- Arity: 1, Strictness: <L,A>m,
@@ -547,7 +559,7 @@ a2c035c6d0428e15a4516ac4fa092be6
 1f25bc1c357e03f0cb54ef3218769d76
   $fMethodEdit_ww4 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Edit"#) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems :: Data.Acid.Core.Method Main.GetAllItems
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -594,7 +606,7 @@ be08ebf18103aa413a638f8aa7bbfb06
 02aa0d0ed38fc850809481f38a0149d8
   $fMethodGetAllItems13 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Item"#) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems14 ::
     GHC.Prim.Proxy# Main.GetAllItems -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -619,13 +631,13 @@ ff137b9b44e2277c8ab5c7227f1c680f
                    Main.$fMethodGetAllItems_ww4
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems3 ::
     Data.SafeCopy.SafeCopy.SafeCopy Main.ListOfItems
   {- Strictness: m,
      Unfolding: InlineRule (0, True, True)
                 Main.$fMethodGetAllItems_$s$fSafeCopy[] -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems4 :: Data.Typeable.Internal.Typeable [Main.Item]
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
@@ -633,7 +645,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                   `cast`
                 (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
                           <*>_N <[Main.Item]>_N)) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems5 ::
     GHC.Prim.Proxy# [Main.Item] -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>,
@@ -675,13 +687,13 @@ cc00e2bb82b8f866e87fd2a8ece025b7
      Unfolding: (GHC.Fingerprint.Type.Fingerprint
                    __word 17730107610217102821
                    __word 9866972337190828755) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems_$cmethodTag ::
     Main.GetAllItems -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.GetAllItems -> Main.$fMethodGetAllItems1) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.GetAllItems
   {- Arity: 1, Strictness: <L,A>m,
@@ -690,7 +702,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                   `cast`
                 (Sym (Data.Typeable.Internal.NTCo:Typeable[0]
                           <*>_N <Main.GetAllItems>_N)) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems_$s$fSafeCopy[] ::
     Data.SafeCopy.SafeCopy.SafeCopy [Main.Item]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -711,19 +723,19 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                      @ Main.Item
                      Main.$fSafeCopyItem)
                   Main.$fMethodGetAllItems_$s$fSafeCopy[]_$cerrorTypeName -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems_$s$fSafeCopy[]_$cerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy [Main.Item] -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.Instances.$fSafeCopy[]4 @ Main.Item) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems_$s$fSafeCopy[]_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency [Main.Item]
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ [Main.Item]) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fMethodGetAllItems_$s$fSafeCopy[]_$ckind ::
     Data.SafeCopy.SafeCopy.Kind [Main.Item]
   {- HasNoCafRefs,
@@ -776,7 +788,7 @@ a84f499ce31e2e91fdd7fb54f78d2aca
 cddcfdd9ebc38fd2a49663bee8fada62
   $fMethodGetAllItems_ww7 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "main"#) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fMethodInsert :: Data.Acid.Core.Method Main.Insert
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -807,7 +819,7 @@ ef3be92edf9b90befb861edad06ee766
                    Main.$fMethodInsert_ww4
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fMethodInsert3 ::
     GHC.Prim.Proxy# Main.Insert -> Data.Typeable.Internal.TypeRep
   {- Arity: 1, Strictness: <L,A>m,
@@ -822,12 +834,12 @@ fa019052803265f864d5290d4a78809b
                    Main.$fMethodInsert_wild
                    (GHC.Types.[] @ Data.Typeable.Internal.KindRep)
                    (GHC.Types.[] @ Data.Typeable.Internal.TypeRep)) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fMethodInsert_$cmethodTag :: Main.Insert -> Data.Acid.Core.Tag
   {- Arity: 1, Strictness: <L,A>, Inline: INLINE[0],
      Unfolding: InlineRule (1, True, True)
                 (\ w :: Main.Insert -> Main.$fMethodInsert1) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fMethodInsert_$dTypeable ::
     Data.Typeable.Internal.Typeable Main.Insert
   {- Arity: 1, Strictness: <L,A>m,
@@ -848,7 +860,7 @@ d37e40040edf3acc8ef8ac9f17229749
 073647acab04a783f07b41557a59beec
   $fMethodInsert_ww4 :: GHC.Base.String
   {- Unfolding: (GHC.CString.unpackCString# "Insert"#) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fQueryEventGetAllItems ::
     Data.Acid.Common.QueryEvent Main.GetAllItems
   DFunId[0]
@@ -857,7 +869,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                 Main.$fMethodGetAllItems
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:QueryEvent[0]) <Main.GetAllItems>_N) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems :: Data.SafeCopy.SafeCopy.SafeCopy Main.AllItems
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -873,7 +885,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
 bb5f76bfe217eb7c8d61298841c2c8f2
   $fSafeCopyAllItems1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Main.AllItems"#) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -927,7 +939,7 @@ bb5f76bfe217eb7c8d61298841c2c8f2
                    (\ s1 :: Data.Serialize.Get.Input
                       b1 :: Data.Serialize.Get.Buffer
                       m1 :: Data.Serialize.Get.More
-                      a26 :: Data.Serialize.Get.Get Main.ListOfItems ->
+                      a23 :: Data.Serialize.Get.Get Main.ListOfItems ->
                     Data.Serialize.Get.$fAlternativeGet5
                       @ Main.ListOfItems
                       @ Main.AllItems
@@ -935,14 +947,14 @@ bb5f76bfe217eb7c8d61298841c2c8f2
                         `cast`
                       (Sym (Data.Serialize.Get.NTCo:Get[0]
                                 <Main.ListOfItems -> Main.AllItems>_R))
-                      a26
+                      a23
                       @ r
                       s1
                       b1
                       m1
                       kf1
                       ks)) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems3 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -961,7 +973,7 @@ bb5f76bfe217eb7c8d61298841c2c8f2
                    ks :: Data.Serialize.Get.Success
                            (Main.ListOfItems -> Main.AllItems) r ->
                  ks s0 b0 m0 Main.AllItems) -}
-43b699fd85a22fa615e5e5857525b899
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems4 ::
     Data.Serialize.Get.Get (Data.Serialize.Get.Get Main.ListOfItems)
   {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
@@ -970,14 +982,14 @@ bb5f76bfe217eb7c8d61298841c2c8f2
 bd681cee741aadbe3fce7a3da4a2a3e3
   $fSafeCopyAllItems5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Main.AllItems:"#) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems_$cerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.AllItems -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.AllItems ->
                  Main.$fSafeCopyAllItems1) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.AllItems)
@@ -988,16 +1000,16 @@ bd681cee741aadbe3fce7a3da4a2a3e3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.AllItems>_R))) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.AllItems
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.AllItems) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.AllItems
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems_$cputCopy ::
     Main.AllItems
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1006,7 +1018,7 @@ bd681cee741aadbe3fce7a3da4a2a3e3
                 (\ w :: Main.AllItems ->
                  case w of ww { Main.AllItems ww1 ->
                  let {
-                   a26 :: Data.Serialize.Builder.Builder
+                   a23 :: Data.Serialize.Builder.Builder
                    = case Data.SafeCopy.Instances.$w$cputCopy6
                             @ Main.Item
                             Main.$fSafeCopyItem
@@ -1021,13 +1033,13 @@ bd681cee741aadbe3fce7a3da4a2a3e3
                      Main.$fSafeCopyAllItems_a20
                        `cast`
                      (Data.Serialize.Builder.NTCo:Builder[0])
-                       (a26 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x))
+                       (a23 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x))
                       `cast`
                     (Sym (Data.Serialize.Builder.NTCo:Builder[0])))
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyAllItems_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.AllItems
   {- Strictness: m,
@@ -1040,7 +1052,7 @@ d2c3a4fe77fa64e4d864b5b8157c7455
   {- Unfolding: (case Data.Serialize.$w$cput15
                         Main.$fSafeCopyItem6 of ww { (#,#) ww1 ww2 ->
                  ww2 }) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos ::
     Data.SafeCopy.SafeCopy.SafeCopy Main.DeleteByPos
   DFunId[0]
@@ -1054,7 +1066,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                   Main.$fSafeCopyDeleteByPos_$cinternalConsistency
                   Main.$fSafeCopyDeleteByPos_$cobjectProfile
                   Main.$fSafeCopyDeleteByPos_$s$dmerrorTypeName -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos1 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1073,7 +1085,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                    Main.$fSafeCopyEdit4
                      `cast`
                    (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R))) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1103,7 +1115,7 @@ a2af6d135bb7386aa33b9ff662d59de3
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
      Unfolding: InlineRule (1, True, True)
                 (\ tpl :: GHC.Types.Int -> tpl) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.DeleteByPos)
@@ -1113,16 +1125,16 @@ a2af6d135bb7386aa33b9ff662d59de3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.DeleteByPos>_R))) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.DeleteByPos
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.DeleteByPos) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.DeleteByPos
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$cputCopy ::
     Main.DeleteByPos
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1152,7 +1164,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N)))) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.DeleteByPos
   {- Strictness: m,
@@ -1161,7 +1173,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0]
                           <Main.DeleteByPos>_P)) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.DeleteByPos -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1170,13 +1182,13 @@ a2af6d135bb7386aa33b9ff662d59de3
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyDeleteByPos_$s$dmkind ::
     Data.SafeCopy.SafeCopy.Kind Main.DeleteByPos
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
                 (Data.SafeCopy.SafeCopy.Base @ Main.DeleteByPos) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit :: Data.SafeCopy.SafeCopy.SafeCopy Main.Edit
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1189,7 +1201,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                   Main.$fSafeCopyEdit_$cinternalConsistency
                   Main.$fSafeCopyEdit_$cobjectProfile
                   Main.$fSafeCopyEdit_$s$dmerrorTypeName -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit1 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1208,7 +1220,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                    Main.$fSafeCopyEdit2
                      `cast`
                    (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R))) -}
-57a5fc1849031b8cc6de833fdee27cc2
+674860f5dab05cbf5b6be801932263db
   $fSafeCopyEdit2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1236,15 +1248,15 @@ a2af6d135bb7386aa33b9ff662d59de3
                    (\ s1 :: Data.Serialize.Get.Input
                       b1 :: Data.Serialize.Get.Buffer
                       m1 :: Data.Serialize.Get.More
-                      a26 :: Data.Serialize.Get.Get GHC.Base.String ->
-                    a26 `cast` (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R)
+                      a23 :: Data.Serialize.Get.Get GHC.Base.String ->
+                    a23 `cast` (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R)
                       @ r
                       s1
                       b1
                       m1
                       kf
                       ks)) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit3 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1263,7 +1275,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                    Main.$fSafeCopyEdit4
                      `cast`
                    (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R))) -}
-5bb3f8da7ef28d42f8312e26a5bbcf33
+84bd67d3012e9e8a7eb0a4d1e582a151
   $fSafeCopyEdit4 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1291,15 +1303,15 @@ a2af6d135bb7386aa33b9ff662d59de3
                    (\ s1 :: Data.Serialize.Get.Input
                       b1 :: Data.Serialize.Get.Buffer
                       m1 :: Data.Serialize.Get.More
-                      a26 :: Data.Serialize.Get.Get GHC.Types.Int ->
-                    a26 `cast` (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R)
+                      a23 :: Data.Serialize.Get.Get GHC.Types.Int ->
+                    a23 `cast` (Data.Serialize.Get.NTCo:Get[0] <GHC.Types.Int>_R)
                       @ r
                       s1
                       b1
                       m1
                       kf
                       ks)) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit5 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1319,7 +1331,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                    ks :: Data.Serialize.Get.Success
                            (GHC.Types.Int -> GHC.Base.String -> Main.Edit) r ->
                  ks s0 b0 m0 Main.Edit) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained (Data.Serialize.Get.Get Main.Edit)
   {- Arity: 5,
@@ -1328,16 +1340,16 @@ a2af6d135bb7386aa33b9ff662d59de3
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.Edit>_R))) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.Edit
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.Edit) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.Edit
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$cputCopy ::
     Main.Edit
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1350,7 +1362,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) } }) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.Edit
   {- Strictness: m,
@@ -1358,7 +1370,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                 Main.$fSafeCopyItem6
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Edit>_P)) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.Edit -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1367,7 +1379,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyEdit_$s$dmkind :: Data.SafeCopy.SafeCopy.Kind Main.Edit
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
@@ -1378,7 +1390,7 @@ a4d31ac5e9272c5b3ea9ee6c1bb02fb3
   {- Unfolding: (Data.SafeCopy.SafeCopy.getSafeGet
                    @ GHC.Types.Int
                    Data.SafeCopy.Instances.$fSafeCopyInt) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems ::
     Data.SafeCopy.SafeCopy.SafeCopy Main.GetAllItems
   DFunId[0]
@@ -1403,7 +1415,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                          -> [Data.ByteString.Internal.ByteString]))
                      `cast`
                    (Sym (Data.Serialize.Builder.NTCo:Builder[0]))) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1421,7 +1433,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                    ds :: Data.Serialize.Get.Failure r
                    ks :: Data.Serialize.Get.Success Main.GetAllItems r ->
                  ks s0 b0 m0 Main.GetAllItems) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.GetAllItems)
@@ -1432,16 +1444,16 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.GetAllItems>_R))) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.GetAllItems
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.GetAllItems) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.GetAllItems
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$cputCopy ::
     Main.GetAllItems
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1453,7 +1465,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.GetAllItems
   {- Strictness: m,
@@ -1462,7 +1474,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0]
                           <Main.GetAllItems>_P)) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.GetAllItems -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1471,13 +1483,13 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyGetAllItems_$s$dmkind ::
     Data.SafeCopy.SafeCopy.Kind Main.GetAllItems
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
                 (Data.SafeCopy.SafeCopy.Base @ Main.GetAllItems) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert :: Data.SafeCopy.SafeCopy.SafeCopy Main.Insert
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1490,7 +1502,7 @@ d37e40040edf3acc8ef8ac9f17229749
                   Main.$fSafeCopyInsert_$cinternalConsistency
                   Main.$fSafeCopyInsert_$cobjectProfile
                   Main.$fSafeCopyInsert_$s$dmerrorTypeName -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert1 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1509,7 +1521,7 @@ d37e40040edf3acc8ef8ac9f17229749
                    Main.$fSafeCopyEdit2
                      `cast`
                    (Sym (Data.Serialize.Get.NTCo:Get[0] <GHC.Base.String>_R))) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1539,7 +1551,7 @@ d37e40040edf3acc8ef8ac9f17229749
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
      Unfolding: InlineRule (1, True, True)
                 (\ tpl :: GHC.Base.String -> tpl) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained
       (Data.Serialize.Get.Get Main.Insert)
@@ -1549,16 +1561,16 @@ d37e40040edf3acc8ef8ac9f17229749
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.Insert>_R))) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.Insert
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.Insert) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.Insert
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$cputCopy ::
     Main.Insert
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1572,7 +1584,7 @@ d37e40040edf3acc8ef8ac9f17229749
                      Data.Serialize.Put.PairS @ () ww1 ww2 }
                  } in
                  let {
-                   a26 :: Data.Serialize.Builder.Builder
+                   a23 :: Data.Serialize.Builder.Builder
                    = case Data.Serialize.$w$cput15
                             Data.SafeCopy.Instances.$fSafeCopy()3 of ww { (#,#) ww1 ww2 ->
                      ww2 }
@@ -1582,7 +1594,7 @@ d37e40040edf3acc8ef8ac9f17229749
                     GHC.Tuple.()
                     (\ x :: Data.Serialize.Builder.Buffer
                             -> [Data.ByteString.Internal.ByteString] ->
-                     a26 `cast` (Data.Serialize.Builder.NTCo:Builder[0])
+                     a23 `cast` (Data.Serialize.Builder.NTCo:Builder[0])
                        (case ds1 of wild1 { Data.Serialize.Put.PairS b1 w'1 ->
                         w'1 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x }))
                       `cast`
@@ -1590,7 +1602,7 @@ d37e40040edf3acc8ef8ac9f17229749
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N)))) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.Insert
   {- Strictness: m,
@@ -1598,7 +1610,7 @@ d37e40040edf3acc8ef8ac9f17229749
                 Main.$fSafeCopyItem6
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Version[0] <Main.Insert>_P)) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$s$dmerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.Insert -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
@@ -1607,13 +1619,13 @@ d37e40040edf3acc8ef8ac9f17229749
                  GHC.Base.build
                    @ GHC.Types.Char
                    (\ @ b -> GHC.CString.unpackFoldrCString# @ b "<unkown type>"#)) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyInsert_$s$dmkind ::
     Data.SafeCopy.SafeCopy.Kind Main.Insert
   {- HasNoCafRefs,
      Unfolding: InlineRule (-1, True, True)
                 (Data.SafeCopy.SafeCopy.Base @ Main.Insert) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem :: Data.SafeCopy.SafeCopy.SafeCopy Main.Item
   DFunId[0]
   {- Strictness: m, Inline: [ALWAYS] CONLIKE,
@@ -1629,7 +1641,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
 85aca919228f9a4d62ba74bb933f0a8a
   $fSafeCopyItem1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Main.Item"#) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem2 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1676,7 +1688,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                    (\ s1 :: Data.Serialize.Get.Input
                       b1 :: Data.Serialize.Get.Buffer
                       m1 :: Data.Serialize.Get.More
-                      a26 :: Data.Serialize.Get.Get GHC.Base.String ->
+                      a23 :: Data.Serialize.Get.Get GHC.Base.String ->
                     Data.Serialize.Get.$fAlternativeGet5
                       @ GHC.Base.String
                       @ Main.Item
@@ -1684,14 +1696,14 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                         `cast`
                       (Sym (Data.Serialize.Get.NTCo:Get[0]
                                 <GHC.Base.String -> Main.Item>_R))
-                      a26
+                      a23
                       @ r
                       s1
                       b1
                       m1
                       kf1
                       ks)) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem3 ::
     Data.Serialize.Get.Input
     -> Data.Serialize.Get.Buffer
@@ -1722,14 +1734,14 @@ eaaa6d09921106ddf4abb6c80e2b548b
 d79f93f2ca20668cb0073eda4cf42268
   $fSafeCopyItem6 :: GHC.Int.Int32
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Int.I32# 0) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem_$cerrorTypeName ::
     Data.SafeCopy.SafeCopy.Proxy Main.Item -> GHC.Base.String
   {- Arity: 1, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ ds :: Data.SafeCopy.SafeCopy.Proxy Main.Item ->
                  Main.$fSafeCopyItem1) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem_$cgetCopy ::
     Data.SafeCopy.SafeCopy.Contained (Data.Serialize.Get.Get Main.Item)
   {- Arity: 5,
@@ -1739,16 +1751,16 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                   `cast`
                 (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                           (Data.Serialize.Get.NTCo:Get[0] <Main.Item>_R))) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem_$cinternalConsistency ::
     Data.SafeCopy.SafeCopy.Consistency Main.Item
   {- HasNoCafRefs,
      Unfolding: InlineRule (0, True, True)
                 (Data.SafeCopy.SafeCopy.Consistent @ Main.Item) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem_$cobjectProfile ::
     Data.SafeCopy.SafeCopy.Profile Main.Item
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem_$cputCopy ::
     Main.Item
     -> Data.SafeCopy.SafeCopy.Contained Data.Serialize.Put.Put
@@ -1757,7 +1769,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                 (\ ds :: Main.Item ->
                  case ds of wild { Main.Item arg ->
                  let {
-                   a26 :: Data.Serialize.Builder.Builder
+                   a23 :: Data.Serialize.Builder.Builder
                    = case Data.SafeCopy.Instances.$w$s$cputCopy2
                             arg of ww { (#,#) ww1 ww2 ->
                      ww2 }
@@ -1770,13 +1782,13 @@ cc00e2bb82b8f866e87fd2a8ece025b7
                      Main.$fSafeCopyItem_a20
                        `cast`
                      (Data.Serialize.Builder.NTCo:Builder[0])
-                       (a26 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x))
+                       (a23 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x))
                       `cast`
                     (Sym (Data.Serialize.Builder.NTCo:Builder[0])))
                    `cast`
                  (Sym (Data.SafeCopy.SafeCopy.NTCo:Contained[0]
                            (Data.Serialize.Put.NTCo:PutM[0] <()>_N))) }) -}
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   $fSafeCopyItem_$cversion ::
     Data.SafeCopy.SafeCopy.Version Main.Item
   {- Strictness: m,
@@ -1789,7 +1801,7 @@ cc00e2bb82b8f866e87fd2a8ece025b7
   {- Unfolding: (case Data.Serialize.$w$cput15
                         Data.SafeCopy.Instances.$fSafeCopy()3 of ww { (#,#) ww1 ww2 ->
                  ww2 }) -}
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   $fUpdateEventDeleteByPos ::
     Data.Acid.Common.UpdateEvent Main.DeleteByPos
   DFunId[0]
@@ -1798,7 +1810,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                 Main.$fMethodDeleteByPos
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.DeleteByPos>_N) -}
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   $fUpdateEventEdit :: Data.Acid.Common.UpdateEvent Main.Edit
   DFunId[0]
   {- Strictness: m, Inline: INLINE (sat-args=0),
@@ -1806,7 +1818,7 @@ a2af6d135bb7386aa33b9ff662d59de3
                 Main.$fMethodEdit
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Edit>_N) -}
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   $fUpdateEventInsert :: Data.Acid.Common.UpdateEvent Main.Insert
   DFunId[0]
   {- Strictness: m, Inline: INLINE (sat-args=0),
@@ -1814,35 +1826,14 @@ d37e40040edf3acc8ef8ac9f17229749
                 Main.$fMethodInsert
                   `cast`
                 (Sym (Data.Acid.Common.NTCo:UpdateEvent[0]) <Main.Insert>_N) -}
-db5fd1fadcc7112029b98065753b8fa1
-  $scontainerBorderWidth ::
-    System.Glib.Attributes.Attr
-      Graphics.UI.Gtk.Types.Window GHC.Types.Int
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, False)
-                (System.Glib.Attributes.Attr
-                   @ Graphics.UI.Gtk.Types.Window
-                   @ GHC.Types.Int
-                   @ GHC.Types.Int
-                   System.Glib.Attributes.newAttr1
-                   Main.$scontainerBorderWidth2
-                     `cast`
-                   (<Graphics.UI.Gtk.Types.Window>_R
-                    ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Types.Int>_R))
-                   Main.$scontainerBorderWidth1
-                     `cast`
-                   (<Graphics.UI.Gtk.Types.Window>_R
-                    ->_R <GHC.Types.Int>_R
-                    ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R))) -}
-4cd7e309bc5ee7b69e7fe817fd8bf7fd
+42b165bd79b97a7ea315631fc972edaa
   $scontainerBorderWidth1 ::
     Graphics.UI.Gtk.Types.Window
     -> GHC.Types.Int
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, HasNoCafRefs, Strictness: <S,1*U(U,U)><S,1*U(U)><L,U>,
-     Unfolding: InlineRule (3, True, False)
-                (\ self1 :: Graphics.UI.Gtk.Types.Window
+  {- Arity: 3, HasNoCafRefs,
+     Unfolding: (\ self1 :: Graphics.UI.Gtk.Types.Window
                    borderWidth :: GHC.Types.Int
                    eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case self1
@@ -1866,14 +1857,13 @@ db5fd1fadcc7112029b98065753b8fa1
                         ds1
                         ds of s' { DEFAULT ->
                  (# s', GHC.Tuple.() #) } } } }) -}
-7118e7cbfb37b379d90099f437ad84db
+116ec3b1fd0d19fca53fffd30d7ff4a9
   $scontainerBorderWidth2 ::
     Graphics.UI.Gtk.Types.Window
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U(U,U)><L,U>,
-     Unfolding: InlineRule (2, True, False)
-                (\ self1 :: Graphics.UI.Gtk.Types.Window
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ self1 :: Graphics.UI.Gtk.Types.Window
                    s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case self1
                         `cast`
@@ -1896,26 +1886,6 @@ db5fd1fadcc7112029b98065753b8fa1
                  (# s',
                     GHC.Types.I#
                       (GHC.Prim.word2Int# (GHC.Prim.narrow32Word# ds2)) #) } } }) -}
-be8ca0d4a46d63a7c468ff06e66b200c
-  $swindowDefaultHeight ::
-    System.Glib.Attributes.Attr
-      Graphics.UI.Gtk.Types.Window GHC.Types.Int
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, False)
-                (System.Glib.Properties.newAttrFromIntProperty
-                   @ Graphics.UI.Gtk.Types.Window
-                   Graphics.UI.Gtk.Types.$fGObjectClassWindow
-                   Graphics.UI.Gtk.Windows.Window.windowDefaultHeight1) -}
-b2158e5ea1a96aa0db4d255f054af12c
-  $swindowDefaultWidth ::
-    System.Glib.Attributes.Attr
-      Graphics.UI.Gtk.Types.Window GHC.Types.Int
-  {- Strictness: m,
-     Unfolding: InlineRule (0, True, False)
-                (System.Glib.Properties.newAttrFromIntProperty
-                   @ Graphics.UI.Gtk.Types.Window
-                   Graphics.UI.Gtk.Types.$fGObjectClassWindow
-                   Graphics.UI.Gtk.Windows.Window.windowDefaultWidth1) -}
 462ab431ccf914bef20bb1f78905c963
   $w$cputCopy ::
     GHC.Types.Int
@@ -1950,7 +1920,7 @@ b2158e5ea1a96aa0db4d255f054af12c
                               w'2 `cast` (Data.Serialize.Builder.NTCo:Builder[0]) x })) }))
                       `cast`
                     (Sym (Data.Serialize.Builder.NTCo:Builder[0])) #)) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $wa ::
     GHC.Types.Int
     -> GHC.Base.String -> Main.ListOfItems -> (# (), Main.AllItems #)
@@ -1966,10 +1936,10 @@ b2158e5ea1a96aa0db4d255f054af12c
                          y :: GHC.Prim.Int# = GHC.Prim.-# x 1
                        } in
                        let {
-                         a26 :: Main.Item {- Strictness: m -} = Main.Item w1
+                         a23 :: Main.Item {- Strictness: m -} = Main.Item w1
                        } in
                        let {
-                         a27 :: [Main.Item]
+                         a24 :: [Main.Item]
                          = let {
                              x1 :: GHC.Prim.Int# = GHC.Prim.+# x 1
                            } in
@@ -1980,7 +1950,7 @@ b2158e5ea1a96aa0db4d255f054af12c
                              GHC.Types.True -> ww }
                        } in
                        let {
-                         n :: [Main.Item] = GHC.Types.: @ Main.Item a26 a27
+                         n :: [Main.Item] = GHC.Types.: @ Main.Item a23 a24
                        } in
                        case GHC.Prim.tagToEnum#
                               @ GHC.Types.Bool
@@ -2000,7 +1970,7 @@ b2158e5ea1a96aa0db4d255f054af12c
                                        1 -> GHC.Types.: @ Main.Item y1 n } }
                             } in
                             $wgo ww y } }) #)) -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   $wa1 ::
     GHC.Types.Int -> Main.ListOfItems -> (# (), Main.AllItems #)
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
@@ -2049,46 +2019,46 @@ b2158e5ea1a96aa0db4d255f054af12c
   $wunsafeDrop1 :: GHC.Prim.Int# -> [a1] -> [a1]
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U>,
      Inline: [0] -}
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   data AllItems = AllItems Main.ListOfItems
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   newtype DeleteByPos = DeleteByPos GHC.Types.Int
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   data Edit = Edit GHC.Types.Int GHC.Base.String
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   data GetAllItems = GetAllItems
     Promotable
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   newtype Insert = Insert GHC.Base.String
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   data Item = Item GHC.Base.String
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   type ListOfItems = [Main.Item]
-a2af6d135bb7386aa33b9ff662d59de3
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodResultDeleteByPos::
       Data.Acid.Core.MethodResult Main.DeleteByPos = ()
-5598364015e5d5ec8ce9f9e4394297b5
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodResultEdit::
       Data.Acid.Core.MethodResult Main.Edit = ()
-cc00e2bb82b8f866e87fd2a8ece025b7
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodResultGetAllItems::
       Data.Acid.Core.MethodResult Main.GetAllItems = [Main.Item]
-d37e40040edf3acc8ef8ac9f17229749
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodResultInsert::
       Data.Acid.Core.MethodResult Main.Insert = ()
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodStateDeleteByPos::
       Data.Acid.Core.MethodState Main.DeleteByPos = Main.AllItems
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodStateEdit::
       Data.Acid.Core.MethodState Main.Edit = Main.AllItems
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodStateGetAllItems::
       Data.Acid.Core.MethodState Main.GetAllItems = Main.AllItems
-6d0d55e3c97ae6c642d681b2623adddf
+6342322f88b389eecd113dd67e7be8b3
   axiom TFCo:R:MethodStateInsert::
       Data.Acid.Core.MethodState Main.Insert = Main.AllItems
-bbd4b998447f5461c9369742186cf6cc
+e51621def6ea3f4306c73c987c07fa97
   deleteByPos ::
     GHC.Types.Int -> Data.Acid.Common.Update Main.AllItems ()
   {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><S,1*U(U)>m,
@@ -2101,7 +2071,7 @@ bbd4b998447f5461c9369742186cf6cc
                                     <Main.AllItems>_N <Data.Functor.Identity.Identity>_R <()>_N))
                           (Sym (Data.Acid.Common.NTCo:Update[0]
                                     <Main.AllItems>_N) <()>_N)) -}
-6d54d82f76700c5469403d9d0ba59f9c
+6c5819a450048212a502a33853f01d60
   edit ::
     GHC.Types.Int
     -> GHC.Base.String -> Data.Acid.Common.Update Main.AllItems ()
@@ -2116,7 +2086,7 @@ bbd4b998447f5461c9369742186cf6cc
                                     <Main.AllItems>_N <Data.Functor.Identity.Identity>_R <()>_N))
                           (Sym (Data.Acid.Common.NTCo:Update[0]
                                     <Main.AllItems>_N) <()>_N)) -}
-fcd77f22c7fc843856c6865d5b6fd90e
+e494b267fa4a898fcf9d2281fa222c8d
   getAllItems :: Data.Acid.Common.Query Main.AllItems [Main.Item]
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
      Unfolding: InlineRule (0, True, True)
@@ -2129,7 +2099,7 @@ fcd77f22c7fc843856c6865d5b6fd90e
                                <[Main.Item]>_N))
                      (Sym (Data.Acid.Common.NTCo:Query[0]
                                <Main.AllItems>_R) <[Main.Item]>_N)) -}
-89f2761c15083d371aac6fb4e50538a8
+b5e9598118657e68c77a3138be2b9172
   getAllItems1 ::
     Main.AllItems -> Data.Functor.Identity.Identity [Main.Item]
   {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
@@ -2140,7 +2110,7 @@ fcd77f22c7fc843856c6865d5b6fd90e
                    `cast`
                  (Sym (Data.Functor.Identity.NTCo:Identity[0]
                            <[Main.Item]>_R)) }) -}
-95358d4cc629bd285cc75d9cb30a14a9
+ecc1b812449bc2a35b5de0599192fabd
   insert ::
     GHC.Base.String -> Data.Acid.Common.Update Main.AllItems ()
   {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(1*U)>m,
@@ -2267,21 +2237,6 @@ family instance Data.Acid.Core.MethodState [Main.GetAllItems]
                                                                        Main.Item
   Data.SafeCopy.Instances.$fSafeCopy[]_$ckind @ Main.Item $dSafeCopy
   = Main.$fMethodGetAllItems_$s$fSafeCopy[]_$ckind
-"SPEC/Main containerBorderWidth @ Window" [ALWAYS] forall $dContainerClass :: Graphics.UI.Gtk.Types.ContainerClass
-                                                                                Graphics.UI.Gtk.Types.Window
-  Graphics.UI.Gtk.Abstract.Container.containerBorderWidth @ Graphics.UI.Gtk.Types.Window
-                                                          $dContainerClass
-  = Main.$scontainerBorderWidth
-"SPEC/Main windowDefaultHeight @ Window" [ALWAYS] forall $dWindowClass :: Graphics.UI.Gtk.Types.WindowClass
-                                                                            Graphics.UI.Gtk.Types.Window
-  Graphics.UI.Gtk.Windows.Window.windowDefaultHeight @ Graphics.UI.Gtk.Types.Window
-                                                     $dWindowClass
-  = Main.$swindowDefaultHeight
-"SPEC/Main windowDefaultWidth @ Window" [ALWAYS] forall $dWindowClass :: Graphics.UI.Gtk.Types.WindowClass
-                                                                           Graphics.UI.Gtk.Types.Window
-  Graphics.UI.Gtk.Windows.Window.windowDefaultWidth @ Graphics.UI.Gtk.Types.Window
-                                                    $dWindowClass
-  = Main.$swindowDefaultWidth
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
