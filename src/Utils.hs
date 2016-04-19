@@ -7,31 +7,33 @@ import Data.Acid
 import Control.Monad.Reader
 import Data.SafeCopy
 import Data.Char
+import Data.Typeable
 import Data.List.Split
+import Data.Time
 
-data Item = Item String
-type ListOfItems = [Item]
-data AllItems = AllItems ListOfItems --deriving Typeable
+data Item = Item{typo :: String, description :: String, price :: Int, time :: UTCTime} deriving (Typeable,Eq)
+data ItemList = ItemList [Item] deriving Typeable
+
+instance Ord Item where
+    task1 <= task2 = time task1 <= time task2
 
 --interact with db
+insert :: Item -> Update ItemList ()
+insert item = do
+     ItemList ns <- get
+     put (ItemList (ns ++ [item]))
 
-insert :: String -> Update AllItems ()
-insert record = do
-     AllItems ns <- get
-     put (AllItems (ns ++ [Item record]))
-
-deleteByPos :: Int -> Update AllItems ()
+deleteByPos :: Int -> Update ItemList ()
 deleteByPos pos = do
-    AllItems ns <- get
-    put (AllItems (take (pos - 1) ns ++ drop (pos + 1) ns))
+    ItemList ns <- get
+    put (ItemList (take (pos - 1) ns ++ drop (pos + 1) ns))
 
-edit :: Int -> String -> Update AllItems ()
-edit pos record = do
-    AllItems ns <- get
-    put (AllItems (take (pos - 1) ns ++ [Item record] ++ drop (pos + 1) ns))
+edit :: Int -> Item -> Update ItemList ()
+edit pos item = do
+    ItemList ns <- get
+    put (ItemList (take (pos - 1) ns ++ [item] ++ drop (pos + 1) ns))
 
-getAllItems :: Query AllItems [Item]
-getAllItems = do
-    AllItems ns <- ask
+getItemList :: Query ItemList [Item]
+getItemList = do
+    ItemList ns <- ask
     return ns
-

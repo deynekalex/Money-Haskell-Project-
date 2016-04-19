@@ -11,21 +11,22 @@ import Control.Monad.Reader
 import Data.SafeCopy
 import Data.Char
 import Data.List.Split
+import Data.List hiding (insert)
 
 $(deriveSafeCopy 0 'base ''Item)
-$(deriveSafeCopy 0 'base ''AllItems)
-$(makeAcidic ''AllItems ['insert, 'deleteByPos, 'edit, 'getAllItems])
+$(deriveSafeCopy 0 'base ''ItemList)
+$(makeAcidic ''ItemList ['insert, 'deleteByPos, 'edit, 'getItemList])
 
 
 main :: IO()
 main = do
     --Read saved notes
-    allItems <- openLocalState (AllItems [])
-    listItem <- query allItems GetAllItems
-    list2 <- listStoreNew []
-    mapM_ (\(Item r)-> listStoreAppend list2 r) listItem
+    database <- openLocalState (ItemList [])
+    quariedItemList <- query database GetItemList
+    itemList <- listStoreNew []
+    mapM_ (listStoreAppend itemList) (sort quariedItemList)
 
-    --Initialize GUI
+--Initialize GUI
     initGUI
     window <- windowNew
     set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10]
@@ -40,12 +41,13 @@ main = do
     histlbl <- labelNew(Just "История расходов/доходов")
 
     --ListView
-    treeview <- treeViewNewWithModel list2
+    treeview <- treeViewNewWithModel itemList
     treeViewSetHeadersVisible treeview False
     col <- treeViewColumnNew
     rend <- cellRendererTextNew
     cellLayoutPackStart col rend False
-    cellLayoutSetAttributes col rend list2 (\i -> [cellText := i])
+    cellLayoutSetAttributes col rend itemList
+        (\i -> [cellText := typo i ++ show " - " ++ (show (price i)) ++ show " - " ++ description i])
     treeViewAppendColumn treeview col
     -- Make ability to scroll task's list
     itemsScrwin <- scrolledWindowNew Nothing Nothing
@@ -132,14 +134,14 @@ main = do
     boxPackStart mainBox editBox PackNatural 0
     boxPackStart mainBox delBtn PackNatural 0
 
-    onClicked addConsBtn (do
+    {-onClicked addConsBtn (do
         --concat two entry's
         curText <- liftM2 (++) (liftM2 (++) (entryGetText addPriceEdt) (return " - ")) (entryGetText addDescEdt)
         text1 <- entryGetText addPriceEdt::IO String
         --check for some conditions
         Control.Monad.when (not (null curText) && all isNumber text1 && not (null text1)) $ do
-            listStoreAppend list2 ("Расход - " ++ curText)
-            update allItems (Insert ("Расход - " ++ curText))
+            listStoreAppend itemList ("Расход - " ++ curText)
+            update ItemList (Insert ("Расход - " ++ curText))
             entrySetText addDescEdt ""
             entrySetText addPriceEdt "")
 
@@ -147,8 +149,8 @@ main = do
         curText <- liftM2 (++) (liftM2 (++) (entryGetText addPriceEdt) (return " - ")) (entryGetText addDescEdt)
         text1 <- entryGetText addPriceEdt::IO String
         Control.Monad.when (not (null curText) && all isNumber text1 && not (null text1)) $ do
-            listStoreAppend list2 ("Доход - " ++ curText)
-            update allItems (Insert ("Доход - " ++ curText))
+            listStoreAppend itemList ("Доход - " ++ curText)
+            update ItemList (Insert ("Доход - " ++ curText))
             entrySetText addDescEdt ""
             entrySetText addPriceEdt "")
 
@@ -156,8 +158,8 @@ main = do
         selRows <- treeSelectionGetSelectedRows selection
         Control.Monad.unless (null selRows) $ do
             let index = head (head selRows)
-            update allItems (DeleteByPos index)
-            listStoreRemove list2 index
+            update ItemList (DeleteByPos index)
+            listStoreRemove itemList index
             entrySetText editDescEdt "")
 
     onSelectionChanged selection (do
@@ -165,7 +167,7 @@ main = do
         selRows <- treeSelectionGetSelectedRows selection
         Control.Monad.unless (null selRows) $ do
             let index = head (head selRows)
-            v <- listStoreGetValue list2 index
+            v <- listStoreGetValue itemList index
             --parse
             let zero = head (splitOn " - " v)
             let first = splitOn " - " v!!1
@@ -193,13 +195,13 @@ main = do
                 (entryGetText editDescEdt)))
             text1 <- entryGetText editPriceEdt::IO String
             Control.Monad.unless (not (not (null curText) && all isNumber text1 && not (null text1))) $ do
-                listStoreSetValue list2 index curText
-                update allItems (Edit index curText)
+                listStoreSetValue itemList index curText
+                update ItemList (Edit index curText)
                 entrySetText editDescEdt ""
                 entrySetText editPriceEdt ""
-                entrySetText editHiddenEdt ""))
+                entrySetText editHiddenEdt ""))-}
 
     onDestroy window mainQuit
-    onDestroy window (closeAcidState allItems)
+    onDestroy window (closeAcidState database)
     widgetShowAll window
     mainGUI
