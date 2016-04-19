@@ -61,7 +61,9 @@ main = do
 
     --infoBox
     infoBox <-  hBoxNew False 1
-    infoLbl <- labelNew(Just "Оставшиеся деньги")
+    let curBalance = getBalance (ItemList quariedItemList)
+    balanceLbl <- labelNew(Just $ show curBalance)
+    infoLbl <- labelNew(Just ("Баланс = " ++ show curBalance))
     boxPackStart infoBox infoLbl PackNatural 0
 
     --DescriptionPrice
@@ -142,6 +144,10 @@ main = do
             let newItem = Item "Расход" curDescription (read curPrice) now
             listStoreAppend itemList newItem
             update database (Insert newItem)
+            curBalance <- labelGetText balanceLbl
+            let updatedBalance = show ((read curBalance) - (read curPrice))
+            labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+            labelSetText balanceLbl updatedBalance
             entrySetText addDescEdt ""
             entrySetText addPriceEdt ""
 
@@ -153,6 +159,10 @@ main = do
             let newItem = Item "Доход" curDescription (read curPrice) now
             listStoreAppend itemList newItem
             update database (Insert newItem)
+            curBalance <- labelGetText balanceLbl
+            let updatedBalance = show ((read curBalance) + (read curPrice))
+            labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+            labelSetText balanceLbl updatedBalance
             entrySetText addDescEdt ""
             entrySetText addPriceEdt ""
 
@@ -167,6 +177,10 @@ main = do
                 let newItem = Item (typo v) curDescription (read curPrice) (time v)
                 listStoreSetValue itemList index newItem
                 update database (Edit index newItem)
+                curBalance <- labelGetText balanceLbl
+                let updatedBalance = if typo newItem == "Доход" then show ((read curBalance) + (read curPrice) - (price v)) else show ((read curBalance) - (read curPrice) + (price v))
+                labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+                labelSetText balanceLbl updatedBalance
                 entrySetText editDescEdt ""
                 entrySetText editPriceEdt ""
 
@@ -174,6 +188,11 @@ main = do
         selRows <- treeSelectionGetSelectedRows selection
         unless (null selRows) $ do
             let index = head (head selRows)
+            v <- listStoreGetValue itemList index
+            curBalance <- labelGetText balanceLbl
+            let updatedBalance = if typo v == "Доход" then show ((read curBalance) - (price v)) else show ((read curBalance) + (price v))
+            labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+            labelSetText balanceLbl updatedBalance
             update database (DeleteByPos index)
             listStoreRemove itemList index
             entrySetText editDescEdt ""

@@ -17,6 +17,15 @@ data ItemList = ItemList [Item] deriving Typeable
 instance Ord Item where
     task1 <= task2 = time task1 <= time task2
 
+getBalance :: ItemList -> Int
+getBalance list = foldr (+) 0 (unbox list)
+
+unbox :: ItemList -> [Int]
+unbox (ItemList list) = map func list
+
+func :: Item -> Int
+func item = if typo item == "Доход" then price item else 0 - price item
+
 --interact with db
 insert :: Item -> Update ItemList ()
 insert item = do
