@@ -47,8 +47,9 @@ main = do
     col <- treeViewColumnNew
     rend <- cellRendererTextNew
     cellLayoutPackStart col rend False
+    let format = "(%a) %d/%m/%Y %H:%M"
     cellLayoutSetAttributes col rend itemList
-        (\i -> [cellText := typo i ++ " - " ++ (show (price i)) ++ " - " ++ description i ++ "(" ++ (show (time i)) ++ ")"])
+        (\i -> [cellText := typo i ++ " - " ++ (show (price i)) ++ " - " ++ description i ++ "(" ++ (formatTime defaultTimeLocale format (time i)) ++ ")"])
     treeViewAppendColumn treeview col
     -- Make ability to scroll task's list
     itemsScrwin <- scrolledWindowNew Nothing Nothing
@@ -210,9 +211,11 @@ main = do
         windowAbout <- windowNew
         mainBoxAbout <- vBoxNew False 1
         containerAdd windowAbout mainBoxAbout
-        set windowAbout [windowTitle := "О разработчике", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 30]
-        aboutEdt <- labelNew (Just "Я Александр Дейнека, студент 4 курса КТ. Это приложение несомненно облегчит вам учёт расходов.")
-        boxPackStart mainBoxAbout aboutEdt PackGrow 0
+        set windowAbout [windowTitle := "О разработчике", windowDefaultWidth := 100, windowDefaultHeight := 100, containerBorderWidth := 10, windowResizable := False]
+        aboutEdt <- labelNew (Just ("Я Александр Дейнека, студент 4 курса КТ." ++ "\n" ++ "Это приложение несомненно облегчит вам учёт расходов."))
+        image <- imageNewFromFile "res/image.gif"
+        boxPackStart mainBoxAbout aboutEdt PackGrow 5
+        boxPackStart mainBoxAbout image PackGrow 0
         widgetShowAll windowAbout
 
     onDestroy window mainQuit
