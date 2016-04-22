@@ -11,9 +11,19 @@ import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
 
-import Utils
+import Graphics.Rendering.Chart.Easy
+import Graphics.Rendering.Chart.Backend.Cairo
+import Graphics.Rendering.Chart.Gtk as Chart
 
-infoDiagramBtnHandler = do
+import Utils
+import Values
+
+pitem (s,v,o) = pitem_value .~ v
+    $ pitem_label .~ s
+    $ pitem_offset .~ (if o then 25 else 0)
+    $ def
+
+infoDiagramBtnHandler quariedItemList = do
     windowDiagram <- windowNew
     Gtk.set windowDiagram [windowTitle := "Статистика", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10, windowResizable := False]
     diagramEdt <- labelNew(Just "Отобразить статистику за период")
@@ -27,8 +37,8 @@ infoDiagramBtnHandler = do
     leftDayTimeBox <- hBoxNew False 0
     leftSpinH <- myAddSpinButton leftDayTimeBox "Часы:" 0.0 23.0
     leftSpinM <- myAddSpinButton leftDayTimeBox "Минуты:" 0.0 59.0
-    leftHourMinutesLabel <- labelNew (Just "")
-    miscSetAlignment leftHourMinutesLabel 0.0 0.0
+    {-leftHourMinutesLabel <- labelNew (Just "")
+    miscSetAlignment leftHourMinutesLabel 0.0 0.0-}
     leftConsBtn <- buttonNewWithLabel "Расходов"
 
     --ForRightBox
@@ -41,8 +51,8 @@ infoDiagramBtnHandler = do
     rightDayTimeBox <- hBoxNew False 0
     rightSpinH <- myAddSpinButton rightDayTimeBox "Часы:" 0.0 23.0
     rightSpinM <- myAddSpinButton rightDayTimeBox "Минуты:" 0.0 59.0
-    rightHourMinutesLabel <- labelNew (Just "")
-    miscSetAlignment rightHourMinutesLabel 0.0 0.0
+{-    rightHourMinutesLabel <- labelNew (Just "")
+    miscSetAlignment rightHourMinutesLabel 0.0 0.0-}
     rightIncBtn <- buttonNewWithLabel "Доходов"
 
     --Boxing
@@ -73,15 +83,14 @@ infoDiagramBtnHandler = do
     boxPackStart mainBoxDiagram2 leftBox PackGrow 1
     boxPackStart mainBoxDiagram2 rightBox PackGrow 1
 
-    widgetShowAll windowDiagram
+    on leftConsBtn buttonActivated $ do
+        Chart.toWindow 640 480 $ do
+            pie_title .= "Расходы с"
+            pie_plot . pie_data .= map pitem (getValues (quariedItemList) ("Расход"))
 
-myAddSpinButton :: HBox -> String -> Double -> Double -> IO SpinButton
-myAddSpinButton box name min max = do
-    vbox  <- vBoxNew False 0
-    boxPackStart box vbox PackRepel 0
-    label <- labelNew (Just name)
-    miscSetAlignment label 0.0 0.5
-    boxPackStart vbox label PackNatural 0
-    spinb <- spinButtonNewWithRange min max 1.0
-    boxPackStart vbox spinb PackNatural 0
-    return spinb
+    on rightIncBtn buttonActivated $ do
+        Chart.toWindow 640 480 $ do
+            pie_title .= "Дозоды с"
+            pie_plot . pie_data .= map pitem (getValues (quariedItemList) ("Доход"))
+
+    widgetShowAll windowDiagram

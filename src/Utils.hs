@@ -46,4 +46,3 @@ getItemList :: Query ItemList [Item]
 getItemList = do
     ItemList ns <- ask
     return ns
-
