@@ -14,23 +14,31 @@ cabal-version:       >=1.10
 executable Money
   main-is:             Main.hs
   other-extensions:    DeriveDataTypeable, TemplateHaskell, TypeFamilies
-  build-depends:       base >=4.7 && <4.9, mtl >=2.1 && <2.3, network >=2.6 && <2.7, containers >=0.5 && <0.6,
+  build-depends:
+    -- base >=4.7 && <4.9, mtl >=2.1 && <2.3, network >=2.6 && <2.7, containers >=0.5 && <0.6,
     base,
-    random-shuffle,
     split,
-    lens,
-    lens-action,
-    monad-loops,
-    MonadRandom,
-    derive,
     mtl,
     gtk,
     acid-state,
     safecopy,
     time,
-    old-time,
-    tagsoup,
-    HTTP
+    Chart,
+    Chart-gtk,
+    Chart-cairo,
+    lens
+    --data-default-class,
+    --data-accessor,
+    --data-default
+    --random-shuffle,
+    --lens-action,
+    --monad-loops
+    --MonadRandom,
+    --derive,
+    --old-time,
+    --tagsoup
+    --HTTP
+    --chart-cairo
   default-language:    Haskell2010
-  hs-source-dirs:      src
-  --other-modules: Utils, WebTime
+  hs-source-dirs:      src, src/Handlers
+  other-modules: Utils, Values, Handlers.AboutBtn, Handlers.InfoDiagramBtn, Handlers.TreeSelection

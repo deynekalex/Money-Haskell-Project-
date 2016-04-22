@@ -2,10 +2,9 @@
 {-# LANGUAGE TemplateHaskell    #-}
 {-# LANGUAGE TypeFamilies       #-}
 module Main where
-import Utils
 import Control.Monad.State
 import Control.Monad
-import Graphics.UI.Gtk hiding (get)
+import Graphics.UI.Gtk as Gtk hiding (get)
 import Data.Acid
 import Control.Monad.Reader
 import Data.SafeCopy
@@ -14,10 +13,29 @@ import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
 
+--for diagrams
+import Graphics.Rendering.Chart.Easy
+import Graphics.Rendering.Chart.Backend.Cairo
+import Graphics.Rendering.Chart.Gtk as Chart
+
+--local imports
+import Utils
+import Values
+import Handlers.AboutBtn
+import Handlers.TreeSelection
+import Handlers.InfoDiagramBtn
+
 $(deriveSafeCopy 0 'base ''Item)
 $(deriveSafeCopy 0 'base ''ItemList)
 $(makeAcidic ''ItemList ['insert, 'deleteByPos, 'edit, 'getItemList])
 
+values :: [ (String,Double,Bool) ]
+values = [ ("Mexico City",19.2,False), ("Mumbai",12.9,False), ("Sydney",4.3,False), ("London",8.3,False), ("New York",8.2,True) ]
+
+pitem (s,v,o) = pitem_value .~ v
+    $ pitem_label .~ s
+    $ pitem_offset .~ (if o then 25 else 0)
+    $ def
 
 main :: IO()
 main = do
@@ -27,10 +45,14 @@ main = do
     itemList <- listStoreNew []
     mapM_ (listStoreAppend itemList) (sort quariedItemList)
 
---Initialize GUI
+{-    Chart.toWindow 640 480 $ do
+        pie_title .= "Relative Population"
+        pie_plot . pie_data .= map pitem (getValues (quariedItemList) ("Расход"))-}
+
+    --Initialize GUI
     initGUI
     window <- windowNew
-    set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10]
+    Gtk.set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10]
     --mainBox
     mainBox <- vBoxNew False 1
     containerAdd window mainBox
@@ -62,10 +84,16 @@ main = do
 
     --infoBox
     infoBox <-  hBoxNew False 1
+    infoBox1 <- hBoxNew False 1
+    infoBox2 <- hBoxNew False 1
     let curBalance = getBalance (ItemList quariedItemList)
     balanceLbl <- labelNew(Just $ show curBalance)
     infoLbl <- labelNew(Just ("Баланс = " ++ show curBalance))
-    boxPackStart infoBox infoLbl PackNatural 0
+    infoDiagramBtn <- buttonNewWithLabel "Статистика"
+    boxPackStart infoBox1 infoLbl PackGrow 1
+    boxPackEnd infoBox2 infoDiagramBtn PackGrow 1
+    boxPackStart infoBox infoBox1 PackGrow 148
+    boxPackEnd infoBox infoBox2 PackGrow 1
 
     --DescriptionPrice
     descPriceBox <- hBoxNew False 1
@@ -92,7 +120,7 @@ main = do
     addLbl <- labelNew(Just "Новый:")
     addDescEdt <- entryNew
     addPriceEdt <- entryNew
-    addConsBtn <- buttonNewWithLabel "Расход "
+    addConsBtn <- buttonNewWithLabel "Расход"
     addIncBtn <- buttonNewWithLabel "Доход"
     boxPackStart addBox1 addLbl PackGrow 0
     boxPackStart addBox2 addDescEdt PackGrow 0
@@ -199,24 +227,11 @@ main = do
             entrySetText editDescEdt ""
             entrySetText editPriceEdt ""
 
-    onSelectionChanged selection $ do
-        selRows <- treeSelectionGetSelectedRows selection
-        unless (null selRows) $ do
-            let index = head (head selRows)
-            v <- listStoreGetValue itemList index
-            entrySetText editPriceEdt (show (price  v))
-            entrySetText editDescEdt (description v)
+    onSelectionChanged selection $ do onSelectionChangedHandler itemList editPriceEdt editDescEdt selection
 
-    onClicked aboutDeveloperBtn $ do
-        windowAbout <- windowNew
-        mainBoxAbout <- vBoxNew False 1
-        containerAdd windowAbout mainBoxAbout
-        set windowAbout [windowTitle := "О разработчике", windowDefaultWidth := 100, windowDefaultHeight := 100, containerBorderWidth := 10, windowResizable := False]
-        aboutEdt <- labelNew (Just ("Я Александр Дейнека, студент 4 курса КТ." ++ "\n" ++ "Это приложение несомненно облегчит вам учёт расходов."))
-        image <- imageNewFromFile "res/image.gif"
-        boxPackStart mainBoxAbout aboutEdt PackGrow 5
-        boxPackStart mainBoxAbout image PackGrow 0
-        widgetShowAll windowAbout
+    onClicked aboutDeveloperBtn $ do aboutDeveloperBtnHandler
+
+    onClicked infoDiagramBtn $ do infoDiagramBtnHandler
 
     onDestroy window mainQuit
     onDestroy window (closeAcidState database)

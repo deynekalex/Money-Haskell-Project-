@@ -61,5 +61,5 @@ src/Data/Acid/Local.hs:36:1: Warning:
 [15 of 15] Compiling Data.Acid        ( src/Data/Acid.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Data/Acid.o )
 In-place registering acid-state-0.14.0...
 Installing library in
-/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/acid-state-0.14.0-7fYalOGOdhpBygcTKGaMim
+/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-5.13/7.10.3/lib/x86_64-linux-ghc-7.10.3/acid-state-0.14.0-9ivCTpk9Z75LcGAjws7Fxb
 Registering acid-state-0.14.0...
