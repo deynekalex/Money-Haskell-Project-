@@ -16,24 +16,6 @@ rewrap :: [Item] -> [(String,Double,Bool)]
 rewrap (x:xs) = (description x, fromIntegral $ price $ x, False) : (rewrap xs)
 rewrap _ = []
 
-getValues :: [Item] -> String -> [(String,Double,Bool)]
-getValues list condition = rewrap $ (filter (\x -> typo x == condition) list)
+getValues :: [Item] -> UTCTime -> UTCTime -> String -> [(String,Double,Bool)]
+getValues list from to condition = rewrap $ (filter (\x -> (typo x == condition && time x < to && time x > from)) list)
 --TODO добавить monad Ether
-
-myAddSpinButton :: HBox -> String -> Double -> Double -> IO SpinButton
-myAddSpinButton box name min max = do
-    vbox  <- vBoxNew False 0
-    boxPackStart box vbox PackRepel 0
-    label <- labelNew (Just name)
-    miscSetAlignment label 0.0 0.5
-    boxPackStart vbox label PackNatural 0
-    spinb <- spinButtonNewWithRange min max 1.0
-    boxPackStart vbox spinb PackNatural 0
-    return spinb
-
-data Time = Time { year   :: Int
-                    , month :: Int
-                    , day    :: Int
-                    , hour   :: Int
-                    , minute :: Int
-                } deriving (Typeable, Eq, Ord)
