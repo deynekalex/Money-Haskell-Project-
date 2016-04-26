@@ -41,8 +41,6 @@ infoDiagramBtnHandler quariedItemList = do
     leftDayTimeBox <- hBoxNew False 0
     leftSpinH <- myAddSpinButton leftDayTimeBox "Часы:" 0.0 23.0 0.0
     leftSpinM <- myAddSpinButton leftDayTimeBox "Минуты:" 0.0 59.0 0.0
-    {-leftHourMinutesLabel <- labelNew (Just "")
-    miscSetAlignment leftHourMinutesLabel 0.0 0.0-}
     leftConsBtn <- buttonNewWithLabel "Расходов"
 
     --ForRightBox
@@ -55,8 +53,6 @@ infoDiagramBtnHandler quariedItemList = do
     rightDayTimeBox <- hBoxNew False 0
     rightSpinH <- myAddSpinButton rightDayTimeBox "Часы:" 0.0 23.0 23.0
     rightSpinM <- myAddSpinButton rightDayTimeBox "Минуты:" 0.0 59.0 59.0
-{-    rightHourMinutesLabel <- labelNew (Just "")
-    miscSetAlignment rightHourMinutesLabel 0.0 0.0-}
     rightIncBtn <- buttonNewWithLabel "Доходов"
 
     --Boxing
@@ -95,13 +91,15 @@ infoDiagramBtnHandler quariedItemList = do
         hour2 <- Gtk.get rightSpinH spinButtonValue
         minute2 <- Gtk.get rightSpinM spinButtonValue
         Chart.toWindow 640 480 $ do
-            pie_title .= "Расходы"
-            pie_plot . pie_data .= map pitem (getValues (quariedItemList)
-                (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
-                (fromIntegral (3600 * (round hour1) + 60 * (round minute1))))
-                (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
-                (fromIntegral (3600 * (round hour2) + 60 * (round minute2))))
-                ("Расход"))
+            let values = getValues (quariedItemList)
+                            (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
+                            (fromIntegral (3600 * (round hour1) + 60 * (round minute1))))
+                            (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
+                            (fromIntegral (3600 * (round hour2) + 60 * (round minute2))))
+                            ("Расход")
+            let title = if length values == 0 then "Расходов нет" else "Расход"
+            pie_title .= title
+            pie_plot . pie_data .= map pitem (values)
 
 
     on rightIncBtn buttonActivated $ do
@@ -112,13 +110,15 @@ infoDiagramBtnHandler quariedItemList = do
         hour2 <- Gtk.get rightSpinH spinButtonValue
         minute2 <- Gtk.get rightSpinM spinButtonValue
         Chart.toWindow 640 480 $ do
-            pie_title .= "Доходы"
-            pie_plot . pie_data .= map pitem (getValues (quariedItemList)
-                (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
-                (fromIntegral (3600 * (round hour1) + 60 * (round minute1))))
-                (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
-                (fromIntegral (3600 * (round hour2) + 60 * (round minute2))))
-                ("Доход"))
+            let values = getValues (quariedItemList)
+                            (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
+                            (fromIntegral (3600 * (round hour1) + 60 * (round minute1))))
+                            (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
+                            (fromIntegral (3600 * (round hour2) + 60 * (round minute2))))
+                            ("Доход")
+            let title = if length values == 0 then "Доходов нет" else "Доходы"
+            pie_title .= title
+            pie_plot . pie_data .= map pitem (values)
 
     widgetShowAll windowDiagram
 

@@ -61,5 +61,5 @@ System/FilePath/Find.hs:284:25: Warning:
       bound at System/FilePath/Find.hs:271:44
 In-place registering filemanip-0.3.6.3...
 Installing library in
-/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/filemanip-0.3.6.3-AFSulF8Y70TAA5R8pjLEdB
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-5.13/7.10.3/lib/x86_64-linux-ghc-7.10.3/filemanip-0.3.6.3-AFSulF8Y70TAA5R8pjLEdB
 Registering filemanip-0.3.6.3...

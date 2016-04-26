@@ -31,5 +31,5 @@ getValues list from to condition = runEval $ do
     a' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) a))
     b' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) b))
     return (a'++b')
---TODO добавить monad Either
+
 --stack build && stack exec -- Money +RTS -N2 -s -l

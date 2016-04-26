@@ -138,7 +138,7 @@ Language/Haskell/HsColour.hs:94:55: Warning: Tab character
 HsColour.hs:71:1: Warning: Tab character
 Linking .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/HsColour/HsColour ...
 Installing library in
-/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/lib/x86_64-linux-ghc-7.10.3/hscolour-1.23-D9eX1LEa8SaE1RFFjW0myg
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-5.13/7.10.3/lib/x86_64-linux-ghc-7.10.3/hscolour-1.23-D9eX1LEa8SaE1RFFjW0myg
 Installing executable(s) in
-/home/deynekalex/.stack/snapshots/x86_64-linux/lts-4.2/7.10.3/bin
+/home/deynekalex/.stack/snapshots/x86_64-linux/lts-5.13/7.10.3/bin
 Registering hscolour-1.23...
