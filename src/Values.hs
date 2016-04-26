@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell    #-}
 module Values where
 
 import Utils
@@ -22,14 +21,14 @@ mySplit [x] = ([x], [])
 mySplit (x:y:xys) = (x:xs, y:ys) where (xs, ys) = mySplit xys
 
 rewrap :: [Item] -> [(String,Double,Bool)]
-rewrap (x:xs) = (x^.description, fromIntegral(x^.price), False) : (rewrap xs)
+rewrap (x:xs) = (x^.description, fromIntegral(x^.price), False) : rewrap xs
 rewrap _ = []
 
 getValues :: [Item] -> UTCTime -> UTCTime -> String -> [(String,Double,Bool)]
 getValues list from to condition = runEval $ do
     let (a, b) = mySplit list
-    a' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) a))
-    b' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) b))
+    a' <- rpar (rewrap (filter (\x -> x^.typo == condition && x^.time < to && x^.time > from) a))
+    b' <- rpar (rewrap (filter (\x -> x^.typo == condition && x^.time < to && x^.time > from) b))
     return (a'++b')
 
 --stack build && stack exec -- Money +RTS -N2 -s -l

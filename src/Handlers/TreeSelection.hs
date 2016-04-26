@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell    #-}
 module Handlers.TreeSelection where
 
 import Control.Monad.State

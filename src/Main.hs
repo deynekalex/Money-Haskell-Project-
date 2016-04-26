@@ -1,28 +1,21 @@
 {-# LANGUAGE DeriveDataTypeable #-}
 {-# LANGUAGE TemplateHaskell    #-}
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 {-# LANGUAGE TypeFamilies       #-}
+
 module Main where
 import Control.Monad.State
 import Control.Monad.Trans.Maybe
-import Control.Monad.Reader
 import Graphics.UI.Gtk as Gtk hiding (get)
 import Data.Acid
 import Data.SafeCopy
-import Data.Char
-import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
 import Types
-import Control.Lens
-
---for diagrams
-import Graphics.Rendering.Chart.Easy
-import Graphics.Rendering.Chart.Backend.Cairo
-import Graphics.Rendering.Chart.Gtk as Chart
+import Control.Lens hiding (index)
 
 --local imports
 import Utils
-import Values
 import Handlers.AboutBtn
 import Handlers.TreeSelection
 import Handlers.InfoDiagramBtn
@@ -41,7 +34,7 @@ main = do
     mapM_ (listStoreAppend itemList) (sort quariedItemList)
 
     --Initialize GUI
-    initGUI
+    _ <- initGUI
     window <- windowNew
     Gtk.set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500,
                     windowDefaultHeight := 400, containerBorderWidth := 10]
@@ -63,7 +56,7 @@ main = do
     cellLayoutPackStart col rend False
     cellLayoutSetAttributes col rend itemList
         (\i -> [cellText := show i])
-    treeViewAppendColumn treeview col
+    _ <- treeViewAppendColumn treeview col
     -- Make ability to scroll task's list
     itemsScrwin <- scrolledWindowNew Nothing Nothing
     scrolledWindowAddWithViewport itemsScrwin treeview
@@ -156,49 +149,50 @@ main = do
     boxPackStart mainBox editBox PackNatural 0
     boxPackStart mainBox delBtn PackNatural 0
 
-    onClicked addConsBtn $ do
+
+    _ <- ($) onClicked addConsBtn $ do
         curPrice <- runMaybeT $ getValidPrice addPriceEdt
         case curPrice of
             Nothing -> do
                 dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
                     MessageError ButtonsNone "Цена должна состоять только из цифр"
                 widgetShowAll dialog
-            Just curPrice -> do
+            Just curPrice' -> do
                 curDescription <- entryGetText addDescEdt
                 now <- getCurrentTime
-                when (not (null curDescription)) $ do
-                    let newItem = Item "Расход" curDescription curPrice now
-                    listStoreAppend itemList newItem
-                    update database (Insert newItem)
-                    curBalance <- labelGetText balanceLbl
-                    let updatedBalance = show (read(curBalance) - curPrice)
-                    labelSetText infoLbl ("Баланс = " ++ updatedBalance)
-                    labelSetText balanceLbl updatedBalance
+                unless (null curDescription) $ do
+                    let newItem1 = Item "Расход" curDescription curPrice' now
+                    _ <- listStoreAppend itemList newItem1
+                    update database (Insert newItem1)
+                    curBalance' <- labelGetText balanceLbl
+                    let updatedBalance1 = show (read curBalance' - curPrice')
+                    labelSetText infoLbl ("Баланс = " ++ updatedBalance1)
+                    labelSetText balanceLbl updatedBalance1
                     entrySetText addDescEdt ""
                     entrySetText addPriceEdt ""
 
-    onClicked addIncBtn $ do
+    _ <- ($) onClicked addIncBtn $ do
         curPrice <- runMaybeT $ getValidPrice addPriceEdt
         case curPrice of
             Nothing -> do
                 dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
                     MessageError ButtonsNone "Цена должна состоять только из цифр"
                 widgetShowAll dialog
-            Just curPrice -> do
+            Just curPrice' -> do
                 curDescription <- entryGetText addDescEdt
                 now <- getCurrentTime
-                when (not (null curDescription)) $ do
-                    let newItem = Item "Доход" curDescription curPrice now
-                    listStoreAppend itemList newItem
-                    update database (Insert newItem)
-                    curBalance <- labelGetText balanceLbl
-                    let updatedBalance = show ((read curBalance) + curPrice)
-                    labelSetText infoLbl ("Баланс = " ++ updatedBalance)
-                    labelSetText balanceLbl updatedBalance
+                unless (null curDescription) $ do
+                    let newItem2 = Item "Доход" curDescription curPrice' now
+                    _ <- listStoreAppend itemList newItem2
+                    update database (Insert newItem2)
+                    curBalance' <- labelGetText balanceLbl
+                    let updatedBalance2 = show (read curBalance' + curPrice')
+                    labelSetText infoLbl ("Баланс = " ++ updatedBalance2)
+                    labelSetText balanceLbl updatedBalance2
                     entrySetText addDescEdt ""
                     entrySetText addPriceEdt ""
 
-    onClicked saveBtn $ do
+    _ <- ($) onClicked saveBtn $ do
         selRows <- treeSelectionGetSelectedRows selection
         unless (length selRows < 1) $ do
             let index = head (head selRows)
@@ -208,27 +202,27 @@ main = do
                     dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
                         MessageError ButtonsNone "Цена должна состоять только из цифр"
                     widgetShowAll dialog
-                Just curPrice -> do
+                Just curPrice' -> do
                     curDescription <- entryGetText editDescEdt :: IO String
                     v <- listStoreGetValue itemList index
-                    when (not (null curDescription)) $ do
-                        let newItem = Item (v^.typo) curDescription curPrice (v^.time)
+                    unless (null curDescription) $ do
+                        let newItem = Item (v^.typo) curDescription curPrice' (v^.time)
                         listStoreSetValue itemList index newItem
                         update database (Edit index newItem)
-                        let curBalance = read $ unsafePerformIO $ labelGetText balanceLbl
-                        let updatedBalance = if newItem^.typo == "Доход" then show (curBalance + curPrice - (v^.price)) else show (curBalance - curPrice + (v^.price))
+                        let curBalance' = read $ unsafePerformIO $ labelGetText balanceLbl
+                        let updatedBalance = show $ if newItem^.typo == "Доход" then curBalance' + curPrice' - (v^.price) else curBalance' - curPrice' + (v^.price)
                         labelSetText infoLbl ("Баланс = " ++ updatedBalance)
                         labelSetText balanceLbl updatedBalance
                         entrySetText editDescEdt ""
                         entrySetText editPriceEdt ""
 
-    onClicked delBtn $ do
+    _ <- ($) onClicked delBtn $ do
         selRows <- treeSelectionGetSelectedRows selection
         unless (null selRows) $ do
             let index = head (head selRows)
             v <- listStoreGetValue itemList index
-            curBalance <- labelGetText balanceLbl
-            let updatedBalance = if v^.typo == "Доход" then show ((read curBalance) - (v^.price)) else show ((read curBalance) + (v^.price))
+            let curBalance' = read $ unsafePerformIO $ labelGetText balanceLbl
+            let updatedBalance = show $ if v^.typo == "Доход" then curBalance' - (v^.price) else curBalance' + (v^.price)
             labelSetText infoLbl ("Баланс = " ++ updatedBalance)
             labelSetText balanceLbl updatedBalance
             update database (DeleteByPos index)
@@ -236,15 +230,15 @@ main = do
             entrySetText editDescEdt ""
             entrySetText editPriceEdt ""
 
-    onSelectionChanged selection $ do onSelectionChangedHandler itemList editPriceEdt editDescEdt selection
+    _ <- ($) onSelectionChanged selection $ onSelectionChangedHandler itemList editPriceEdt editDescEdt selection
 
-    onClicked aboutDeveloperBtn $ do aboutDeveloperBtnHandler
+    _ <- ($) onClicked aboutDeveloperBtn aboutDeveloperBtnHandler
 
-    onClicked infoDiagramBtn $ do
-        quariedItemList <- query database GetItemList
-        infoDiagramBtnHandler quariedItemList
+    _ <- ($) onClicked infoDiagramBtn $ do
+        updQuariedItemList <- query database GetItemList
+        infoDiagramBtnHandler updQuariedItemList
 
-    onDestroy window mainQuit
-    onDestroy window (closeAcidState database)
+    _ <- onDestroy window mainQuit
+    _ <- onDestroy window (closeAcidState database)
     widgetShowAll window
     mainGUI

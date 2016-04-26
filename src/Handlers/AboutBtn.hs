@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell    #-}
 module Handlers.AboutBtn where
 
 import Control.Monad.State
@@ -22,7 +21,7 @@ aboutDeveloperBtnHandler = do
     containerAdd windowAbout mainBoxAbout
     Gtk.set windowAbout [windowTitle := "О разработчике", windowDefaultWidth := 100,
                          windowDefaultHeight := 100, containerBorderWidth := 10, windowResizable := False]
-    aboutEdt <- labelNew (Just (aboutText))
+    aboutEdt <- labelNew (Just aboutText)
     image <- imageNewFromFile "res/image.gif"
     boxPackStart mainBoxAbout aboutEdt PackGrow 5
     boxPackStart mainBoxAbout image PackGrow 0

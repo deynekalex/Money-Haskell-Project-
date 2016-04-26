@@ -154,6 +154,13 @@
   (major1) == 0 && (major2) <  67 || \
   (major1) == 0 && (major2) == 67 && (minor) <= 0)
 
+/* tool hscolour-1.22 */
+#define TOOL_VERSION_hscolour "1.22"
+#define MIN_TOOL_VERSION_hscolour(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  22 || \
+  (major1) == 1 && (major2) == 22 && (minor) <= 0)
+
 /* tool pkg-config-0.26 */
 #define TOOL_VERSION_pkg_config "0.26"
 #define MIN_TOOL_VERSION_pkg_config(major1,major2,minor) (\

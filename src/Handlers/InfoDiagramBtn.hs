@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell    #-}
 module Handlers.InfoDiagramBtn where
 
 import Control.Monad.State
@@ -91,34 +90,34 @@ infoDiagramBtnHandler quariedItemList = do
         hour2 <- Gtk.get rightSpinH spinButtonValue
         minute2 <- Gtk.get rightSpinM spinButtonValue
         Chart.toWindow 640 480 $ do
-            let values = getValues (quariedItemList)
+            let values = getValues quariedItemList
                             (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
-                            (fromIntegral (3600 * (round hour1) + 60 * (round minute1))))
+                            (fromIntegral (3600 * round hour1 + 60 * round minute1)))
                             (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
-                            (fromIntegral (3600 * (round hour2) + 60 * (round minute2))))
-                            ("Расход")
-            let title = if length values == 0 then "Расходов нет" else "Расход"
+                            (fromIntegral (3600 * round hour2 + 60 * round minute2)))
+                            "Расход"
+            let title = if null values then "Расходов нет" else "Расход"
             pie_title .= title
-            pie_plot . pie_data .= map pitem (values)
+            pie_plot . pie_data .= map pitem values
 
 
     on rightIncBtn buttonActivated $ do
-        (year1, month1, day1) <- calendarGetDate leftCal
-        hour1 <- Gtk.get leftSpinH spinButtonValue
+        (year1', month1', day1') <- calendarGetDate leftCal
+        hour1' <- Gtk.get leftSpinH spinButtonValue
         minute1 <- Gtk.get leftSpinM spinButtonValue
         (year2, month2, day2) <- calendarGetDate rightCal
-        hour2 <- Gtk.get rightSpinH spinButtonValue
+        hour2' <- Gtk.get rightSpinH spinButtonValue
         minute2 <- Gtk.get rightSpinM spinButtonValue
         Chart.toWindow 640 480 $ do
-            let values = getValues (quariedItemList)
-                            (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
-                            (fromIntegral (3600 * (round hour1) + 60 * (round minute1))))
+            let values = getValues quariedItemList
+                            (UTCTime (fromGregorian (toInteger year1') (month1' + 1) day1')
+                            (fromIntegral (3600 * round hour1' + 60 * round minute1)))
                             (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
-                            (fromIntegral (3600 * (round hour2) + 60 * (round minute2))))
-                            ("Доход")
-            let title = if length values == 0 then "Доходов нет" else "Доходы"
+                            (fromIntegral (3600 * round hour2' + 60 * round minute2)))
+                            "Доход"
+            let title = if null values then "Доходов нет" else "Доходы"
             pie_title .= title
-            pie_plot . pie_data .= map pitem (values)
+            pie_plot . pie_data .= map pitem values
 
     widgetShowAll windowDiagram
 

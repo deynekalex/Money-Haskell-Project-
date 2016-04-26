@@ -14,13 +14,12 @@ import Data.Time
 import Control.Lens
 
 data Item = Item {
-    _typo :: String,
+    _typo :: String,            --typo represents type of consumption/income
     _description :: String,
     _price :: Int,
-    _time :: UTCTime
+    _time :: UTCTime            --time and date of creation
     } deriving (Typeable,Eq)
 
 data ItemList = ItemList [Item] deriving Typeable
 
 makeLenses ''Item
-

@@ -27,5 +27,5 @@ src/Control/Monad/Free/TH.hs:217:1: Warning:
 [16 of 16] Compiling Control.Applicative.Free ( src/Control/Applicative/Free.hs, .stack-work/dist/x86_64-linux/Cabal-1.22.5.0/build/Control/Applicative/Free.o )
 In-place registering free-4.12.4...
 Installing library in
-/home/deynekalex/Desktop/Haskell/Money/.stack-work/install/x86_64-linux/lts-5.13/7.10.3/lib/x86_64-linux-ghc-7.10.3/free-4.12.4-6So4BHgUyqe1B74EN63Nbv
+/home/deynekalex/.stack/snapshots/x86_64-linux/nightly-2016-04-26/7.10.3/lib/x86_64-linux-ghc-7.10.3/free-4.12.4-5NoT1dOZmCBIweOSVxxvJX
 Registering free-4.12.4...

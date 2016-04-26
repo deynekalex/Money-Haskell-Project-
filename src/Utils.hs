@@ -1,4 +1,3 @@
-{-# LANGUAGE TemplateHaskell    #-}
 module Utils where
 
 import Control.Monad.State
@@ -18,11 +17,12 @@ import Types
 instance Ord Item where
     task1 <= task2 = task1^.time <= task2^.time
 
+--for displaying treeView
 instance Show Item where
     show i = i^.typo ++ " - " ++
-                (show (i^.price)) ++ " - " ++
+                show (i^.price) ++ " - " ++
                 i^.description ++ "(" ++
-                (formatTime defaultTimeLocale format (i^.time)) ++ ")" where
+                formatTime defaultTimeLocale format (i^.time) ++ ")" where
                     format = "%d/%m/%Y (%a) %H:%M"
 
 isValidPrice :: String  -> Bool
@@ -35,10 +35,7 @@ getValidPrice addPriceEdt = do
     return (read curPrice)
 
 getBalance :: [Item] -> Int
-getBalance list = foldr (+) 0 (map func list)
-
-func :: Item -> Int
-func item = if item^.typo == "Доход" then item^.price else (-item^.price)
+getBalance list = sum (map (\item -> if item^.typo == "Доход" then item^.price else (-item^.price)) list)
 
 --interact with db
 insert :: Item -> Update ItemList ()

@@ -6,4 +6,5 @@ packages:
 extra-deps:
 - Chart-gtk-1.5.1
 - threadscope-0.2.7
+- hlint-1.9.23
 resolver: lts-5.13
