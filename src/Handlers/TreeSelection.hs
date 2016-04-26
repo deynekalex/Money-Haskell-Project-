@@ -1,20 +1,11 @@
 module Handlers.TreeSelection where
 
-import           Control.Lens
+import           Control.Lens         hiding (index)
 import           Control.Monad
-import           Control.Monad.Reader
-import           Control.Monad.State
-import           Data.Acid
-import           Data.Char
-import           Data.List            hiding (insert)
-import           Data.List.Split
-import           Data.SafeCopy
-import           Data.Time
 import           Graphics.UI.Gtk      as Gtk hiding (get)
 import           Types
 
-import           Utils
-
+onSelectionChangedHandler :: ListStore Item -> Entry -> Entry -> TreeSelection -> IO ()
 onSelectionChangedHandler itemList editPriceEdt editDescEdt selection = do
     selRows <- treeSelectionGetSelectedRows selection
     unless (null selRows) $ do

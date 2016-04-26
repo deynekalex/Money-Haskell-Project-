@@ -1,31 +1,23 @@
 module Handlers.InfoDiagramBtn where
 
 import           Control.Lens
-import           Control.Monad
-import           Control.Monad.Reader
-import           Control.Monad.State
-import           Data.Acid
-import           Data.Char
-import           Data.List                              hiding (insert)
-import           Data.List.Split
-import           Data.SafeCopy
 import           Data.Time
 import           Graphics.UI.Gtk                        as Gtk
-import           System.IO.Unsafe
 
-import           Graphics.Rendering.Chart.Backend.Cairo
-import           Graphics.Rendering.Chart.Easy
+import           Graphics.Rendering.Chart.Easy          hiding (label)
 import           Graphics.Rendering.Chart.Gtk           as Chart
 
 import           Types
-import           Utils
+import           Utils()
 import           Values
 
+pitem :: (String, Double, Bool) -> PieItem
 pitem (s,v,o) = pitem_value .~ v
     $ pitem_label .~ s
     $ pitem_offset .~ (if o then 25 else 0)
     $ def
 
+infoDiagramBtnHandler :: [Item] -> IO ()
 infoDiagramBtnHandler quariedItemList = do
     windowDiagram <- windowNew
     Gtk.set windowDiagram [windowTitle := "Статистика", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10, windowResizable := False]
@@ -82,7 +74,7 @@ infoDiagramBtnHandler quariedItemList = do
     boxPackStart mainBoxDiagram2 leftBox PackGrow 1
     boxPackStart mainBoxDiagram2 rightBox PackGrow 1
 
-    on leftConsBtn buttonActivated $ do
+    _ <- ($) on leftConsBtn buttonActivated $ do
         (year1, month1, day1) <- calendarGetDate leftCal
         hour1 <- Gtk.get leftSpinH spinButtonValue
         minute1 <- Gtk.get leftSpinM spinButtonValue
@@ -92,16 +84,16 @@ infoDiagramBtnHandler quariedItemList = do
         Chart.toWindow 640 480 $ do
             let values = getValues quariedItemList
                             (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
-                            (fromIntegral (3600 * round hour1 + 60 * round minute1)))
+                            (fromInteger (3600 * round hour1 + 60 * round minute1)))
                             (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
-                            (fromIntegral (3600 * round hour2 + 60 * round minute2)))
+                            (fromInteger (3600 * round hour2 + 60 * round minute2)))
                             "Расход"
             let title = if null values then "Расходов нет" else "Расход"
             pie_title .= title
             pie_plot . pie_data .= map pitem values
 
 
-    on rightIncBtn buttonActivated $ do
+    _ <- ($) on rightIncBtn buttonActivated $ do
         (year1', month1', day1') <- calendarGetDate leftCal
         hour1' <- Gtk.get leftSpinH spinButtonValue
         minute1 <- Gtk.get leftSpinM spinButtonValue
@@ -111,9 +103,9 @@ infoDiagramBtnHandler quariedItemList = do
         Chart.toWindow 640 480 $ do
             let values = getValues quariedItemList
                             (UTCTime (fromGregorian (toInteger year1') (month1' + 1) day1')
-                            (fromIntegral (3600 * round hour1' + 60 * round minute1)))
+                            (fromInteger (3600 * round hour1' + 60 * round minute1)))
                             (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
-                            (fromIntegral (3600 * round hour2' + 60 * round minute2)))
+                            (fromInteger (3600 * round hour2' + 60 * round minute2)))
                             "Доход"
             let title = if null values then "Доходов нет" else "Доходы"
             pie_title .= title
@@ -123,13 +115,13 @@ infoDiagramBtnHandler quariedItemList = do
 
 
 myAddSpinButton :: HBox -> String -> Double -> Double -> Double -> IO SpinButton
-myAddSpinButton box name min max defaultValue = do
+myAddSpinButton box name minVal maxVal defaultValue = do
     vbox  <- vBoxNew False 0
     boxPackStart box vbox PackRepel 0
     label <- labelNew (Just name)
     miscSetAlignment label 0.0 0.5
     boxPackStart vbox label PackNatural 0
-    spinb <- spinButtonNewWithRange min max 1.0
+    spinb <- spinButtonNewWithRange minVal maxVal 1.0
     Gtk.set spinb [spinButtonValue := defaultValue]
     boxPackStart vbox spinb PackNatural 0
     return spinb

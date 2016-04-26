@@ -171,7 +171,7 @@ main = do
                     entrySetText addDescEdt ""
                     entrySetText addPriceEdt ""
 
-    _ <- ($) onClicked addIncBtn $ do
+    _ <- ($) onClicked addIncBtn $  do
         curPrice <- runMaybeT $ getValidPrice addPriceEdt
         case curPrice of
             Nothing -> do

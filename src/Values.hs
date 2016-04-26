@@ -1,19 +1,9 @@
 module Values where
 
-import           Control.Lens
-import           Control.Monad
-import           Control.Monad.Reader
-import           Control.Monad.State
+import           Control.Lens                hiding (to,from)
 import           Control.Parallel.Strategies
-import           Data.Acid
-import           Data.Char
-import           Data.List.Split
-import           Data.SafeCopy
 import           Data.Time
-import           Data.Typeable
-import           Graphics.UI.Gtk             hiding (get)
 import           Types
-import           Utils
 
 mySplit :: [a] -> ([a], [a])
 mySplit [] = ([], [])

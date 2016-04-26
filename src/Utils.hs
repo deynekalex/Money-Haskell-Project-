@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fno-warn-orphans #-}
 module Utils where
 
 import           Control.Lens
@@ -7,10 +8,7 @@ import           Control.Monad.State
 import           Control.Monad.Trans.Maybe
 import           Data.Acid
 import           Data.Char
-import           Data.List.Split
-import           Data.SafeCopy
 import           Data.Time
-import           Data.Typeable
 import           Graphics.UI.Gtk           hiding (get)
 import           Types
 
