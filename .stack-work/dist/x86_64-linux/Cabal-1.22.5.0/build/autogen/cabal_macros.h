@@ -77,6 +77,13 @@
   (major1) == 1 && (major2) <  5 || \
   (major1) == 1 && (major2) == 5 && (minor) <= 0)
 
+/* package transformers-0.4.2.0 */
+#define VERSION_transformers "0.4.2.0"
+#define MIN_VERSION_transformers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  4 || \
+  (major1) == 0 && (major2) == 4 && (minor) <= 2)
+
 /* tool alex-3.1.7 */
 #define TOOL_VERSION_alex "3.1.7"
 #define MIN_TOOL_VERSION_alex(major1,major2,minor) (\
@@ -154,5 +161,5 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 0)
 
-#define CURRENT_PACKAGE_KEY "Money_3YSy2YEkfLeCcmfK0OOwzF"
+#define CURRENT_PACKAGE_KEY "Money_Ll6W0xlxQhuHHPxwcTiS3m"
 

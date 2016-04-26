@@ -3,10 +3,10 @@
 {-# LANGUAGE TypeFamilies       #-}
 module Main where
 import Control.Monad.State
-import Control.Monad
+import Control.Monad.Trans.Maybe
+import Control.Monad.Reader
 import Graphics.UI.Gtk as Gtk hiding (get)
 import Data.Acid
-import Control.Monad.Reader
 import Data.SafeCopy
 import Data.Char
 import Data.List.Split
@@ -29,10 +29,14 @@ $(deriveSafeCopy 0 'base ''Item)
 $(deriveSafeCopy 0 'base ''ItemList)
 $(makeAcidic ''ItemList ['insert, 'deleteByPos, 'edit, 'getItemList])
 
-{-
-values :: [ (String,Double,Bool) ]
-values = [ ("Mexico City",19.2,False), ("Mumbai",12.9,False), ("Sydney",4.3,False), ("London",8.3,False), ("New York",8.2,True) ]
--}
+isValid :: String  -> Bool
+isValid curPrice = not (null curPrice) && all isNumber curPrice
+
+getValidPrice :: Entry -> MaybeT IO String
+getValidPrice addPriceEdt = do
+    curPrice <- lift (entryGetText addPriceEdt)
+    guard (isValid curPrice)
+    return (curPrice)
 
 main :: IO()
 main = do
@@ -41,10 +45,6 @@ main = do
     quariedItemList <- query database GetItemList
     itemList <- listStoreNew []
     mapM_ (listStoreAppend itemList) (sort quariedItemList)
-
-{-    Chart.toWindow 640 480 $ do
-        pie_title .= "Relative Population"
-        pie_plot . pie_data .= map pitem (getValues (quariedItemList) ("Расход"))-}
 
     --Initialize GUI
     initGUI
@@ -163,52 +163,70 @@ main = do
     boxPackStart mainBox delBtn PackNatural 0
 
     onClicked addConsBtn $ do
-        curDescription <- entryGetText addDescEdt :: IO String
-        curPrice <- entryGetText addPriceEdt :: IO String
-        now <- getCurrentTime
-        when (not (null curDescription) && not (null curPrice) && all isNumber curPrice) $ do
-            let newItem = Item "Расход" curDescription (read curPrice) now
-            listStoreAppend itemList newItem
-            update database (Insert newItem)
-            curBalance <- labelGetText balanceLbl
-            let updatedBalance = show ((read curBalance) - (read curPrice))
-            labelSetText infoLbl ("Баланс = " ++ updatedBalance)
-            labelSetText balanceLbl updatedBalance
-            entrySetText addDescEdt ""
-            entrySetText addPriceEdt ""
+        curPrice <- runMaybeT $ getValidPrice addPriceEdt
+        case curPrice of
+            Nothing -> do
+                dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
+                    MessageError ButtonsNone "Цена должна состоять только из цифр"
+                widgetShowAll dialog
+            Just curPrice -> do
+                curDescription <- entryGetText addDescEdt
+                now <- getCurrentTime
+                when (not (null curDescription)) $ do
+                    let newItem = Item "Расход" curDescription (read curPrice) now
+                    listStoreAppend itemList newItem
+                    update database (Insert newItem)
+                    curBalance <- labelGetText balanceLbl
+                    let updatedBalance = show ((read curBalance) - (read curPrice))
+                    labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+                    labelSetText balanceLbl updatedBalance
+                    entrySetText addDescEdt ""
+                    entrySetText addPriceEdt ""
 
     onClicked addIncBtn $ do
-        curDescription <- entryGetText addDescEdt :: IO String
-        curPrice <- entryGetText addPriceEdt :: IO String
-        now <- getCurrentTime
-        when (not (null curDescription) && not (null curPrice) && all isNumber curPrice) $ do
-            let newItem = Item "Доход" curDescription (read curPrice) now
-            listStoreAppend itemList newItem
-            update database (Insert newItem)
-            curBalance <- labelGetText balanceLbl
-            let updatedBalance = show ((read curBalance) + (read curPrice))
-            labelSetText infoLbl ("Баланс = " ++ updatedBalance)
-            labelSetText balanceLbl updatedBalance
-            entrySetText addDescEdt ""
-            entrySetText addPriceEdt ""
+        curPrice <- runMaybeT $ getValidPrice addPriceEdt
+        case curPrice of
+            Nothing -> do
+                dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
+                    MessageError ButtonsNone "Цена должна состоять только из цифр"
+                widgetShowAll dialog
+            Just curPrice -> do
+                curDescription <- entryGetText addDescEdt :: IO String
+                now <- getCurrentTime
+                when (not (null curDescription)) $ do
+                    let newItem = Item "Доход" curDescription (read curPrice) now
+                    listStoreAppend itemList newItem
+                    update database (Insert newItem)
+                    curBalance <- labelGetText balanceLbl
+                    let updatedBalance = show ((read curBalance) + (read curPrice))
+                    labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+                    labelSetText balanceLbl updatedBalance
+                    entrySetText addDescEdt ""
+                    entrySetText addPriceEdt ""
 
     onClicked saveBtn $ do
         selRows <- treeSelectionGetSelectedRows selection
         unless (length selRows < 1) $ do
             let index = head (head selRows)
-            curDescription <- entryGetText editDescEdt :: IO String
-            curPrice <- entryGetText editPriceEdt :: IO String
-            v <- listStoreGetValue itemList index
-            when (not (null curDescription) && not (null curPrice) && all isNumber curPrice) $ do
-                let newItem = Item (typo v) curDescription (read curPrice) (time v)
-                listStoreSetValue itemList index newItem
-                update database (Edit index newItem)
-                curBalance <- labelGetText balanceLbl
-                let updatedBalance = if typo newItem == "Доход" then show ((read curBalance) + (read curPrice) - (price v)) else show ((read curBalance) - (read curPrice) + (price v))
-                labelSetText infoLbl ("Баланс = " ++ updatedBalance)
-                labelSetText balanceLbl updatedBalance
-                entrySetText editDescEdt ""
-                entrySetText editPriceEdt ""
+            curPrice <- runMaybeT $ getValidPrice editPriceEdt
+            case curPrice of
+                Nothing -> do
+                    dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
+                        MessageError ButtonsNone "Цена должна состоять только из цифр"
+                    widgetShowAll dialog
+                Just curPrice -> do
+                    curDescription <- entryGetText editDescEdt :: IO String
+                    v <- listStoreGetValue itemList index
+                    when (not (null curDescription)) $ do
+                        let newItem = Item (typo v) curDescription (read curPrice) (time v)
+                        listStoreSetValue itemList index newItem
+                        update database (Edit index newItem)
+                        curBalance <- labelGetText balanceLbl
+                        let updatedBalance = if typo newItem == "Доход" then show ((read curBalance) + (read curPrice) - (price v)) else show ((read curBalance) - (read curPrice) + (price v))
+                        labelSetText infoLbl ("Баланс = " ++ updatedBalance)
+                        labelSetText balanceLbl updatedBalance
+                        entrySetText editDescEdt ""
+                        entrySetText editPriceEdt ""
 
     onClicked delBtn $ do
         selRows <- treeSelectionGetSelectedRows selection

@@ -26,7 +26,8 @@ executable Money
     Chart,
     Chart-gtk,
     Chart-cairo,
-    lens
+    lens,
+    transformers
     --data-default-class,
     --data-accessor,
     --data-default

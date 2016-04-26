@@ -21,4 +21,3 @@ aboutDeveloperBtnHandler = do
     boxPackStart mainBoxAbout aboutEdt PackGrow 5
     boxPackStart mainBoxAbout image PackGrow 0
     widgetShowAll windowAbout
-
