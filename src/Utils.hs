@@ -2,6 +2,7 @@
 module Utils where
 
 import Control.Monad.State
+import Control.Monad.Trans.Maybe
 import Control.Monad
 import Graphics.UI.Gtk hiding (get)
 import Data.Acid
@@ -17,14 +18,27 @@ import Types
 instance Ord Item where
     task1 <= task2 = task1^.time <= task2^.time
 
-getBalance :: ItemList -> Int
-getBalance list = foldr (+) 0 (unbox list)
+instance Show Item where
+    show i = i^.typo ++ " - " ++
+                (show (i^.price)) ++ " - " ++
+                i^.description ++ "(" ++
+                (formatTime defaultTimeLocale format (i^.time)) ++ ")" where
+                    format = "%d/%m/%Y (%a) %H:%M"
 
-unbox :: ItemList -> [Int]
-unbox (ItemList list) = map func list
+isValidPrice :: String  -> Bool
+isValidPrice curPrice = not (null curPrice) && all isNumber curPrice
+
+getValidPrice :: Entry -> MaybeT IO Int
+getValidPrice addPriceEdt = do
+    curPrice <- lift (entryGetText addPriceEdt)
+    guard (isValidPrice curPrice)
+    return (read curPrice)
+
+getBalance :: [Item] -> Int
+getBalance list = foldr (+) 0 (map func list)
 
 func :: Item -> Int
-func item = if item^.typo == "Доход" then item^.price else 0 - item^.price
+func item = if item^.typo == "Доход" then item^.price else (-item^.price)
 
 --interact with db
 insert :: Item -> Update ItemList ()

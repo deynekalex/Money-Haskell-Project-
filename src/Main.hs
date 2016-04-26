@@ -26,19 +26,11 @@ import Values
 import Handlers.AboutBtn
 import Handlers.TreeSelection
 import Handlers.InfoDiagramBtn
+import System.IO.Unsafe
 
 $(deriveSafeCopy 0 'base ''Item)
 $(deriveSafeCopy 0 'base ''ItemList)
 $(makeAcidic ''ItemList ['insert, 'deleteByPos, 'edit, 'getItemList])
-
-isValid :: String  -> Bool
-isValid curPrice = not (null curPrice) && all isNumber curPrice
-
-getValidPrice :: Entry -> MaybeT IO String
-getValidPrice addPriceEdt = do
-    curPrice <- lift (entryGetText addPriceEdt)
-    guard (isValid curPrice)
-    return (curPrice)
 
 main :: IO()
 main = do
@@ -51,7 +43,8 @@ main = do
     --Initialize GUI
     initGUI
     window <- windowNew
-    Gtk.set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10]
+    Gtk.set window [windowTitle := "Учёт расходов", windowDefaultWidth := 500,
+                    windowDefaultHeight := 400, containerBorderWidth := 10]
     --mainBox
     mainBox <- vBoxNew False 1
     containerAdd window mainBox
@@ -68,9 +61,8 @@ main = do
     col <- treeViewColumnNew
     rend <- cellRendererTextNew
     cellLayoutPackStart col rend False
-    let format = "(%a) %d/%m/%Y %H:%M"
     cellLayoutSetAttributes col rend itemList
-        (\i -> [cellText := i^.typo ++ " - " ++ (show (i^.price)) ++ " - " ++ i^.description ++ "(" ++ (formatTime defaultTimeLocale format (i^.time)) ++ ")"])
+        (\i -> [cellText := show i])
     treeViewAppendColumn treeview col
     -- Make ability to scroll task's list
     itemsScrwin <- scrolledWindowNew Nothing Nothing
@@ -85,7 +77,7 @@ main = do
     infoBox <-  hBoxNew False 1
     infoBox1 <- hBoxNew False 1
     infoBox2 <- hBoxNew False 1
-    let curBalance = getBalance (ItemList quariedItemList)
+    let curBalance = getBalance quariedItemList
     balanceLbl <- labelNew(Just $ show curBalance)
     infoLbl <- labelNew(Just ("Баланс = " ++ show curBalance))
     infoDiagramBtn <- buttonNewWithLabel "Статистика"
@@ -175,11 +167,11 @@ main = do
                 curDescription <- entryGetText addDescEdt
                 now <- getCurrentTime
                 when (not (null curDescription)) $ do
-                    let newItem = Item "Расход" curDescription (read curPrice) now
+                    let newItem = Item "Расход" curDescription curPrice now
                     listStoreAppend itemList newItem
                     update database (Insert newItem)
                     curBalance <- labelGetText balanceLbl
-                    let updatedBalance = show ((read curBalance) - (read curPrice))
+                    let updatedBalance = show (read(curBalance) - curPrice)
                     labelSetText infoLbl ("Баланс = " ++ updatedBalance)
                     labelSetText balanceLbl updatedBalance
                     entrySetText addDescEdt ""
@@ -193,14 +185,14 @@ main = do
                     MessageError ButtonsNone "Цена должна состоять только из цифр"
                 widgetShowAll dialog
             Just curPrice -> do
-                curDescription <- entryGetText addDescEdt :: IO String
+                curDescription <- entryGetText addDescEdt
                 now <- getCurrentTime
                 when (not (null curDescription)) $ do
-                    let newItem = Item "Доход" curDescription (read curPrice) now
+                    let newItem = Item "Доход" curDescription curPrice now
                     listStoreAppend itemList newItem
                     update database (Insert newItem)
                     curBalance <- labelGetText balanceLbl
-                    let updatedBalance = show ((read curBalance) + (read curPrice))
+                    let updatedBalance = show ((read curBalance) + curPrice)
                     labelSetText infoLbl ("Баланс = " ++ updatedBalance)
                     labelSetText balanceLbl updatedBalance
                     entrySetText addDescEdt ""
@@ -220,11 +212,11 @@ main = do
                     curDescription <- entryGetText editDescEdt :: IO String
                     v <- listStoreGetValue itemList index
                     when (not (null curDescription)) $ do
-                        let newItem = Item (v^.typo) curDescription (read curPrice) (v^.time)
+                        let newItem = Item (v^.typo) curDescription curPrice (v^.time)
                         listStoreSetValue itemList index newItem
                         update database (Edit index newItem)
-                        curBalance <- labelGetText balanceLbl
-                        let updatedBalance = if newItem^.typo == "Доход" then show ((read curBalance) + (read curPrice) - (v^.price)) else show ((read curBalance) - (read curPrice) + (v^.price))
+                        let curBalance = read $ unsafePerformIO $ labelGetText balanceLbl
+                        let updatedBalance = if newItem^.typo == "Доход" then show (curBalance + curPrice - (v^.price)) else show (curBalance - curPrice + (v^.price))
                         labelSetText infoLbl ("Баланс = " ++ updatedBalance)
                         labelSetText balanceLbl updatedBalance
                         entrySetText editDescEdt ""

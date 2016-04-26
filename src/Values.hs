@@ -21,13 +21,6 @@ mySplit [] = ([], [])
 mySplit [x] = ([x], [])
 mySplit (x:y:xys) = (x:xs, y:ys) where (xs, ys) = mySplit xys
 
-{-parPair :: Strategy ([Item] -> UTCTime -> UTCTime -> String -> [(String,Double,Bool)])
-parPair list time1 time2 str = do
-    let (a, b) = mySplit list :: ([Item],[Item])
-    a' <- rpar a
-    b' <- rpar b
-    return (a' ++ b')-}
-
 rewrap :: [Item] -> [(String,Double,Bool)]
 rewrap (x:xs) = (x^.description, fromIntegral(x^.price), False) : (rewrap xs)
 rewrap _ = []
@@ -38,5 +31,5 @@ getValues list from to condition = runEval $ do
     a' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) a))
     b' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) b))
     return (a'++b')
---TODO добавить monad Ether
+--TODO добавить monad Either
 --stack build && stack exec -- Money +RTS -N2 -s -l
