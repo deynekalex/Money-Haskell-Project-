@@ -2,7 +2,6 @@
 {-# LANGUAGE TemplateHaskell    #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 {-# LANGUAGE TypeFamilies       #-}
-
 module Main where
 import           Control.Lens              hiding (index)
 import           Control.Monad.State
@@ -21,13 +20,14 @@ import           Handlers.TreeSelection
 import           System.IO.Unsafe
 import           Utils
 
+--AcidState
 $(deriveSafeCopy 0 'base ''Item)
 $(deriveSafeCopy 0 'base ''ItemList)
 $(makeAcidic ''ItemList ['insert, 'deleteByPos, 'edit, 'getItemList])
 
 main :: IO()
 main = do
-    --Read saved notes
+    --Read saved items and sort it
     database <- openLocalState (ItemList [])
     quariedItemList <- query database GetItemList
     itemList <- listStoreNew []
@@ -149,21 +149,27 @@ main = do
     boxPackStart mainBox editBox PackNatural 0
     boxPackStart mainBox delBtn PackNatural 0
 
-
+    --adding new consume
     _ <- ($) onClicked addConsBtn $ do
+        --check for not null and all isDigit
         curPrice <- runMaybeT $ getValidPrice addPriceEdt
         case curPrice of
             Nothing -> do
+                --no comment
                 dialog <- messageDialogNew (Just window) [DialogDestroyWithParent]
                     MessageError ButtonsNone "Цена должна состоять только из цифр"
                 widgetShowAll dialog
             Just curPrice' -> do
+                --get description of consume
                 curDescription <- entryGetText addDescEdt
                 now <- getCurrentTime
                 unless (null curDescription) $ do
                     let newItem1 = Item "Расход" curDescription curPrice' now
+                    --add to treeSelection
                     _ <- listStoreAppend itemList newItem1
+                    --add to database
                     update database (Insert newItem1)
+                    --update current balance of user
                     curBalance' <- labelGetText balanceLbl
                     let updatedBalance1 = show (read curBalance' - curPrice')
                     labelSetText infoLbl ("Баланс = " ++ updatedBalance1)
@@ -171,6 +177,8 @@ main = do
                     entrySetText addDescEdt ""
                     entrySetText addPriceEdt ""
 
+    --all is the same as above, except income
+    --adding new income
     _ <- ($) onClicked addIncBtn $  do
         curPrice <- runMaybeT $ getValidPrice addPriceEdt
         case curPrice of
@@ -192,6 +200,7 @@ main = do
                     entrySetText addDescEdt ""
                     entrySetText addPriceEdt ""
 
+    --edit consume/income
     _ <- ($) onClicked saveBtn $ do
         selRows <- treeSelectionGetSelectedRows selection
         unless (length selRows < 1) $ do
@@ -207,8 +216,11 @@ main = do
                     v <- listStoreGetValue itemList index
                     unless (null curDescription) $ do
                         let newItem = Item (v^.typo) curDescription curPrice' (v^.time)
+                        --edit treeView
                         listStoreSetValue itemList index newItem
+                        --edit database
                         update database (Edit index newItem)
+                        --update current balance of user
                         let curBalance' = read $ unsafePerformIO $ labelGetText balanceLbl
                         let updatedBalance = show $ if newItem^.typo == "Доход" then curBalance' + curPrice' - (v^.price) else curBalance' - curPrice' + (v^.price)
                         labelSetText infoLbl ("Баланс = " ++ updatedBalance)
@@ -216,24 +228,32 @@ main = do
                         entrySetText editDescEdt ""
                         entrySetText editPriceEdt ""
 
+    --delete income/consume
     _ <- ($) onClicked delBtn $ do
+        --get selected rows
         selRows <- treeSelectionGetSelectedRows selection
         unless (null selRows) $ do
             let index = head (head selRows)
+            --edit treeView
             v <- listStoreGetValue itemList index
             let curBalance' = read $ unsafePerformIO $ labelGetText balanceLbl
+            --update current balance of user
             let updatedBalance = show $ if v^.typo == "Доход" then curBalance' - (v^.price) else curBalance' + (v^.price)
             labelSetText infoLbl ("Баланс = " ++ updatedBalance)
             labelSetText balanceLbl updatedBalance
+            --remove from database
             update database (DeleteByPos index)
             listStoreRemove itemList index
             entrySetText editDescEdt ""
             entrySetText editPriceEdt ""
 
+    --set entry's values to selectied item values
     _ <- ($) onSelectionChanged selection $ onSelectionChangedHandler itemList editPriceEdt editDescEdt selection
 
+    --open new window with some info about developer
     _ <- ($) onClicked aboutDeveloperBtn aboutDeveloperBtnHandler
 
+    --open new window, which configurates diagrams
     _ <- ($) onClicked infoDiagramBtn $ do
         updQuariedItemList <- query database GetItemList
         infoDiagramBtnHandler updQuariedItemList

@@ -5,6 +5,7 @@ import           Control.Lens
 import           Data.Time
 import           Data.Typeable
 
+--main type in app
 data Item = Item {
     _typo        :: String,            --typo represents type of consumption/income
     _description :: String,

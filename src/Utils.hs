@@ -12,6 +12,7 @@ import           Data.Time
 import           Graphics.UI.Gtk           hiding (get)
 import           Types
 
+--orded Items sorting by add time
 instance Ord Item where
     task1 <= task2 = task1^.time <= task2^.time
 
@@ -32,6 +33,7 @@ getValidPrice addPriceEdt = do
     guard (isValidPrice curPrice)
     return (read curPrice)
 
+--return 0 + [incomes] - [consumes]
 getBalance :: [Item] -> Int
 getBalance list = sum (map (\item -> if item^.typo == "Доход" then item^.price else (-item^.price)) list)
 

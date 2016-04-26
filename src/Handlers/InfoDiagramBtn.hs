@@ -11,10 +11,11 @@ import           Types
 import           Utils()
 import           Values
 
-pitem :: (String, Double, Bool) -> PieItem
-pitem (s,v,o) = pitem_value .~ v
-    $ pitem_label .~ s
-    $ pitem_offset .~ (if o then 25 else 0)
+--set size of pie and description
+pitem :: Item -> PieItem
+pitem item = pitem_value .~ fromIntegral(item^.price)
+    $ pitem_label .~ item^.description
+    $ pitem_offset .~ 0
     $ def
 
 infoDiagramBtnHandler :: [Item] -> IO ()
@@ -22,12 +23,14 @@ infoDiagramBtnHandler quariedItemList = do
     windowDiagram <- windowNew
     Gtk.set windowDiagram [windowTitle := "Статистика", windowDefaultWidth := 500, windowDefaultHeight := 400, containerBorderWidth := 10, windowResizable := False]
     diagramEdt <- labelNew(Just "Отобразить статистику за период")
+
     --ForLeftBox
     leftEdt <- labelNew(Just "Начиная с")
     leftCal <- calendarNew
     calendarSetDisplayOptions leftCal [CalendarShowHeading,CalendarShowDayNames,CalendarWeekStartMonday]
     leftChosenDayLabel <- labelNew (Just "")
     miscSetAlignment leftChosenDayLabel 0.0 0.0
+
     -- Hour and minute choosing
     leftDayTimeBox <- hBoxNew False 0
     leftSpinH <- myAddSpinButton leftDayTimeBox "Часы:" 0.0 23.0 0.0
@@ -74,21 +77,25 @@ infoDiagramBtnHandler quariedItemList = do
     boxPackStart mainBoxDiagram2 leftBox PackGrow 1
     boxPackStart mainBoxDiagram2 rightBox PackGrow 1
 
+    --leftBtn is show consumes
     _ <- ($) on leftConsBtn buttonActivated $ do
+        --get date
         (year1, month1, day1) <- calendarGetDate leftCal
+        --get hour and minute
         hour1 <- Gtk.get leftSpinH spinButtonValue
         minute1 <- Gtk.get leftSpinM spinButtonValue
         (year2, month2, day2) <- calendarGetDate rightCal
         hour2 <- Gtk.get rightSpinH spinButtonValue
         minute2 <- Gtk.get rightSpinM spinButtonValue
         Chart.toWindow 640 480 $ do
+            --values is [Item] which suits to date range and typo
             let values = getValues quariedItemList
                             (UTCTime (fromGregorian (toInteger year1) (month1 + 1) day1)
                             (fromInteger (3600 * round hour1 + 60 * round minute1)))
                             (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
                             (fromInteger (3600 * round hour2 + 60 * round minute2)))
                             "Расход"
-            let title = if null values then "Расходов нет" else "Расход"
+            let title = if null values then "Расходов в выбранном периоде нет" else "Расход"
             pie_title .= title
             pie_plot . pie_data .= map pitem values
 
@@ -107,13 +114,13 @@ infoDiagramBtnHandler quariedItemList = do
                             (UTCTime (fromGregorian (toInteger year2) (month2 + 1) day2)
                             (fromInteger (3600 * round hour2' + 60 * round minute2)))
                             "Доход"
-            let title = if null values then "Доходов нет" else "Доходы"
+            let title = if null values then "Доходов в выбранном периоде нет" else "Доходы"
             pie_title .= title
             pie_plot . pie_data .= map pitem values
 
     widgetShowAll windowDiagram
 
-
+--creating spinHbox with some settings
 myAddSpinButton :: HBox -> String -> Double -> Double -> Double -> IO SpinButton
 myAddSpinButton box name minVal maxVal defaultValue = do
     vbox  <- vBoxNew False 0
