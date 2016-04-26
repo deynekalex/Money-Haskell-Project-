@@ -1,18 +1,18 @@
 module Utils where
 
-import Control.Monad.State
-import Control.Monad.Trans.Maybe
-import Control.Monad
-import Graphics.UI.Gtk hiding (get)
-import Data.Acid
-import Control.Monad.Reader
-import Data.SafeCopy
-import Data.Char
-import Data.Typeable
-import Data.List.Split
-import Data.Time
-import Control.Lens
-import Types
+import           Control.Lens
+import           Control.Monad
+import           Control.Monad.Reader
+import           Control.Monad.State
+import           Control.Monad.Trans.Maybe
+import           Data.Acid
+import           Data.Char
+import           Data.List.Split
+import           Data.SafeCopy
+import           Data.Time
+import           Data.Typeable
+import           Graphics.UI.Gtk           hiding (get)
+import           Types
 
 instance Ord Item where
     task1 <= task2 = task1^.time <= task2^.time

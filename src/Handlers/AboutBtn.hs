@@ -1,17 +1,17 @@
 module Handlers.AboutBtn where
 
-import Control.Monad.State
-import Control.Monad
-import Graphics.UI.Gtk as Gtk hiding (get)
-import Data.Acid
-import Control.Monad.Reader
-import Data.SafeCopy
-import Data.Char
-import Data.List.Split
-import Data.List hiding (insert)
-import Data.Time
-import Types
-import Control.Lens
+import           Control.Lens
+import           Control.Monad
+import           Control.Monad.Reader
+import           Control.Monad.State
+import           Data.Acid
+import           Data.Char
+import           Data.List            hiding (insert)
+import           Data.List.Split
+import           Data.SafeCopy
+import           Data.Time
+import           Graphics.UI.Gtk      as Gtk hiding (get)
+import           Types
 
 aboutText = "Я Александр Дейнека, студент 4 курса КТ." ++ "\n" ++ "Это приложение несомненно облегчит вам учёт расходов."
 

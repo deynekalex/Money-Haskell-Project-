@@ -4,22 +4,22 @@
 {-# LANGUAGE TypeFamilies       #-}
 
 module Main where
-import Control.Monad.State
-import Control.Monad.Trans.Maybe
-import Graphics.UI.Gtk as Gtk hiding (get)
-import Data.Acid
-import Data.SafeCopy
-import Data.List hiding (insert)
-import Data.Time
-import Types
-import Control.Lens hiding (index)
+import           Control.Lens              hiding (index)
+import           Control.Monad.State
+import           Control.Monad.Trans.Maybe
+import           Data.Acid
+import           Data.List                 hiding (insert)
+import           Data.SafeCopy
+import           Data.Time
+import           Graphics.UI.Gtk           as Gtk hiding (get)
+import           Types
 
 --local imports
-import Utils
-import Handlers.AboutBtn
-import Handlers.TreeSelection
-import Handlers.InfoDiagramBtn
-import System.IO.Unsafe
+import           Handlers.AboutBtn
+import           Handlers.InfoDiagramBtn
+import           Handlers.TreeSelection
+import           System.IO.Unsafe
+import           Utils
 
 $(deriveSafeCopy 0 'base ''Item)
 $(deriveSafeCopy 0 'base ''ItemList)

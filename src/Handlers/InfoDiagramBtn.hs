@@ -1,25 +1,25 @@
 module Handlers.InfoDiagramBtn where
 
-import Control.Monad.State
-import Control.Monad
-import Graphics.UI.Gtk as Gtk
-import Data.Acid
-import Control.Monad.Reader
-import Data.SafeCopy
-import Data.Char
-import Data.List.Split
-import Data.List hiding (insert)
-import Data.Time
-import System.IO.Unsafe
-import Control.Lens
+import           Control.Lens
+import           Control.Monad
+import           Control.Monad.Reader
+import           Control.Monad.State
+import           Data.Acid
+import           Data.Char
+import           Data.List                              hiding (insert)
+import           Data.List.Split
+import           Data.SafeCopy
+import           Data.Time
+import           Graphics.UI.Gtk                        as Gtk
+import           System.IO.Unsafe
 
-import Graphics.Rendering.Chart.Easy
-import Graphics.Rendering.Chart.Backend.Cairo
-import Graphics.Rendering.Chart.Gtk as Chart
+import           Graphics.Rendering.Chart.Backend.Cairo
+import           Graphics.Rendering.Chart.Easy
+import           Graphics.Rendering.Chart.Gtk           as Chart
 
-import Utils
-import Values
-import Types
+import           Types
+import           Utils
+import           Values
 
 pitem (s,v,o) = pitem_value .~ v
     $ pitem_label .~ s
