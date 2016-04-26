@@ -12,6 +12,8 @@ import Data.Char
 import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
+import Types
+import Control.Lens
 
 --for diagrams
 import Graphics.Rendering.Chart.Easy
@@ -68,7 +70,7 @@ main = do
     cellLayoutPackStart col rend False
     let format = "(%a) %d/%m/%Y %H:%M"
     cellLayoutSetAttributes col rend itemList
-        (\i -> [cellText := typo i ++ " - " ++ (show (price i)) ++ " - " ++ description i ++ "(" ++ (formatTime defaultTimeLocale format (time i)) ++ ")"])
+        (\i -> [cellText := i^.typo ++ " - " ++ (show (i^.price)) ++ " - " ++ i^.description ++ "(" ++ (formatTime defaultTimeLocale format (i^.time)) ++ ")"])
     treeViewAppendColumn treeview col
     -- Make ability to scroll task's list
     itemsScrwin <- scrolledWindowNew Nothing Nothing
@@ -218,11 +220,11 @@ main = do
                     curDescription <- entryGetText editDescEdt :: IO String
                     v <- listStoreGetValue itemList index
                     when (not (null curDescription)) $ do
-                        let newItem = Item (typo v) curDescription (read curPrice) (time v)
+                        let newItem = Item (v^.typo) curDescription (read curPrice) (v^.time)
                         listStoreSetValue itemList index newItem
                         update database (Edit index newItem)
                         curBalance <- labelGetText balanceLbl
-                        let updatedBalance = if typo newItem == "Доход" then show ((read curBalance) + (read curPrice) - (price v)) else show ((read curBalance) - (read curPrice) + (price v))
+                        let updatedBalance = if newItem^.typo == "Доход" then show ((read curBalance) + (read curPrice) - (v^.price)) else show ((read curBalance) - (read curPrice) + (v^.price))
                         labelSetText infoLbl ("Баланс = " ++ updatedBalance)
                         labelSetText balanceLbl updatedBalance
                         entrySetText editDescEdt ""
@@ -234,7 +236,7 @@ main = do
             let index = head (head selRows)
             v <- listStoreGetValue itemList index
             curBalance <- labelGetText balanceLbl
-            let updatedBalance = if typo v == "Доход" then show ((read curBalance) - (price v)) else show ((read curBalance) + (price v))
+            let updatedBalance = if v^.typo == "Доход" then show ((read curBalance) - (v^.price)) else show ((read curBalance) + (v^.price))
             labelSetText infoLbl ("Баланс = " ++ updatedBalance)
             labelSetText balanceLbl updatedBalance
             update database (DeleteByPos index)

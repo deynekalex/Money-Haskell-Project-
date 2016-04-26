@@ -1,3 +1,4 @@
+{-# LANGUAGE TemplateHaskell    #-}
 module Handlers.AboutBtn where
 
 import Control.Monad.State
@@ -10,6 +11,8 @@ import Data.Char
 import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
+import Types
+import Control.Lens
 
 aboutDeveloperBtnHandler = do
     windowAbout <- windowNew

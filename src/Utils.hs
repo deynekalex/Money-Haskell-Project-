@@ -1,3 +1,4 @@
+{-# LANGUAGE TemplateHaskell    #-}
 module Utils where
 
 import Control.Monad.State
@@ -10,12 +11,11 @@ import Data.Char
 import Data.Typeable
 import Data.List.Split
 import Data.Time
-
-data Item = Item{typo :: String, description :: String, price :: Int, time :: UTCTime} deriving (Typeable,Eq)
-data ItemList = ItemList [Item] deriving Typeable
+import Control.Lens
+import Types
 
 instance Ord Item where
-    task1 <= task2 = time task1 <= time task2
+    task1 <= task2 = task1^.time <= task2^.time
 
 getBalance :: ItemList -> Int
 getBalance list = foldr (+) 0 (unbox list)
@@ -24,7 +24,7 @@ unbox :: ItemList -> [Int]
 unbox (ItemList list) = map func list
 
 func :: Item -> Int
-func item = if typo item == "Доход" then price item else 0 - price item
+func item = if item^.typo == "Доход" then item^.price else 0 - item^.price
 
 --interact with db
 insert :: Item -> Update ItemList ()
@@ -46,4 +46,3 @@ getItemList :: Query ItemList [Item]
 getItemList = do
     ItemList ns <- ask
     return ns
-

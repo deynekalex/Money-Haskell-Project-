@@ -1,3 +1,4 @@
+{-# LANGUAGE TemplateHaskell    #-}
 module Values where
 
 import Utils
@@ -12,6 +13,8 @@ import Data.Typeable
 import Data.List.Split
 import Data.Time
 import Control.Parallel.Strategies
+import Control.Lens
+import Types
 
 mySplit :: [a] -> ([a], [a])
 mySplit [] = ([], [])
@@ -26,14 +29,14 @@ parPair list time1 time2 str = do
     return (a' ++ b')-}
 
 rewrap :: [Item] -> [(String,Double,Bool)]
-rewrap (x:xs) = (description x, fromIntegral $ price $ x, False) : (rewrap xs)
+rewrap (x:xs) = (x^.description, fromIntegral(x^.price), False) : (rewrap xs)
 rewrap _ = []
 
 getValues :: [Item] -> UTCTime -> UTCTime -> String -> [(String,Double,Bool)]
 getValues list from to condition = runEval $ do
     let (a, b) = mySplit list
-    a' <- rpar (rewrap $ (filter (\x -> (typo x == condition && time x < to && time x > from)) a))
-    b' <- rpar (rewrap $ (filter (\x -> (typo x == condition && time x < to && time x > from)) b))
+    a' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) a))
+    b' <- rpar (rewrap $ (filter (\x -> (x^.typo == condition && x^.time < to && x^.time > from)) b))
     return (a'++b')
 --TODO добавить monad Ether
 --stack build && stack exec -- Money +RTS -N2 -s -l

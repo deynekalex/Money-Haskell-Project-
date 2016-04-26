@@ -1,3 +1,4 @@
+{-# LANGUAGE TemplateHaskell    #-}
 module Handlers.TreeSelection where
 
 import Control.Monad.State
@@ -10,6 +11,8 @@ import Data.Char
 import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
+import Types
+import Control.Lens
 
 import Utils
 
@@ -18,5 +21,5 @@ onSelectionChangedHandler itemList editPriceEdt editDescEdt selection = do
     unless (null selRows) $ do
         let index = head (head selRows)
         v <- listStoreGetValue itemList index
-        entrySetText editPriceEdt (show (price  v))
-        entrySetText editDescEdt (description v)
+        entrySetText editPriceEdt (show (v^.price))
+        entrySetText editDescEdt (v^.description)

@@ -1,3 +1,4 @@
+{-# LANGUAGE TemplateHaskell    #-}
 module Handlers.InfoDiagramBtn where
 
 import Control.Monad.State
@@ -11,6 +12,7 @@ import Data.List.Split
 import Data.List hiding (insert)
 import Data.Time
 import System.IO.Unsafe
+import Control.Lens
 
 import Graphics.Rendering.Chart.Easy
 import Graphics.Rendering.Chart.Backend.Cairo
@@ -18,6 +20,7 @@ import Graphics.Rendering.Chart.Gtk as Chart
 
 import Utils
 import Values
+import Types
 
 pitem (s,v,o) = pitem_value .~ v
     $ pitem_label .~ s
