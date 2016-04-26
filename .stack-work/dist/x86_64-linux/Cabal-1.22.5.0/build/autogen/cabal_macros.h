@@ -56,6 +56,13 @@
   (major1) == 2 && (major2) <  2 || \
   (major1) == 2 && (major2) == 2 && (minor) <= 1)
 
+/* package parallel-3.2.1.0 */
+#define VERSION_parallel "3.2.1.0"
+#define MIN_VERSION_parallel(major1,major2,minor) (\
+  (major1) <  3 || \
+  (major1) == 3 && (major2) <  2 || \
+  (major1) == 3 && (major2) == 2 && (minor) <= 1)
+
 /* package safecopy-0.9.0.1 */
 #define VERSION_safecopy "0.9.0.1"
 #define MIN_VERSION_safecopy(major1,major2,minor) (\
@@ -161,5 +168,5 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 0)
 
-#define CURRENT_PACKAGE_KEY "Money_Ll6W0xlxQhuHHPxwcTiS3m"
+#define CURRENT_PACKAGE_KEY "Money_GShlO9iRvaL96DfHp3PQ7V"
 

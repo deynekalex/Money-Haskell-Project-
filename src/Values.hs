@@ -11,11 +11,29 @@ import Data.Char
 import Data.Typeable
 import Data.List.Split
 import Data.Time
+import Control.Parallel.Strategies
+
+mySplit :: [a] -> ([a], [a])
+mySplit [] = ([], [])
+mySplit [x] = ([x], [])
+mySplit (x:y:xys) = (x:xs, y:ys) where (xs, ys) = mySplit xys
+
+{-parPair :: Strategy ([Item] -> UTCTime -> UTCTime -> String -> [(String,Double,Bool)])
+parPair list time1 time2 str = do
+    let (a, b) = mySplit list :: ([Item],[Item])
+    a' <- rpar a
+    b' <- rpar b
+    return (a' ++ b')-}
 
 rewrap :: [Item] -> [(String,Double,Bool)]
 rewrap (x:xs) = (description x, fromIntegral $ price $ x, False) : (rewrap xs)
 rewrap _ = []
 
 getValues :: [Item] -> UTCTime -> UTCTime -> String -> [(String,Double,Bool)]
-getValues list from to condition = rewrap $ (filter (\x -> (typo x == condition && time x < to && time x > from)) list)
+getValues list from to condition = runEval $ do
+    let (a, b) = mySplit list
+    a' <- rpar (rewrap $ (filter (\x -> (typo x == condition && time x < to && time x > from)) a))
+    b' <- rpar (rewrap $ (filter (\x -> (typo x == condition && time x < to && time x > from)) b))
+    return (a'++b')
 --TODO добавить monad Ether
+--stack build && stack exec -- Money +RTS -N2 -s -l
